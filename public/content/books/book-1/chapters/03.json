@@ -1,0 +1,142 @@
+{
+  "id": "03",
+  "title": "The Morning After",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "id": "s1",
+          "text": "When the sun rose, the valley looked washed and new."
+        },
+        {
+          "id": "s2",
+          "text": "Puddles shone in the road, and the trees dripped with silver drops."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "id": "s3",
+          "text": "Down in the village, the merchants were unloading their carts."
+        },
+        {
+          "id": "s4",
+          "text": "Some of them looked up at the tower and lifted their hands in thanks."
+        },
+        {
+          "id": "s5",
+          "text": "The keeper waved back."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "id": "s6",
+          "text": "Meera was tired, but she felt something she could not quite name."
+        },
+        {
+          "id": "s7",
+          "text": "It was the feeling of having done something small that was also important."
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "id": "s8",
+          "text": "\"Will you teach me?\""
+        },
+        {
+          "id": "s9",
+          "text": "she asked."
+        },
+        {
+          "id": "s10",
+          "text": "\"How to trim the wick, and clean the glass, and keep the oil from running low?\""
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "sentences": [
+        {
+          "id": "s11",
+          "text": "The keeper looked at her for a long moment."
+        },
+        {
+          "id": "s12",
+          "text": "Then he nodded."
+        }
+      ]
+    },
+    {
+      "id": "p6",
+      "sentences": [
+        {
+          "id": "s13",
+          "text": "Many Years Later"
+        }
+      ],
+      "kind": "h"
+    },
+    {
+      "id": "p7",
+      "sentences": [
+        {
+          "id": "s14",
+          "text": "The seasons turned, and the years went by."
+        },
+        {
+          "id": "s15",
+          "text": "The old keeper grew older still, and one day he could no longer climb the stairs at all."
+        }
+      ]
+    },
+    {
+      "id": "p8",
+      "sentences": [
+        {
+          "id": "s16",
+          "text": "But the lantern did not go dark."
+        }
+      ]
+    },
+    {
+      "id": "p9",
+      "sentences": [
+        {
+          "id": "s17",
+          "text": "Every evening, when the sun went down behind the far mountains, a young woman climbed the narrow stairs and lit the great lamp at the top."
+        },
+        {
+          "id": "s18",
+          "text": "The children of the village gathered at the bottom of the hill and counted the windows as the light passed each one."
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sentences": [
+        {
+          "id": "s19",
+          "text": "And sometimes, one child would stay behind, sitting on a flat rock, looking up at the light and wondering who it was for."
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sentences": [
+        {
+          "id": "s20",
+          "text": "Meera always came down to answer."
+        }
+      ]
+    }
+  ]
+}

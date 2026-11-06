@@ -3,7 +3,7 @@
  * Convert REAL forced-alignment output into the reader's alignment format.
  * Nothing is estimated: sentences/words without a real timestamp are left out and reported.
  *
- *   node scripts/import-alignment.mjs --book book-1 --ch 01 --from 01.aeneas.json [--format aeneas|words]
+ *   node scripts/import-alignment.mjs --book book-1 --ch 01 --from 01.aeneas.json [--format aeneas|words] [--offset 0.07]
  *
  * Supported inputs
  *  aeneas : {"fragments":[{"id":"s1","begin":"0.000","end":"2.480", ...}]}   (export-aeneas.mjs ids)
@@ -82,6 +82,16 @@ if (format === 'aeneas') {
   console.log(`  matched ${matched}/${total} words (${((matched / Math.max(1, total)) * 100).toFixed(1)}%)`);
   if (matched / Math.max(1, total) < 0.85)
     console.warn('! Low match rate — check that the audio and the chapter text are the same version.');
+}
+
+// --offset <seconds>: shift every timestamp (e.g. MP3 encoder delay when timings came from the WAV)
+const offset = Number(a.offset || 0);
+if (offset) {
+  for (const s of segments) {
+    s.begin = round(s.begin + offset);
+    s.end = round(s.end + offset);
+    if (s.words) s.words = s.words.map((w) => (w ? [round(w[0] + offset), round(w[1] + offset)] : w));
+  }
 }
 
 segments.sort((x, y) => x.begin - y.begin);

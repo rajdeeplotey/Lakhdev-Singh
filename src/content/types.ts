@@ -59,6 +59,8 @@ export interface Book {
   placeholder?: boolean;
   /** Developer sample — listed only in dev builds. */
   devOnly?: boolean;
+  /** Public demo book (sample text / synthetic narration) — not counted in the author's stats. */
+  demo?: boolean;
   chapters: ChapterRef[];
 }
 

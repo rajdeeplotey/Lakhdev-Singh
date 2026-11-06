@@ -15,7 +15,8 @@ export function About() {
   const { about } = site;
 
   const books = lib.books.filter((b) => !b.devOnly);
-  const chapters = books.reduce((n, b) => n + (b.placeholder ? 0 : b.chapters.length), 0);
+  // only the author's real books count (not placeholders or demo books)
+  const chapters = books.reduce((n, b) => n + (b.placeholder || b.demo ? 0 : b.chapters.length), 0);
   const hours = about.narratedHours;
   const [first, ...rest] = site.author.split(' ');
   const last = rest.pop() ?? '';

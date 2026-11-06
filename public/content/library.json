@@ -4,23 +4,65 @@
   "books": [
     {
       "slug": "book-1",
-      "title": "Book One",
-      "subtitle": "Title to be supplied",
-      "description": "",
-      "cover": "",
+      "title": "The Lantern Keeper",
+      "subtitle": "Demo book · sample text & synthetic narration",
+      "description": "A lantern keeper on a hill, a curious girl, and a stormy night on the mountain road. This short demo shows how every book on the site can be read page by page or heard with the narration highlighted line by line.",
+      "cover": "/images/covers/lantern-keeper.webp",
       "language": "en",
-      "placeholder": true,
-      "chapters": []
+      "chapters": [
+        {
+          "id": "01",
+          "title": "The Hill Above the Village",
+          "audio": "audio/01.mp3",
+          "alignment": "alignment/01.json"
+        },
+        {
+          "id": "02",
+          "title": "A Storm in the Night",
+          "audio": "audio/02.mp3",
+          "alignment": "alignment/02.json"
+        },
+        {
+          "id": "03",
+          "title": "The Morning After",
+          "audio": "audio/03.mp3",
+          "alignment": "alignment/03.json"
+        }
+      ],
+      "coverWidth": 800,
+      "coverHeight": 1200,
+      "demo": true
     },
     {
       "slug": "book-2",
-      "title": "Book Two",
-      "subtitle": "Title to be supplied",
-      "description": "",
-      "cover": "",
+      "title": "Letters from the River",
+      "subtitle": "Demo book · sample text & synthetic narration",
+      "description": "A pale blue letter, an old ferryman and a promise kept for many years. A second short demo for trying both reading modes, bookmarks and the narration player.",
+      "cover": "/images/covers/letters-from-the-river.webp",
       "language": "en",
-      "placeholder": true,
-      "chapters": []
+      "chapters": [
+        {
+          "id": "01",
+          "title": "The First Letter",
+          "audio": "audio/01.mp3",
+          "alignment": "alignment/01.json"
+        },
+        {
+          "id": "02",
+          "title": "The Ferryman",
+          "audio": "audio/02.mp3",
+          "alignment": "alignment/02.json"
+        },
+        {
+          "id": "03",
+          "title": "Home",
+          "audio": "audio/03.mp3",
+          "alignment": "alignment/03.json"
+        }
+      ],
+      "coverWidth": 800,
+      "coverHeight": 1200,
+      "demo": true
     },
     {
       "slug": "book-3",

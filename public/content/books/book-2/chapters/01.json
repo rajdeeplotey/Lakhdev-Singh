@@ -1,0 +1,158 @@
+{
+  "id": "01",
+  "title": "The First Letter",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "id": "s1",
+          "text": "The letter arrived on a Tuesday, in a pale blue envelope with a stamp from a country Arjun had never visited."
+        },
+        {
+          "id": "s2",
+          "text": "His name was written on the front in careful, old-fashioned handwriting."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "id": "s3",
+          "text": "He opened it at the kitchen table, while the kettle began to whistle."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "id": "s4",
+          "text": "\"Dear Arjun,\" it began."
+        },
+        {
+          "id": "s5",
+          "text": "\"You do not know me, but I knew your grandfather very well."
+        },
+        {
+          "id": "s6",
+          "text": "Many years ago, he and I made a journey together along the great river."
+        },
+        {
+          "id": "s7",
+          "text": "I have kept a promise to him for a long time, and now I would like to keep it with you.\""
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "id": "s8",
+          "text": "Arjun read the letter twice."
+        },
+        {
+          "id": "s9",
+          "text": "Then he turned off the kettle, which had been whistling for some time."
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "sentences": [
+        {
+          "id": "s10",
+          "text": "The Promise"
+        }
+      ],
+      "kind": "h"
+    },
+    {
+      "id": "p6",
+      "sentences": [
+        {
+          "id": "s11",
+          "text": "The letter explained that his grandfather had once left something behind, in a small town at the mouth of the river."
+        },
+        {
+          "id": "s12",
+          "text": "He had asked his friend to make sure it reached his family one day."
+        }
+      ]
+    },
+    {
+      "id": "p7",
+      "sentences": [
+        {
+          "id": "s13",
+          "text": "\"I am too old to travel now,\" the letter said."
+        },
+        {
+          "id": "s14",
+          "text": "\"But if you will come to the river, I will tell you where to look."
+        },
+        {
+          "id": "s15",
+          "text": "Take the ferry from the northern bank."
+        },
+        {
+          "id": "s16",
+          "text": "Ask for the ferryman called Daud."
+        },
+        {
+          "id": "s17",
+          "text": "He will know who you are.\""
+        }
+      ]
+    },
+    {
+      "id": "p8",
+      "sentences": [
+        {
+          "id": "s18",
+          "text": "At the bottom of the page, there was a small drawing of a boat with a single sail."
+        }
+      ]
+    },
+    {
+      "id": "p9",
+      "kind": "break",
+      "sentences": []
+    },
+    {
+      "id": "p10",
+      "sentences": [
+        {
+          "id": "s19",
+          "text": "That evening, Arjun took down the old photograph album from the top shelf."
+        },
+        {
+          "id": "s20",
+          "text": "Near the back, he found a picture he had never paid much attention to."
+        },
+        {
+          "id": "s21",
+          "text": "Two young men stood on a wooden pier, laughing at something outside the frame."
+        },
+        {
+          "id": "s22",
+          "text": "Behind them, a boat with a single sail rested on the water."
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sentences": [
+        {
+          "id": "s23",
+          "text": "He looked at the photograph for a long time."
+        },
+        {
+          "id": "s24",
+          "text": "Then he went to find his travel bag."
+        }
+      ]
+    }
+  ]
+}
