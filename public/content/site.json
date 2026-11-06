@@ -1,0 +1,36 @@
+{
+  "author": "Dr. Lakhdev Singh",
+  "role": "Writer",
+  "hero": {
+    "eyebrow": "The Literary Library of",
+    "headline": "Stories to be read slowly, and heard aloud.",
+    "intro": "Every book here can be read page by page or heard in my own voice — chapter by chapter, free and open to all."
+  },
+  "about": {
+    "heading": "About the Author",
+    "paragraphs": [
+      "[Biography to be supplied — edit public/content/site.json → about.paragraphs]"
+    ],
+    "quote": "",
+    "photo": "/images/lakhdev-singh-portrait.webp",
+    "photoFallback": "/images/lakhdev-singh-portrait.jpg",
+    "photoAlt": "Portrait of Dr. Lakhdev Singh",
+    "narratedHours": null,
+    "welcomeAudio": ""
+  },
+  "readListen": {
+    "heading": "Read. Listen. Return whenever you like.",
+    "body": "Every book in this library is free to read and free to listen to. Turn the pages in Classic Book Mode, or follow the narration line by line in Immersive Listening Mode. The site remembers where you stopped."
+  },
+  "contact": {
+    "email": "",
+    "phone": "",
+    "address": "",
+    "social": []
+  },
+  "brand": {
+    "logoFull": "/brand/logo-full.webp",
+    "logoStacked": "/brand/logo-stacked.webp",
+    "logoEmblem": "/brand/logo-emblem.webp"
+  }
+}

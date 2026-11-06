@@ -1,0 +1,163 @@
+/* page-flip.css — styles for page-flip.js (v2)
+   Mapped to this reader:  .book-spread → .book   ·   .page-left / .page-right → .book-page.page-left / .page-right
+   The real pages are never transformed; everything that moves lives in .pf-layer and is removed after each turn. */
+
+.book.pf-ready {
+  touch-action: pan-y; /* horizontal gestures turn pages, vertical still scrolls */
+  cursor: grab;
+  outline: none;
+}
+.book.pf-ready:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 6px;
+}
+.book.pf-dragging {
+  cursor: grabbing;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.book.pf-turning .book-page {
+  pointer-events: none;
+}
+
+/* the temporary layer drawn over the book during a turn */
+.pf-layer {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  perspective: 2600px;
+  pointer-events: none;
+}
+.pf-slot {
+  position: absolute;
+  overflow: hidden;
+}
+.pf-slot > .pf-page {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  margin: 0;
+  flex: none;
+}
+.pf-blank {
+  background: var(--paper);
+}
+
+/* the turning leaf: front = page leaving, back = page arriving */
+.pf-leaf {
+  position: absolute;
+  transform-style: preserve-3d;
+  will-change: transform;
+}
+.pf-leaf-next {
+  transform-origin: left center; /* hinged at the spine */
+}
+.pf-leaf-prev {
+  transform-origin: right center;
+}
+.pf-face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  box-shadow: 0 0 calc(var(--pf-fold, 0) * 40px) rgba(0, 0, 0, calc(var(--pf-fold, 0) * 0.25));
+}
+.pf-back {
+  transform: rotateY(180deg);
+}
+
+/* shading — opacity is driven by page-flip.js */
+.pf-shade {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+.pf-leaf-next .pf-front .pf-shade {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 45%);
+}
+.pf-leaf-next .pf-back .pf-shade {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 45%);
+}
+.pf-leaf-prev .pf-front .pf-shade {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 45%);
+}
+.pf-leaf-prev .pf-back .pf-shade {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0) 45%);
+}
+.pf-under-shade {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 30%);
+}
+.pf-layer:has(.pf-leaf-prev) .pf-under-shade {
+  background: linear-gradient(270deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 30%);
+}
+
+/* single-page (phone) layout: one page is both "left" and "right" — no static copy over it */
+.is-single .pf-still {
+  display: none;
+}
+
+/* gentle bump when there is no page in that direction */
+.book.pf-bump-next {
+  animation: pfBumpNext 0.32s ease;
+}
+.book.pf-bump-prev {
+  animation: pfBumpPrev 0.32s ease;
+}
+@keyframes pfBumpNext {
+  40% {
+    transform: translateX(-6px);
+  }
+}
+@keyframes pfBumpPrev {
+  40% {
+    transform: translateX(6px);
+  }
+}
+
+/* screen-reader announcement */
+.pf-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* first-visit hint under the book */
+.ptc-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  transform: translateX(-50%);
+  z-index: 6;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: rgba(28, 43, 77, 0.92);
+  color: #f3eadb;
+  font-family: 'Jost', var(--f-ui);
+  font-size: 12.5px;
+  white-space: nowrap;
+  pointer-events: none;
+  animation: ptcHint 4s ease both;
+}
+@keyframes ptcHint {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 6px);
+  }
+  10%,
+  85% {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ptc-hint,
+  .book.pf-bump-next,
+  .book.pf-bump-prev {
+    animation: none;
+  }
+}

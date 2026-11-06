@@ -1,0 +1,381 @@
+/* ═════════════ Mobile hero (≤480px) — one screen at 390×844 ═════════════ */
+.mhero {
+  --m-navy: #1c2b4d;
+  --m-cream: #f3eadb;
+  --m-gold: #e2c27e;
+  --m-muted: #c9c2b3;
+  --m-jost: 'Jost', var(--f-ui);
+  min-height: 100vh;
+  min-height: 100svh;
+  background: var(--m-navy);
+  color: var(--m-cream);
+  display: flex;
+  flex-direction: column;
+  padding-top: 68px; /* header: 44px logo + 12px × 2 */
+  overflow: hidden;
+}
+.mhero-main {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(4px, 1.5svh, 14px) 24px clamp(10px, 2.4svh, 22px);
+}
+
+/* arch + play badge */
+.mhero-visual {
+  position: relative;
+  width: 150px;
+  height: 188px;
+  flex-shrink: 0;
+  animation: mIn 0.9s var(--ease-out) both;
+}
+.mhero-arch {
+  position: absolute;
+  inset: 0;
+  border: 1px solid rgba(226, 194, 126, 0.45);
+  border-radius: 75px 75px 4px 4px;
+  padding: 9px;
+}
+.mhero-arch-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 66px 66px 2px 2px;
+  background: radial-gradient(80% 60% at 50% 45%, #fffaf0, var(--m-cream) 70%);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.mhero-emblem {
+  width: 82%;
+  height: auto;
+}
+.mhero-badge {
+  position: absolute;
+  right: -32px;
+  bottom: -14px;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: var(--m-gold);
+  color: var(--m-navy);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 24px -10px rgba(0, 0, 0, 0.55);
+  transition: transform 0.3s var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+.mhero-badge:active {
+  transform: scale(0.95);
+}
+.mhero-badge-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: spin 14s linear infinite;
+  fill: var(--m-navy);
+  font-family: var(--m-jost);
+  font-size: 7.4px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+.mhero-badge-icon {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(28, 43, 77, 0.35);
+}
+.mhero-badge:not(.is-playing) .mhero-badge-icon svg {
+  margin-left: 2px;
+}
+
+/* type */
+.mhero-label {
+  margin-top: clamp(18px, 3.4svh, 30px);
+  font-family: var(--m-jost);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--m-gold);
+  animation: mIn 0.9s 0.1s var(--ease-out) both;
+}
+.mhero-name {
+  margin-top: 8px;
+  font-family: 'Cormorant Garamond', var(--f-display);
+  font-size: 46px;
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.005em;
+  display: flex;
+  flex-direction: column;
+  animation: mIn 0.9s 0.18s var(--ease-out) both;
+}
+.mhero-name span {
+  color: var(--m-cream);
+}
+.mhero-name em {
+  color: var(--m-gold);
+  font-style: italic;
+}
+.mhero-tagline {
+  margin-top: clamp(10px, 1.8svh, 16px);
+  font-family: 'Cormorant Garamond', var(--f-display);
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.2;
+  color: var(--m-cream);
+  white-space: pre-line;
+  animation: mIn 0.9s 0.26s var(--ease-out) both;
+}
+
+/* buttons */
+.mhero-ctas {
+  margin-top: clamp(16px, 3svh, 26px);
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  animation: mIn 0.9s 0.34s var(--ease-out) both;
+}
+.mhero-btn {
+  height: 50px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--m-jost);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.mhero-btn:active {
+  transform: scale(0.98);
+}
+.mhero-btn-solid {
+  background: var(--m-gold);
+  color: var(--m-navy);
+}
+.mhero-btn-line {
+  border: 1.5px solid var(--m-gold);
+  color: var(--m-cream);
+}
+.mhero-trust {
+  margin-top: 12px;
+  font-family: var(--m-jost);
+  font-size: 13px;
+  color: var(--m-muted);
+  animation: mIn 0.9s 0.42s var(--ease-out) both;
+}
+
+/* mini library */
+.mhero-shelf {
+  padding-bottom: max(18px, env(safe-area-inset-bottom));
+  animation: mIn 0.9s 0.5s var(--ease-out) both;
+}
+.mhero-shelf-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 0 24px;
+  margin-bottom: 10px;
+}
+.mhero-shelf-head h2 {
+  font-family: 'Cormorant Garamond', var(--f-display);
+  font-size: 19px;
+  font-weight: 500;
+  color: var(--m-cream);
+}
+.mhero-shelf-head span {
+  font-family: var(--m-jost);
+  font-size: 12px;
+  color: var(--m-muted);
+}
+.mhero-row {
+  list-style: none;
+  margin: 0;
+  padding: 6px 24px 10px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding-left: 24px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.mhero-row::-webkit-scrollbar {
+  display: none;
+}
+.mhero-row li {
+  flex: 0 0 72px;
+  scroll-snap-align: start;
+}
+.mhero-row li:last-child {
+  margin-right: 14px;
+}
+.mcover {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 72px;
+  height: 104px;
+  border-radius: 2px 6px 6px 2px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.6), inset 3px 0 0 rgba(0, 0, 0, 0.14);
+  transition: box-shadow 0.25s, transform 0.25s var(--ease);
+  -webkit-tap-highlight-color: transparent;
+}
+.mcover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mcover::before {
+  /* spine shading */
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 6px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.22), transparent);
+  pointer-events: none;
+}
+.mcover-title {
+  position: relative;
+  padding: 0 8px 9px 10px;
+  font-family: 'Cormorant Garamond', var(--f-display);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: left;
+}
+.mcover.is-selected {
+  box-shadow: 0 0 0 2px var(--m-gold), 0 8px 18px -6px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px);
+}
+/* placeholder cover tones (used only until real cover images are supplied) */
+.mcover.tone-0 { background: #efe6d4; color: #2a3a5e; }
+.mcover.tone-1 { background: #8b3a2b; color: #f3eadb; }
+.mcover.tone-2 { background: #2f5444; color: #f3eadb; }
+.mcover.tone-3 { background: #d9b46c; color: #1c2b4d; }
+.mcover.tone-4 { background: #4b3a63; color: #f3eadb; }
+.mcover.tone-5 { background: #2a3f6a; color: #f3eadb; }
+
+@keyframes mIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+}
+
+/* mobile/tablet header (<1024px): logo + menu only, no name, no divider */
+@media (max-width: 1023px) {
+  .site-header .header-inner {
+    height: 68px;
+    padding: 12px 20px;
+  }
+  .site-header.is-solid .header-inner {
+    height: 68px;
+  }
+  .site-header::after {
+    display: none;
+  }
+  .header-wordmark {
+    display: none;
+  }
+  .header-brand .emblem-badge {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .site-header:not(.is-solid) {
+    background: transparent;
+  }
+  .menu-toggle {
+    width: 44px;
+    height: 44px;
+    margin-right: -10px;
+  }
+}
+
+/* shorter phones (e.g. 360×740, iPhone SE): tighten so the shelf still fits on screen */
+@media (max-width: 1023px) and (max-height: 780px) {
+  .mhero-visual {
+    width: 124px;
+    height: 156px;
+  }
+  .mhero-arch {
+    border-radius: 62px 62px 4px 4px;
+    padding: 8px;
+  }
+  .mhero-arch-inner {
+    border-radius: 54px 54px 2px 2px;
+  }
+  .mhero-badge {
+    width: 70px;
+    height: 70px;
+    right: -30px;
+  }
+  .mhero-name {
+    font-size: 41px;
+  }
+  .mhero-tagline {
+    font-size: 19px;
+  }
+  .mhero-label {
+    margin-top: 14px;
+  }
+}
+@media (max-width: 1023px) and (max-height: 700px) {
+  .mhero-visual {
+    width: 100px;
+    height: 126px;
+  }
+  .mhero-arch {
+    border-radius: 50px 50px 4px 4px;
+    padding: 7px;
+  }
+  .mhero-arch-inner {
+    border-radius: 43px 43px 2px 2px;
+  }
+  .mhero-badge {
+    width: 62px;
+    height: 62px;
+    right: -28px;
+    bottom: -10px;
+  }
+  .mhero-badge-ring {
+    font-size: 8px;
+  }
+  .mhero-label {
+    margin-top: 10px;
+    font-size: 11px;
+  }
+  .mhero-name {
+    font-size: 37px;
+    margin-top: 4px;
+  }
+  .mhero-tagline {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+  .mhero-ctas {
+    margin-top: 14px;
+  }
+  .mhero-trust {
+    margin-top: 8px;
+  }
+  .mhero-main {
+    padding-bottom: 10px;
+  }
+}

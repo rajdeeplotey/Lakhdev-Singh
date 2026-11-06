@@ -1,0 +1,88 @@
+{
+  "audioBaseUrl": "",
+  "latestRelease": "book-1",
+  "books": [
+    {
+      "slug": "book-1",
+      "title": "Book One",
+      "subtitle": "Title to be supplied",
+      "description": "",
+      "cover": "",
+      "language": "en",
+      "placeholder": true,
+      "chapters": []
+    },
+    {
+      "slug": "book-2",
+      "title": "Book Two",
+      "subtitle": "Title to be supplied",
+      "description": "",
+      "cover": "",
+      "language": "en",
+      "placeholder": true,
+      "chapters": []
+    },
+    {
+      "slug": "book-3",
+      "title": "Book Three",
+      "subtitle": "Title to be supplied",
+      "description": "",
+      "cover": "",
+      "language": "en",
+      "placeholder": true,
+      "chapters": []
+    },
+    {
+      "slug": "book-4",
+      "title": "Book Four",
+      "subtitle": "Title to be supplied",
+      "description": "",
+      "cover": "",
+      "language": "en",
+      "placeholder": true,
+      "chapters": []
+    },
+    {
+      "slug": "book-5",
+      "title": "Book Five",
+      "subtitle": "Title to be supplied",
+      "description": "",
+      "cover": "",
+      "language": "en",
+      "placeholder": true,
+      "chapters": []
+    },
+    {
+      "slug": "book-6",
+      "title": "Book Six",
+      "subtitle": "Title to be supplied",
+      "description": "",
+      "cover": "",
+      "language": "en",
+      "placeholder": true,
+      "chapters": []
+    },
+    {
+      "slug": "reader-test-sample",
+      "title": "Reader Test Sample",
+      "subtitle": "Developer fixture — not one of the author's books",
+      "description": "A synthetic test chapter with machine-generated narration and real timestamps, used only to verify the reader and audio-text sync. Visible in development builds only.",
+      "language": "en",
+      "devOnly": true,
+      "chapters": [
+        {
+          "id": "01",
+          "title": "The Reading Room",
+          "audio": "audio/01.wav",
+          "alignment": "alignment/01.json"
+        },
+        {
+          "id": "02",
+          "title": "The Return",
+          "audio": "audio/02.wav",
+          "alignment": "alignment/02.json"
+        }
+      ]
+    }
+  ]
+}

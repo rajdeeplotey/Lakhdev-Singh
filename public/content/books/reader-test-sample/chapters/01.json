@@ -1,0 +1,202 @@
+{
+  "id": "01",
+  "title": "The Reading Room",
+  "paragraphs": [
+    {
+      "id": "p1",
+      "sentences": [
+        {
+          "id": "s1",
+          "text": "This chapter is a test fixture for the reader."
+        },
+        {
+          "id": "s2",
+          "text": "It is not part of any book by the author."
+        },
+        {
+          "id": "s3",
+          "text": "Its only purpose is to check that pages turn, that narration plays, and that the highlighted sentence follows the voice."
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "sentences": [
+        {
+          "id": "s4",
+          "text": "Imagine a quiet room at the end of a long corridor."
+        },
+        {
+          "id": "s5",
+          "text": "The window faces east, and the morning light falls across a wooden table."
+        },
+        {
+          "id": "s6",
+          "text": "On the table there is a single book, open at the first page."
+        },
+        {
+          "id": "s7",
+          "text": "The paper is the colour of warm ivory, and the letters are dark and clear."
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "sentences": [
+        {
+          "id": "s8",
+          "text": "A reader enters the room and sits down."
+        },
+        {
+          "id": "s9",
+          "text": "She turns the first page slowly."
+        },
+        {
+          "id": "s10",
+          "text": "The sound of the paper is soft, like a breath."
+        },
+        {
+          "id": "s11",
+          "text": "Outside, a bird calls once and then is silent."
+        },
+        {
+          "id": "s12",
+          "text": "The reader begins to read, and the room seems to grow larger around her."
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "sentences": [
+        {
+          "id": "s13",
+          "text": "Every sentence in this test is short and simple."
+        },
+        {
+          "id": "s14",
+          "text": "That makes it easy to see when the highlight moves."
+        },
+        {
+          "id": "s15",
+          "text": "When the narrator reaches the end of a sentence, the highlight should move to the next one."
+        },
+        {
+          "id": "s16",
+          "text": "When the narration reaches the bottom of a page, the page should turn by itself."
+        }
+      ]
+    },
+    {
+      "id": "p5",
+      "kind": "break",
+      "sentences": []
+    },
+    {
+      "id": "p6",
+      "sentences": [
+        {
+          "id": "s17",
+          "text": "A Second Section"
+        }
+      ],
+      "kind": "h"
+    },
+    {
+      "id": "p7",
+      "sentences": [
+        {
+          "id": "s18",
+          "text": "Now the light has moved across the table."
+        },
+        {
+          "id": "s19",
+          "text": "The reader has finished several pages."
+        },
+        {
+          "id": "s20",
+          "text": "She pauses to look out of the window, and then returns to the book."
+        },
+        {
+          "id": "s21",
+          "text": "Nothing has been lost."
+        },
+        {
+          "id": "s22",
+          "text": "The book remembers her place, and so does the reader."
+        }
+      ]
+    },
+    {
+      "id": "p8",
+      "sentences": [
+        {
+          "id": "s23",
+          "text": "If you pause the narration, the highlight should stay where it is."
+        },
+        {
+          "id": "s24",
+          "text": "If you press play again, it should continue from the same sentence."
+        },
+        {
+          "id": "s25",
+          "text": "If you switch from the book view to the listening view, you should arrive at the very same place in the text."
+        }
+      ]
+    },
+    {
+      "id": "p9",
+      "sentences": [
+        {
+          "id": "s26",
+          "text": "You can also change the size of the letters."
+        },
+        {
+          "id": "s27",
+          "text": "When the text grows larger, there are more pages, but the narrated sentence should still be found on the correct page."
+        },
+        {
+          "id": "s28",
+          "text": "This is the purpose of measuring each sentence after the layout is complete."
+        }
+      ]
+    },
+    {
+      "id": "p10",
+      "sentences": [
+        {
+          "id": "s29",
+          "text": "The afternoon arrives."
+        },
+        {
+          "id": "s30",
+          "text": "The shadows in the room grow longer and softer."
+        },
+        {
+          "id": "s31",
+          "text": "The reader closes her eyes for a moment and listens."
+        },
+        {
+          "id": "s32",
+          "text": "The voice continues, steady and calm, and the words appear one after another on the page."
+        }
+      ]
+    },
+    {
+      "id": "p11",
+      "sentences": [
+        {
+          "id": "s33",
+          "text": "At last the chapter comes to an end."
+        },
+        {
+          "id": "s34",
+          "text": "The reader marks her place and stands up."
+        },
+        {
+          "id": "s35",
+          "text": "Tomorrow she will return to this room, and the book will open exactly where she left it."
+        }
+      ]
+    }
+  ]
+}
