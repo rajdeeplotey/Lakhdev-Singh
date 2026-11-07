@@ -22,7 +22,7 @@ export function Logo({
   const site = useSite();
   const [failed, setFailed] = useState(false);
   const src =
-    variant === 'emblem' ? site?.brand.logoEmblem : variant === 'stacked' ? site?.brand.logoStacked ?? site?.brand.logoFull : site?.brand.logoFull;
+    variant === 'emblem' ? (height && height <= 96 && site?.brand.logoSmall) || site?.brand.logoEmblem : variant === 'stacked' ? site?.brand.logoStacked ?? site?.brand.logoFull : site?.brand.logoFull;
   const alt = variant === 'emblem' ? 'LS — Dr. Lakhdev Singh' : 'Dr. Lakhdev Singh — Writer';
 
   const img =

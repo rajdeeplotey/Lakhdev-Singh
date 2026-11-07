@@ -1,13 +1,16 @@
 # Official brand assets
 
-Generated from the originals in `/brand-source` (cream background removed; colours, shapes and proportions untouched).
+The site uses ONE logo everywhere: the round logo from the Heyzine flipbooks, in a version WITHOUT the
+"WRITER · Dr. Lakhdev Singh" text (master: `/brand-source/logo-round-noname.png`). It was made from the original
+(`/brand-source/logo-round-original.png`) by refilling the cream disc with its own shading and centring the LS mark
+(letters, quill, book) at 106%; the bronze ring and the mark itself are unchanged.
 
 | File | Used for |
 |---|---|
-| `logo-emblem.webp/.png` | LS emblem: header & reader (in an ivory medallion), hero arch, About section, loading screen |
-| `logo-full.webp/.png` | Horizontal logo: footer |
-| `logo-stacked.webp/.png` | Stacked logo: available for large branding (`site.json → brand.logoStacked`) |
-| `favicon-64.png`, `favicon-512.png`, `apple-touch-icon.png` | Browser / phone icons |
+| `logo-round.webp` (600px) / `logo-round.png` | Hero arch, About seal, footer, loading screen |
+| `logo-round-160.webp` | Small spots: header, reader bar, About seal |
+| `favicon-64.png`, `favicon-512.png` | Browser tab icon |
+| `apple-touch-icon.png` | Phone home-screen icon (logo on the site's cream, as icons must be opaque) |
 
-The logo has navy lettering, so it is always placed on an ivory or parchment surface (never recoloured for dark backgrounds).
-If a vector (SVG) master or a light-on-dark version of the logo exists, drop it here and update `public/content/site.json → brand`.
+Paths are set in `public/content/site.json → brand`. The logo is never recoloured, cropped or distorted.
+Earlier logo versions (horizontal / stacked) are kept in `/brand-source` and in git history.

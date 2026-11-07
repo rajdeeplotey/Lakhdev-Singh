@@ -1,18 +1,28 @@
 import { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { SiteProvider } from './content/SiteContext';
+import { LangProvider, useT } from './i18n';
 import { PageLoader } from './components/PageLoader';
 import { scrollToId } from './components/HashLink';
 import Home from './pages/Home';
+import { BookViewer } from './components/BookViewer';
+import { parseHash } from './lib/viewer';
 
-// Reader & detail are split into their own chunks — the homepage loads fast.
-const BookDetail = lazy(() => import('./pages/BookDetail'));
-const Reader = lazy(() => import('./pages/Reader'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+
+function SkipLink() {
+  const t = useT();
+  return (
+    <a href="#main" className="skip-link">
+      {t.skip}
+    </a>
+  );
+}
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
+    if (parseHash(hash)) return; // #book-… opens the viewer, never scrolls
     if (hash) {
       const id = hash.slice(1);
       // wait for content (loaded from JSON) to render
@@ -32,21 +42,20 @@ function ScrollManager() {
 
 export default function App() {
   return (
+    <LangProvider>
     <SiteProvider>
       <BrowserRouter>
-        <a href="#main" className="skip-link">
-          Skip to content
-        </a>
+        <SkipLink />
         <ScrollManager />
         <Suspense fallback={<PageLoader />}>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/books/:slug" element={<BookDetail />} />
-            <Route path="/read/:slug" element={<Reader />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
+        <BookViewer />
       </BrowserRouter>
     </SiteProvider>
+    </LangProvider>
   );
 }

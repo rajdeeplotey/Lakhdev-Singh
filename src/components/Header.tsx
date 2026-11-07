@@ -2,30 +2,34 @@ import { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Logo } from './Logo';
 import { HashLink } from './HashLink';
-import { useLibrary } from '../content/SiteContext';
-import { bookOneTargets } from '../content/bookOne';
-
-const NAV = [
-  { href: '/#books', label: 'The Books' },
-  { href: '/#about', label: 'About' },
-  { href: '/#contact', label: 'Contact' },
-];
-// the full-screen mobile menu keeps every section
-const MOBILE_NAV = [
-  { href: '/#top', label: 'Home' },
-  { href: '/#books', label: 'The Books' },
-  { href: '/#about', label: 'About the Author' },
-  { href: '/#read-listen', label: 'Reading & Listening' },
-  { href: '/#contact', label: 'Contact' },
-];
+import { LangToggle } from './LangToggle';
+import { useBooks, useSite } from '../content/SiteContext';
+import { startBook } from '../content/startBook';
+import { openBook } from '../lib/viewer';
+import { useT } from '../i18n';
 
 export function Header() {
+  const t = useT();
+  const site = useSite();
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const { pathname } = useLocation();
-  const lib = useLibrary();
-  const { listenHref } = bookOneTargets(lib);
+  const book1 = startBook(useBooks());
   const overHero = pathname === '/';
+
+  const NAV = [
+    { href: '/#books', label: t.nav.books },
+    { href: '/#about', label: t.nav.about },
+    { href: '/#contact', label: t.nav.contact },
+  ];
+  // the full-screen mobile menu keeps every section
+  const MOBILE_NAV = [
+    { href: '/#top', label: t.nav.home },
+    { href: '/#books', label: t.nav.books },
+    { href: '/#about', label: t.nav.aboutLong },
+    { href: '/#read-listen', label: t.nav.readListen },
+    { href: '/#contact', label: t.nav.contact },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -46,15 +50,16 @@ export function Header() {
 
   const solid = scrolled || !overHero;
   const close = () => setOpen(false);
+  const name = site ? `${site.authorParts.first} ${site.authorParts.last}` : 'Lakhdev Singh';
 
   return (
     <header className={`site-header ${solid ? 'is-solid' : ''} ${open ? 'menu-open' : ''}`}>
       <div className="container header-inner">
-        <Link to="/" className="header-brand" aria-label="Dr. Lakhdev Singh — home" onClick={close}>
+        <Link to="/" className="header-brand" aria-label={`${site?.author ?? 'Dr. Lakhdev Singh'} — ${t.nav.homeLink}`} onClick={close}>
           <Logo variant="emblem" badge height={48} eager />
           <span className="header-wordmark">
-            <span>Lakhdev Singh</span>
-            <small>Writer</small>
+            <span>{name}</span>
+            <small>{t.writer}</small>
           </span>
         </Link>
 
@@ -64,16 +69,22 @@ export function Header() {
               {n.label}
             </HashLink>
           ))}
-          <Link to={listenHref} className="header-listen">
-            <HeadphonesIcon /> Listen now
-          </Link>
+          <LangToggle className="header-lang" />
+          {book1 && (
+            <button type="button" className="header-listen" onClick={() => openBook(book1.slug)}>
+              <HeadphonesIcon /> {t.nav.listenNow}
+            </button>
+          )}
         </nav>
+
+        {/* phones & tablets: language switch stays visible in the header, not hidden in the menu */}
+        <LangToggle className="header-lang-mobile" compact />
 
         <button
           className="menu-toggle"
           aria-expanded={open}
           aria-controls="mobile-menu"
-          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
           onClick={() => setOpen((o) => !o)}
         >
           <span />
@@ -90,9 +101,18 @@ export function Header() {
             </HashLink>
           ))}
         </nav>
-        <Link to={listenHref} className="btn btn-gold" onClick={close}>
-          <HeadphonesIcon /> Listen now
-        </Link>
+        {book1 && (
+          <button
+            type="button"
+            className="btn btn-gold"
+            onClick={() => {
+              close();
+              openBook(book1.slug);
+            }}
+          >
+            <HeadphonesIcon /> {t.nav.listenNow}
+          </button>
+        )}
       </div>
     </header>
   );

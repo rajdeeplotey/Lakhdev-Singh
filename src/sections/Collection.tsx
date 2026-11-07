@@ -1,25 +1,24 @@
-import { useLibrary } from '../content/SiteContext';
+import { useBooks } from '../content/SiteContext';
 import { BookCard } from '../components/BookCard';
 import { Reveal } from '../components/Reveal';
+import { useT } from '../i18n';
 
 export function Collection() {
-  const lib = useLibrary();
-  if (!lib) return null;
+  const t = useT();
+  const data = useBooks();
+  if (!data) return null;
   return (
     <section className="collection" id="books" aria-labelledby="books-title">
       <div className="container">
         <Reveal className="section-head">
-          <p className="eyebrow">The Library</p>
+          <p className="eyebrow">{t.books.eyebrow}</p>
           <h2 id="books-title" className="display">
-            The Book <em>Collection</em>
+            {t.books.titleA} <em>{t.books.titleB}</em>
           </h2>
-          <p className="lede">
-            {lib.books.length} {lib.books.length === 1 ? 'volume' : 'volumes'}, each available to read and to hear,
-            chapter by chapter.
-          </p>
+          <p className="lede">{t.hero.booksAllFree(data.books.length)}</p>
         </Reveal>
         <div className="shelf">
-          {lib.books.map((b, i) => (
+          {data.books.map((b, i) => (
             <Reveal key={b.slug} delay={(i % 3) * 0.1}>
               <BookCard book={b} index={i} />
             </Reveal>

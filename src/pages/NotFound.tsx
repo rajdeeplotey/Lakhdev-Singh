@@ -2,17 +2,19 @@ import { Link } from 'react-router-dom';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
 import { Flourish } from '../components/Botanical';
+import { useT } from '../i18n';
 
-export default function NotFound({ message = 'This page could not be found.' }: { message?: string }) {
+export default function NotFound({ message }: { message?: string }) {
+  const t = useT();
   return (
     <>
       <Header />
       <main className="notfound" id="main">
-        <p className="eyebrow center">A missing page</p>
-        <h1>{message}</h1>
+        <p className="eyebrow center">{t.notFound.eyebrow}</p>
+        <h1>{message ?? t.notFound.page}</h1>
         <Flourish className="notfound-flourish" />
         <Link to="/" className="btn">
-          Return to the library
+          {t.notFound.back}
         </Link>
       </main>
       <Footer />

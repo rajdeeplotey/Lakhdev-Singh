@@ -1,5 +1,10 @@
 {
   "author": "Dr. Lakhdev Singh",
+  "authorParts": {
+    "prefix": "Dr.",
+    "first": "Lakhdev",
+    "last": "Singh"
+  },
   "role": "Writer",
   "hero": {
     "eyebrow": "The Literary Library of",
@@ -20,7 +25,7 @@
   },
   "readListen": {
     "heading": "Read. Listen. Return whenever you like.",
-    "body": "Every book in this library is free to read and free to listen to. Turn the pages in Classic Book Mode, or follow the narration line by line in Immersive Listening Mode. The site remembers where you stopped."
+    "body": "Every book in this library is free to read. Each one opens exactly as printed, page by page, and you can start from any chapter."
   },
   "contact": {
     "email": "",
@@ -29,8 +34,33 @@
     "social": []
   },
   "brand": {
-    "logoFull": "/brand/logo-full.webp",
-    "logoStacked": "/brand/logo-stacked.webp",
-    "logoEmblem": "/brand/logo-emblem.webp"
+    "logoFull": "/brand/logo-round.webp",
+    "logoStacked": "/brand/logo-round.webp",
+    "logoEmblem": "/brand/logo-round.webp",
+    "logoSmall": "/brand/logo-round-160.webp"
+  },
+  "i18n": {
+    "pa": {
+      "author": "ਡਾ. ਲਖਦੇਵ ਸਿੰਘ",
+      "authorParts": {
+        "prefix": "ਡਾ.",
+        "first": "ਲਖਦੇਵ",
+        "last": "ਸਿੰਘ"
+      },
+      "role": "ਲੇਖਕ",
+      "hero": {
+        "eyebrow": "ਸਾਹਿਤਕ ਲਾਇਬ੍ਰੇਰੀ",
+        "headline": "ਹੌਲੀ-ਹੌਲੀ ਪੜ੍ਹਨ ਲਈ, ਅਤੇ ਸੁਣਨ ਲਈ ਕਹਾਣੀਆਂ।",
+        "intro": "ਇੱਥੇ ਹਰ ਕਿਤਾਬ ਪੰਨਾ-ਦਰ-ਪੰਨਾ ਪੜ੍ਹੀ ਜਾ ਸਕਦੀ ਹੈ ਜਾਂ ਮੇਰੀ ਆਪਣੀ ਆਵਾਜ਼ ਵਿੱਚ ਸੁਣੀ ਜਾ ਸਕਦੀ ਹੈ — ਅਧਿਆਇ-ਦਰ-ਅਧਿਆਇ, ਮੁਫ਼ਤ ਅਤੇ ਸਭ ਲਈ।"
+      },
+      "about": {
+        "heading": "ਲੇਖਕ ਬਾਰੇ",
+        "photoAlt": "ਡਾ. ਲਖਦੇਵ ਸਿੰਘ ਦੀ ਤਸਵੀਰ"
+      },
+      "readListen": {
+        "heading": "ਪੜ੍ਹੋ। ਸੁਣੋ। ਜਦੋਂ ਚਾਹੋ ਵਾਪਸ ਆਓ।",
+        "body": "ਇਸ ਲਾਇਬ੍ਰੇਰੀ ਦੀ ਹਰ ਕਿਤਾਬ ਪੜ੍ਹਨ ਲਈ ਮੁਫ਼ਤ ਹੈ। ਹਰ ਕਿਤਾਬ ਬਿਲਕੁਲ ਛਪੀ ਕਿਤਾਬ ਵਾਂਗ ਪੰਨਾ-ਦਰ-ਪੰਨਾ ਖੁੱਲ੍ਹਦੀ ਹੈ, ਅਤੇ ਤੁਸੀਂ ਕਿਸੇ ਵੀ ਅਧਿਆਇ ਤੋਂ ਸ਼ੁਰੂ ਕਰ ਸਕਦੇ ਹੋ।"
+      }
+    }
   }
 }

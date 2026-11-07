@@ -1,0 +1,209 @@
+/* ═════════════ Language switch (English / ਪੰਜਾਬੀ) ═════════════ */
+.lang-toggle {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(226, 194, 126, 0.55);
+  flex-shrink: 0;
+}
+.lang-toggle button {
+  min-height: 44px;
+  min-width: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  font-family: 'Jost', 'Noto Sans Gurmukhi', var(--f-ui);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  color: inherit;
+  opacity: 0.85;
+  transition: background 0.25s, color 0.25s, opacity 0.25s;
+}
+.lang-toggle button[lang='pa'] {
+  font-size: 15px;
+}
+.lang-toggle button:hover {
+  opacity: 1;
+  background: rgba(226, 194, 126, 0.12);
+}
+.lang-toggle button.is-on {
+  background: #e2c27e;
+  color: #1c2b4d;
+  opacity: 1;
+  font-weight: 600;
+}
+.lang-toggle button:focus-visible {
+  outline: 2px solid #e2c27e;
+  outline-offset: 2px;
+}
+
+/* header placement */
+.header-nav .header-lang {
+  color: #f3eadb;
+}
+.header-lang-mobile {
+  display: none;
+  color: #f3eadb;
+  margin-left: auto;
+}
+.header-lang-mobile button {
+  min-height: 44px;
+  padding: 0 12px;
+}
+@media (max-width: 1023px) {
+  .header-lang-mobile {
+    display: inline-flex;
+  }
+  .site-header .header-brand {
+    margin-right: 0;
+  }
+  .site-header .header-inner {
+    gap: 10px;
+  }
+}
+@media (max-width: 359px) {
+  .header-lang-mobile button {
+    padding: 0 9px;
+  }
+}
+
+/* reader: one-tap switch in the top bar */
+.lang-switch {
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(226, 194, 126, 0.55);
+  color: #f3eadb;
+  font-family: 'Jost', 'Noto Sans Gurmukhi', var(--f-ui);
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: 6px;
+  transition: background 0.25s;
+}
+.lang-switch:hover {
+  background: rgba(226, 194, 126, 0.14);
+}
+/* settings drawer (light background) */
+.set-lang {
+  color: var(--navy);
+  border-color: rgba(23, 40, 70, 0.3);
+}
+.set-lang button {
+  min-height: 44px;
+  padding: 0 20px;
+  font-size: 15px;
+}
+.set-lang button[lang='pa'] {
+  font-size: 16px;
+}
+
+/* book detail: "· reading" marker follows the language */
+.chapter-list li.is-current .cl-title::after {
+  content: ' · ' attr(data-reading);
+}
+/* ═════════════ Gurmukhi typography (html[lang="pa"]) ═════════════
+   Gurmukhi letters hang from a continuous top line (ਸ਼ਿਰੋਰੇਖਾ): letter-spacing breaks it, small sizes
+   are hard to read, and tight line-heights clip the vowel signs above/below. */
+html[lang='pa'] body *:not(.lang-toggle button):not(svg):not(svg *) {
+  letter-spacing: normal !important;
+}
+html[lang='pa'] .eyebrow,
+html[lang='pa'] .dhero-label,
+html[lang='pa'] .mhero-label,
+html[lang='pa'] .author-label,
+html[lang='pa'] .book-meta,
+html[lang='pa'] .footer-col h3,
+html[lang='pa'] .header-wordmark small,
+html[lang='pa'] .set-label,
+html[lang='pa'] .reader-book,
+html[lang='pa'] .ch-label,
+html[lang='pa'] .page-end-next-label,
+html[lang='pa'] .link-line,
+html[lang='pa'] .btn,
+html[lang='pa'] .chapter-step,
+html[lang='pa'] .reader-foot-meta,
+html[lang='pa'] .mode-switch button,
+html[lang='pa'] .reader-back {
+  font-size: max(15px, 1em) !important;
+  text-transform: none;
+}
+html[lang='pa'] .dhero-label,
+html[lang='pa'] .mhero-label {
+  font-size: 17px !important;
+}
+html[lang='pa'] .dhero-name {
+  line-height: 1.12;
+}
+html[lang='pa'] .dhero-dr {
+  padding-top: 0.35em;
+}
+html[lang='pa'] .mhero-name {
+  font-size: 40px;
+  line-height: 1.15;
+}
+html[lang='pa'] .author-name,
+html[lang='pa'] .latest-title,
+html[lang='pa'] .detail-copy h1,
+html[lang='pa'] .section-head h2,
+html[lang='pa'] .about-title,
+html[lang='pa'] .rl-copy h2,
+html[lang='pa'] .notfound h1 {
+  line-height: 1.25;
+}
+html[lang='pa'] .dhero-tagline,
+html[lang='pa'] .mhero-tagline {
+  line-height: 1.45;
+}
+html[lang='pa'] .dhero-tagline {
+  white-space: normal;
+}
+html[lang='pa'] .dhero-intro,
+html[lang='pa'] .author-bio,
+html[lang='pa'] .rl-body,
+html[lang='pa'] .rl-mode p,
+html[lang='pa'] .rl-points,
+html[lang='pa'] .lede,
+html[lang='pa'] .book-card-desc,
+html[lang='pa'] .mhero-trust,
+html[lang='pa'] .dhero-shelf-sub,
+html[lang='pa'] .author-stats dt,
+html[lang='pa'] .player-note,
+html[lang='pa'] .sync-note {
+  line-height: 1.8;
+}
+html[lang='pa'] .mhero-trust,
+html[lang='pa'] .dhero-shelf-sub,
+html[lang='pa'] .author-stats dt {
+  font-size: 15px;
+}
+/* the marquee word is shorter and taller in Gurmukhi */
+html[lang='pa'] .marquee-row span {
+  line-height: 1.3;
+  text-transform: none;
+}
+/* Punjabi pill labels are longer: let the two hero buttons wrap gracefully */
+html[lang='pa'] .mhero-btn {
+  font-size: 16px;
+  padding: 0 10px;
+  text-align: center;
+  line-height: 1.2;
+}
+html[lang='pa'] .pill {
+  font-size: 17px;
+}
+
+/* rotating badge text in Gurmukhi: words stay whole (no letter-spacing / textLength stretching);
+   the phrase is written twice and word-spacing fills the circle */
+html[lang='pa'] .dhero-badge-ring {
+  letter-spacing: 0;
+  font-size: 13px;
+  font-weight: 600;
+  word-spacing: 7.2px;
+}
+html[lang='pa'] .mhero-badge-ring {
+  letter-spacing: 0;
+  font-size: 9px;
+  font-weight: 600;
+  word-spacing: 2.3px;
+}

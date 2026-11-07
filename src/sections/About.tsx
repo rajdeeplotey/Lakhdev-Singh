@@ -1,25 +1,26 @@
-import { useSite, useLibrary } from '../content/SiteContext';
+import { useSite, useBooks } from '../content/SiteContext';
 import { Reveal } from '../components/Reveal';
 import { HashLink } from '../components/HashLink';
 import { fmtTime } from '../lib/format';
 import { togglePreview, usePreviewPlaying, usePreviewTime } from '../lib/chapterPreview';
+import { useT } from '../i18n';
 
 /** About the Author — portrait arch with offset outline + LS seal, bio, stats, welcome audio. */
 export function About() {
+  const t = useT();
   const site = useSite();
-  const lib = useLibrary();
+  const data = useBooks();
   const welcome = site?.about.welcomeAudio || null;
   const playing = usePreviewPlaying(welcome);
   const elapsed = usePreviewTime(welcome);
-  if (!site || !lib) return null;
+  if (!site || !data) return null;
   const { about } = site;
 
-  const books = lib.books.filter((b) => !b.devOnly);
-  // only the author's real books count (not placeholders or demo books)
-  const chapters = books.reduce((n, b) => n + (b.placeholder || b.demo ? 0 : b.chapters.length), 0);
+  const books = data.books;
+  const chapters = books.reduce((n, b) => n + b.chapters.length, 0);
+  const pages = books.reduce((n, b) => n + b.pages, 0);
   const hours = about.narratedHours;
-  const [first, ...rest] = site.author.split(' ');
-  const last = rest.pop() ?? '';
+  const { prefix, first, last } = site.authorParts;
   const quote = about.quote?.trim();
 
   return (
@@ -43,14 +44,14 @@ export function About() {
             ) : null}
           </div>
           <div className="author-seal" aria-hidden>
-            <img src="/brand/logo-emblem-gold.webp" alt="" loading="lazy" decoding="async" />
+            <img src={site.brand.logoSmall || site.brand.logoEmblem} alt="" loading="lazy" decoding="async" />
           </div>
         </Reveal>
 
         <Reveal className="author-copy" delay={0.1}>
           <p className="author-label">{about.heading}</p>
           <h2 id="author-title" className="author-name">
-            {first} {rest.join(' ')} <em>{last}</em>
+            {prefix} {first} <em>{last}</em>
           </h2>
           <blockquote className={`author-quote ${quote ? '' : 'is-todo'}`}>
             {quote ? `“${quote}”` : '[Quote to be supplied — edit public/content/site.json → about.quote]'}
@@ -65,16 +66,17 @@ export function About() {
 
           <dl className="author-stats">
             <div>
-              <dt>Books published</dt>
+              <dt>{t.about.booksPublished}</dt>
               <dd>{books.length}</dd>
             </div>
             <div>
-              <dt>Chapters, all free</dt>
+              <dt>{t.about.chaptersFree}</dt>
               <dd>{chapters || '—'}</dd>
             </div>
             <div>
-              <dt>Narrated in his voice</dt>
-              <dd>{hours ? `${hours} hrs` : '—'}</dd>
+              {/* narration hours once recorded; until then the real page count */}
+              <dt>{hours ? t.about.narratedVoice : t.about.pagesLabel}</dt>
+              <dd>{hours ? t.about.hrs(hours) : pages}</dd>
             </div>
           </dl>
 
@@ -85,7 +87,7 @@ export function About() {
               onClick={() => welcome && togglePreview(welcome)}
               disabled={!welcome}
               aria-pressed={welcome ? playing : undefined}
-              aria-label={welcome ? (playing ? 'Pause the welcome from the author' : 'Hear a welcome from the author') : 'Welcome message coming soon'}
+              aria-label={welcome ? (playing ? t.about.pauseWelcome : t.about.hearWelcome) : t.about.welcomeSoon}
             >
               <span className="author-btn-dot" aria-hidden>
                 {playing ? (
@@ -99,10 +101,10 @@ export function About() {
                   </svg>
                 )}
               </span>
-              <span>{welcome ? (playing ? `Playing · ${fmtTime(elapsed)}` : 'Hear a welcome from the author') : 'Welcome message coming soon'}</span>
+              <span>{welcome ? (playing ? t.about.playing(fmtTime(elapsed)) : t.about.hearWelcome) : t.about.welcomeSoon}</span>
             </button>
             <HashLink to="/#books" className="author-btn author-btn-line">
-              Read his books <span aria-hidden>→</span>
+              {t.about.readHisBooks} <span aria-hidden>→</span>
             </HashLink>
           </div>
         </Reveal>

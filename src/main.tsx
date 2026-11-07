@@ -7,7 +7,8 @@ import './styles/pages.css';
 import './styles/mobile-hero.css';
 import './styles/desktop-hero.css';
 import './styles/author.css';
-import './styles/reader.css';
+import './styles/i18n.css';
+import './styles/books.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

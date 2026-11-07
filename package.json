@@ -5,14 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node scripts/strip-dev.mjs",
+    "build": "tsc -b && vite build",
     "preview": "vite preview",
     "typecheck": "tsc -b",
-    "test": "vitest run",
-    "content:import": "node scripts/import-chapter.mjs",
-    "content:export-aeneas": "node scripts/export-aeneas.mjs",
-    "content:import-alignment": "node scripts/import-alignment.mjs",
-    "content:validate": "node scripts/validate-content.mjs"
+    "test": "vitest run"
   },
   "dependencies": {
     "react": "^18.3.1",
@@ -20,6 +16,7 @@
     "react-router-dom": "^6.28.0"
   },
   "devDependencies": {
+    "@types/node": "^22.10.2",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@vitejs/plugin-react": "^4.3.4",

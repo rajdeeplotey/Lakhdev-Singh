@@ -1,0 +1,536 @@
+{
+  "_readme": "One entry per book. Text is Unicode Gurmukhi copied from the books (do not retype). heyzinePage = page number in the Heyzine flipbook (#page/N); page = number printed in the book. Set chaptersConfirmed:true after checking a chapter list.",
+  "featured": "gurmat-guhaj-vichar-3",
+  "books": [
+    {
+      "id": 1,
+      "slug": "gurmat-guhaj-vichar-1",
+      "titlePa": "ਗੁਰਮਤਿ ਗੁਹਜ ਵਿਚਾਰ (ਭਾਗ-1)",
+      "titleEn": "Gurmat Guhaj Vichar (Part 1)",
+      "cover": "/images/covers/book-1-cover.webp",
+      "coverWidth": 600,
+      "coverHeight": 849,
+      "heyzine": "https://heyzine.com/flip-book/f7f49e1065.html",
+      "descriptionPa": "",
+      "pages": 135,
+      "chaptersConfirmed": true,
+      "chaptersSource": "printed ਤਤਕਰਾ (Heyzine text)",
+      "chapters": [
+        {
+          "n": 1,
+          "pa": "ਪੁੰਨ",
+          "page": 7,
+          "heyzinePage": 5
+        },
+        {
+          "n": 2,
+          "pa": "ਰਾਜਾ ਜਨਕ",
+          "page": 10,
+          "heyzinePage": 8
+        },
+        {
+          "n": 3,
+          "pa": "ਹਿੰਦੂ-ਸਿੱਖਾਂ ਦਾ ਪਿਆਰ",
+          "page": 15,
+          "heyzinePage": 13
+        },
+        {
+          "n": 4,
+          "pa": "ਨਿੰਦਾ",
+          "page": 20,
+          "heyzinePage": 18
+        },
+        {
+          "n": 5,
+          "pa": "ਸੂਖਮ ਹਉਮੈ",
+          "page": 45,
+          "heyzinePage": 43
+        },
+        {
+          "n": 6,
+          "pa": "ਸੋ ਸਤਿਗੁਰ",
+          "page": 56,
+          "heyzinePage": 54
+        },
+        {
+          "n": 7,
+          "pa": "ਪਿਆਰ ਦੇ ਛੇ ਲੱਛਣ",
+          "page": 62,
+          "heyzinePage": 60
+        },
+        {
+          "n": 8,
+          "pa": "ਮਸਕੀਨੀਆ",
+          "page": 64,
+          "heyzinePage": 62
+        },
+        {
+          "n": 9,
+          "pa": "ਮੁਕਤੀ",
+          "page": 68,
+          "heyzinePage": 66
+        },
+        {
+          "n": 10,
+          "pa": "ਰਾਜਾਨ ਰਾਜ॥ ਭਾਨਾਨ ਭਾਨ॥ ਦੇਵਾਨ ਦੇਵ॥ ਉਪਮਾ ਮਹਾਨ॥",
+          "page": 72,
+          "heyzinePage": 70
+        },
+        {
+          "n": 11,
+          "pa": "ਭਗਤੀ ਤੋਂ ਗਿਰ ਕੇ",
+          "page": 76,
+          "heyzinePage": 74
+        },
+        {
+          "n": 12,
+          "pa": "ਪ੍ਰਮਾਤਮਾ ਦਾ ਨਿਕਟ ਵਸਣਾ",
+          "page": 83,
+          "heyzinePage": 81
+        },
+        {
+          "n": 13,
+          "pa": "ਗੁਰਮਤਾ",
+          "page": 86,
+          "heyzinePage": 84
+        },
+        {
+          "n": 14,
+          "pa": "ਦੁੱਖ",
+          "page": 94,
+          "heyzinePage": 92
+        },
+        {
+          "n": 15,
+          "pa": "ਠੱਗੀ ਇਕ ਸਜ਼ਾ",
+          "page": 100,
+          "heyzinePage": 98
+        },
+        {
+          "n": 16,
+          "pa": "ਦਸਮ ਗ੍ਰੰਥ ਸਾਹਿਬ ਜੀ",
+          "page": 105,
+          "heyzinePage": 103
+        },
+        {
+          "n": 17,
+          "pa": "ਵੇਮੁਖ ਹੋਏ ਰਾਮ ਤੇ",
+          "page": 108,
+          "heyzinePage": 106
+        },
+        {
+          "n": 18,
+          "pa": "ਅਨੰਦ",
+          "page": 111,
+          "heyzinePage": 109
+        },
+        {
+          "n": 19,
+          "pa": "ਅਕਾਲੀ",
+          "page": 119,
+          "heyzinePage": 117
+        },
+        {
+          "n": 20,
+          "pa": "ਅਪਨੇ ਲੋਭ ਕਉ ਕੀਨੋ ਮੀਤੁ ॥",
+          "page": 126,
+          "heyzinePage": 125
+        },
+        {
+          "n": 21,
+          "pa": "ਨਿੰਦਾ ਤੇ ਸਚ",
+          "page": 129,
+          "heyzinePage": 128
+        },
+        {
+          "n": 22,
+          "pa": "ਸਿਆਣਪ",
+          "page": 132,
+          "heyzinePage": 131
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "slug": "gurmat-guhaj-vichar-2",
+      "titlePa": "ਗੁਰਮਤਿ ਗੁਹਜ ਵਿਚਾਰ (ਭਾਗ- 2)",
+      "titleEn": "Gurmat Guhaj Vichar (Part 2)",
+      "cover": "/images/covers/book-2-cover.webp",
+      "coverWidth": 600,
+      "coverHeight": 849,
+      "heyzine": "https://heyzine.com/flip-book/2e278305bd.html",
+      "descriptionPa": "",
+      "pages": 127,
+      "chaptersConfirmed": false,
+      "chaptersSource": "chapter headings found in the book (printed ਤਤਕਰਾ belongs to Part 3)",
+      "chapters": [
+        {
+          "n": 1,
+          "pa": "ਸ੍ਰਿਸ਼ਟੀ ਦੀ ਉਤਪੱਤੀ",
+          "page": 7,
+          "heyzinePage": 6
+        },
+        {
+          "n": 2,
+          "pa": "ਨਾਮ ਅਤੇ ਬਾਣੀ",
+          "page": 12,
+          "heyzinePage": 11
+        },
+        {
+          "n": 3,
+          "pa": "ਜੁਗਾਂ ਜੁਗਾਂਤਰਾਂ ਤੋਂ ਨਾਮ ਦੀ ਮਹਿਮਾ",
+          "page": 15,
+          "heyzinePage": 14,
+          "verify": "typed from the page image — please confirm"
+        },
+        {
+          "n": 4,
+          "pa": "ਭਗਤ, ਸੰਤ, ਸਾਧ ਆਦਿ ਵਿੱਚ ਅੰਤਰ",
+          "page": 22,
+          "heyzinePage": 21
+        },
+        {
+          "n": 5,
+          "pa": "ਮੂਰਖ",
+          "page": 24,
+          "heyzinePage": 23
+        },
+        {
+          "n": 6,
+          "pa": "ਦਸ ਅਵਸਥਾਵਾਂ ਮਨ ਅਤੇ ਉਮਰ ਅਨੁਸਾਰ",
+          "page": 31,
+          "heyzinePage": 30
+        },
+        {
+          "n": 7,
+          "pa": "ਸੁਪਨੇ ਸੇਤੀ ਚਿਤੁ ਮੂਰਖੁ ਲਾਇਆ",
+          "page": 34,
+          "heyzinePage": 33
+        },
+        {
+          "n": 8,
+          "pa": "ਸੁੱਚ",
+          "page": 38,
+          "heyzinePage": 37
+        },
+        {
+          "n": 9,
+          "pa": "ਥੋੜਾ ਸੌਣਾ, ਖਾਣਾ, ਥੋੜਾ ਬੋਲਣਾ ਗੁਰਮਤਿ ਪਾਏ",
+          "page": 41,
+          "heyzinePage": 40
+        },
+        {
+          "n": 10,
+          "pa": "ਸੋ ਪੰਡਿਤ",
+          "page": 47,
+          "heyzinePage": 46
+        },
+        {
+          "n": 11,
+          "pa": "ਪਾਪ ਨਾਸ਼ਕ ਵਿਧੀਆਂ",
+          "page": 52,
+          "heyzinePage": 51
+        },
+        {
+          "n": 12,
+          "pa": "ਗੁਰੂ ਪਰਾਇਣ",
+          "page": 56,
+          "heyzinePage": 55
+        },
+        {
+          "n": 13,
+          "pa": "ਅੰਤਕਾਲ ਦੇ ਚਿੰਤਨ ਕਾਰਨ ਜੂਨੀ",
+          "page": 59,
+          "heyzinePage": 58
+        },
+        {
+          "n": 14,
+          "pa": "ਭੁੱਖ",
+          "page": 63,
+          "heyzinePage": 62
+        },
+        {
+          "n": 15,
+          "pa": "ਵਿਰੋਧਾਭਾਸ",
+          "page": 65,
+          "heyzinePage": 64
+        },
+        {
+          "n": 16,
+          "pa": "ਗੁਰਮਤਿ ਰਾਹ",
+          "page": 73,
+          "heyzinePage": 72
+        },
+        {
+          "n": 17,
+          "pa": "ਹਰਿ, ਰਾਮ",
+          "page": 75,
+          "heyzinePage": 74
+        },
+        {
+          "n": 18,
+          "pa": "ਅਕ੍ਰਿਤਘਣ",
+          "page": 77,
+          "heyzinePage": 76
+        },
+        {
+          "n": 19,
+          "pa": "ਕੀਰਤਨ ਵਿੱਚ ਸਿਮਰਨ",
+          "page": 80,
+          "heyzinePage": 79
+        },
+        {
+          "n": 20,
+          "pa": "ਖਾਲਸਾ ਸੋਇ ਜੋ ਕਰੇ ਨਿਤ ਜੰਗ",
+          "page": 97,
+          "heyzinePage": 96
+        },
+        {
+          "n": 21,
+          "pa": "ਤਿੰਨ ਅਵਸਥਾ ਜਾਣਿ",
+          "page": 104,
+          "heyzinePage": 103
+        },
+        {
+          "n": 22,
+          "pa": "ਧਿਆਨ ਤੇ ਨਾਮ",
+          "page": 106,
+          "heyzinePage": 105
+        },
+        {
+          "n": 23,
+          "pa": "ਨਹ ਬਿਲੰਬ ਧਰਮੰ ਬਿਲੰਬ ਪਾਪੰ॥",
+          "page": 109,
+          "heyzinePage": 108
+        },
+        {
+          "n": 24,
+          "pa": "ਸੰਸਾਰੁ ਭਰਮਿ ਸੁਤਾ",
+          "page": 110,
+          "heyzinePage": 109
+        },
+        {
+          "n": 25,
+          "pa": "ਮਾਨੁ ਸਭੈ ਕਉ ਖਾਇ",
+          "page": 113,
+          "heyzinePage": 112
+        },
+        {
+          "n": 26,
+          "pa": "ਸਾਖੀ (ਬ੍ਰਹਮ ਗਿਆਨੀ)",
+          "page": 116,
+          "heyzinePage": 115
+        },
+        {
+          "n": 27,
+          "pa": "ਅਗਿਆਨਤਾ ਚ ਗ਼ਲਤ ਸੋਚ",
+          "page": 118,
+          "heyzinePage": 117
+        },
+        {
+          "n": 28,
+          "pa": "ਭਗਤੀ ਤੋਂ ਡਿੱਗ ਕੇ",
+          "page": 121,
+          "heyzinePage": 120
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "slug": "gurmat-guhaj-vichar-3",
+      "titlePa": "ਗੁਰਮਤਿ ਗੁਹਜ ਵਿਚਾਰ (ਭਾਗ- 3)",
+      "titleEn": "Gurmat Guhaj Vichar (Part 3)",
+      "cover": "/images/covers/book-3-cover.webp",
+      "coverWidth": 600,
+      "coverHeight": 849,
+      "heyzine": "https://heyzine.com/flip-book/5da8806fc1.html",
+      "descriptionPa": "",
+      "pages": 135,
+      "chaptersConfirmed": true,
+      "chaptersSource": "printed ਤਤਕਰਾ numbers + chapter headings (Heyzine text)",
+      "chapters": [
+        {
+          "n": 1,
+          "pa": "ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨਾਲ ਕਿੰਝ ਗੱਲ ਕਰੀਏ?",
+          "page": 5,
+          "heyzinePage": 5
+        },
+        {
+          "n": 2,
+          "pa": "ਸਾਹਿਬਜ਼ਾਦਿਆਂ ਦੀ ਸ਼ਹੀਦੀ",
+          "page": 7,
+          "heyzinePage": 7
+        },
+        {
+          "n": 3,
+          "pa": "ਗੁਰਬਾਣੀ ਵਿੱਚ ਅਵਤਾਰ ਕੌਣ ਹੈ?",
+          "page": 9,
+          "heyzinePage": 9
+        },
+        {
+          "n": 4,
+          "pa": "ਇੰਦਰ",
+          "page": 12,
+          "heyzinePage": 12
+        },
+        {
+          "n": 5,
+          "pa": "ਭਗਤ ਕਬੀਰ ਜੀ",
+          "page": 22,
+          "heyzinePage": 22
+        },
+        {
+          "n": 6,
+          "pa": "ਜਥੇਦਾਰ ਦਮਦਮਾ ਸਾਹਿਬ ਜੀ (ਲਗਭਗ 1967)",
+          "page": 27,
+          "heyzinePage": 27
+        },
+        {
+          "n": 7,
+          "pa": "ਸੰਤ ਕਰਤਾਰ ਸਿੰਘ ਜੀ ਭਿੰਡਰਾਂਵਾਲੇ",
+          "page": 29,
+          "heyzinePage": 29
+        },
+        {
+          "n": 8,
+          "pa": "ਜਥੇਦਾਰ ਤਰਨਾ ਦਲ ਬਾਬਾ ਨਿਹਾਲ ਸਿੰਘ ਜੀ",
+          "page": 33,
+          "heyzinePage": 33,
+          "note": "from the printed ਤਤਕਰਾ; the title printed on the chapter page repeats chapter 6"
+        },
+        {
+          "n": 9,
+          "pa": "ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ",
+          "page": 35,
+          "heyzinePage": 35
+        },
+        {
+          "n": 10,
+          "pa": "ਭਾਈ ਬਲਦੇਵ ਸਿੰਘ ਜੀ, ਪਿੰਡ ਕੁਰਾਂਗਣਾ, ਜ਼ਿਲ੍ਹਾ ਹੁਸ਼ਿਆਰਪੁਰ",
+          "page": 43,
+          "heyzinePage": 43
+        },
+        {
+          "n": 11,
+          "pa": "ਗੁਰਬਾਣੀ ਵਿਚਾਰ",
+          "page": 45,
+          "heyzinePage": 45
+        },
+        {
+          "n": 12,
+          "pa": "ਗੁਰੂ ਦਾ ਸਤਿਕਾਰ ਜਾਂ ਪੰਥ ਵਿੱਚ ਪੰਗਾ",
+          "page": 49,
+          "heyzinePage": 49
+        },
+        {
+          "n": 13,
+          "pa": "ਬੇਨਿਵਾਜਾ ਕੁੱਤਿਆ",
+          "page": 54,
+          "heyzinePage": 54
+        },
+        {
+          "n": 14,
+          "pa": "ਕਾਮਧੇਨ ਹਰਿ ਹਰਿ ਗੁਣ ਗਾਮ ॥",
+          "page": 56,
+          "heyzinePage": 56
+        },
+        {
+          "n": 15,
+          "pa": "ਨਿੰਦਾ ਜਨ ਕਉ ਖਰੀ ਪਿਆਰੀ ॥",
+          "page": 59,
+          "heyzinePage": 59
+        },
+        {
+          "n": 16,
+          "pa": "ਨਿੰਦਕ ਕੌਣ",
+          "page": 62,
+          "heyzinePage": 62
+        },
+        {
+          "n": 17,
+          "pa": "ਕਿਹੜੀ ਨਿੰਦਾ ਸਭ ਤੋਂ ਚੰਗੀ",
+          "page": 63,
+          "heyzinePage": 63
+        },
+        {
+          "n": 18,
+          "pa": "ਹਨੂਮੰਤੁ ਅਰਾਧਿਆ",
+          "page": 65,
+          "heyzinePage": 65
+        },
+        {
+          "n": 19,
+          "pa": "ਕਾਮ",
+          "page": 73,
+          "heyzinePage": 73
+        },
+        {
+          "n": 20,
+          "pa": "ਖਿਮਾ",
+          "page": 79,
+          "heyzinePage": 79
+        },
+        {
+          "n": 21,
+          "pa": "ਪਾਰਜਾਤੁ ਇਹੁ ਹਰਿ ਕੋ ਨਾਮੁ",
+          "page": 83,
+          "heyzinePage": 83
+        },
+        {
+          "n": 22,
+          "pa": "ਨਿਰਧਨ ਹੈ ਸੋਈ",
+          "page": 86,
+          "heyzinePage": 86
+        },
+        {
+          "n": 23,
+          "pa": "ਹਰਿਮੰਦਰ ਸਾਹਿਬ / Golden Temple",
+          "page": 89,
+          "heyzinePage": 89
+        },
+        {
+          "n": 24,
+          "pa": "ਸਾਡਾ ਸੱਭਿਆਚਾਰ",
+          "page": 93,
+          "heyzinePage": 93
+        },
+        {
+          "n": 25,
+          "pa": "ਖਾਲਿਸਤਾਨ",
+          "page": 104,
+          "heyzinePage": 104
+        },
+        {
+          "n": 26,
+          "pa": "ਕਸਵੱਟੀ",
+          "page": 113,
+          "heyzinePage": 113
+        },
+        {
+          "n": 27,
+          "pa": "ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ",
+          "page": 119,
+          "heyzinePage": 119
+        },
+        {
+          "n": 28,
+          "pa": "ਖ਼ਾਲਸੇ ਦਾ ਨਿਆਰਾਪਣ",
+          "page": 125,
+          "heyzinePage": 125
+        },
+        {
+          "n": 29,
+          "pa": "ਪੰਜ ਸੁੱਖ",
+          "page": 129,
+          "heyzinePage": 129
+        },
+        {
+          "n": 30,
+          "pa": "ਮਾਂ ਬੋਲੀ ਪ੍ਰਫੁੱਲਤ ਕਰਨ ਬਾਰੇ",
+          "page": 133,
+          "heyzinePage": 133
+        }
+      ]
+    }
+  ]
+}

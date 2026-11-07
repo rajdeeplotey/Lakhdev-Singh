@@ -18,7 +18,7 @@
 
   --f-display: 'Cormorant Garamond', 'Noto Serif Devanagari', 'Noto Serif Gurmukhi', Georgia, serif;
   --f-read: 'Literata', 'Noto Serif Devanagari', 'Noto Serif Gurmukhi', Georgia, serif;
-  --f-ui: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-ui: 'Manrope', 'Noto Sans Gurmukhi', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
   --gutter: clamp(20px, 5vw, 72px);
   --maxw: 1280px;

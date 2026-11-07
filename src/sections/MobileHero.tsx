@@ -1,38 +1,31 @@
-import { useState, type MouseEvent } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { useLibrary, useSite } from '../content/SiteContext';
-import { bookOneTargets } from '../content/bookOne';
+import { useState } from 'react';
+import { useBooks, useSite } from '../content/SiteContext';
 import { Logo } from '../components/Logo';
-import { scrollToId } from '../components/HashLink';
-import { togglePreview, usePreviewPlaying } from '../lib/chapterPreview';
+import { openBook } from '../lib/viewer';
+import { firstChapterPage, startBook } from '../content/startBook';
+import { useLang, useT } from '../i18n';
 
 /**
- * Mobile/tablet hero (<1024px): one screen — arch + play badge, name, two CTAs, trust line, swipeable shelf.
+ * Mobile/tablet hero (<1024px): one screen — arch + badge, name, two CTAs, trust line, swipeable shelf.
+ * Every book action opens the Heyzine viewer.
  */
 export function MobileHero() {
+  const t = useT();
+  const { lang } = useLang();
   const site = useSite();
-  const lib = useLibrary();
-  const navigate = useNavigate();
-  const { readHref, listenHref, previewSrc: ch1Audio, previewStart } = bookOneTargets(lib);
-  const playing = usePreviewPlaying(ch1Audio);
+  const data = useBooks();
   const [selected, setSelected] = useState<string | null>(null);
 
-  if (!site || !lib) return null;
-  const books = lib.books;
-
-  const toggleBadge = () => {
-    if (!ch1Audio) scrollToId('books');
-    else togglePreview(ch1Audio, previewStart);
-  };
-
-  const openBook = (e: MouseEvent, slug: string) => {
-    e.preventDefault();
-    setSelected(slug);
-    window.setTimeout(() => navigate(`/books/${slug}`), 220);
-  };
-
-  const [first, ...rest] = site.author.replace(/^Dr\.?\s*/, '').split(' ');
+  if (!site || !data) return null;
+  const books = data.books;
+  const book1 = startBook(data);
+  const { prefix, first, last } = site.authorParts;
   const n = books.length;
+
+  const openCover = (slug: string) => {
+    setSelected(slug);
+    window.setTimeout(() => openBook(slug), 180);
+  };
 
   return (
     <section className="mhero" id="top" aria-labelledby="mhero-name">
@@ -43,78 +36,67 @@ export function MobileHero() {
               <Logo variant="emblem" className="mhero-emblem" eager />
             </div>
           </div>
-          <button
-            className={`mhero-badge ${playing ? 'is-playing' : ''}`}
-            onClick={toggleBadge}
-            aria-label={ch1Audio ? (playing ? 'Pause Chapter 1' : 'Play Chapter 1') : 'Browse the library'}
-            aria-pressed={ch1Audio ? playing : undefined}
-          >
-            <svg className="mhero-badge-ring" viewBox="0 0 78 78" aria-hidden>
-              <defs>
-                <path id="mhero-ring" d="M39,39 m-29,0 a29,29 0 1,1 58,0 a29,29 0 1,1 -58,0" />
-              </defs>
-              <text>
-                <textPath href="#mhero-ring" textLength="180" lengthAdjust="spacing">
-                  READ · LISTEN · RETURN ·
-                </textPath>
-              </text>
-            </svg>
-            <span className="mhero-badge-icon" aria-hidden>
-              {playing ? (
-                <svg width="13" height="15" viewBox="0 0 13 15">
-                  <rect x="0.5" width="4" height="15" rx="0.5" fill="currentColor" />
-                  <rect x="8.5" width="4" height="15" rx="0.5" fill="currentColor" />
-                </svg>
-              ) : (
+          {book1 && (
+            <button className="mhero-badge" onClick={() => openBook(book1.slug)} aria-label={t.shelf.openBook(book1.titlePa)}>
+              <svg className="mhero-badge-ring" viewBox="0 0 78 78" aria-hidden>
+                <defs>
+                  <path id="mhero-ring" d="M39,39 m-29,0 a29,29 0 1,1 58,0 a29,29 0 1,1 -58,0" />
+                </defs>
+                <text>
+                  <textPath href="#mhero-ring" textLength={lang === 'pa' ? undefined : 180} lengthAdjust={lang === 'pa' ? undefined : 'spacing'}>
+                    {t.hero.ring}
+                  </textPath>
+                </text>
+              </svg>
+              <span className="mhero-badge-icon" aria-hidden>
                 <svg width="13" height="15" viewBox="0 0 13 15">
                   <path d="M1 0.8 L12.5 7.5 L1 14.2 Z" fill="currentColor" />
                 </svg>
-              )}
-            </span>
-          </button>
+              </span>
+            </button>
+          )}
         </div>
 
         <p className="mhero-label">{site.hero.eyebrow}</p>
         <h1 id="mhero-name" className="mhero-name">
-          <span>Dr. {first}</span>
-          <em>{rest.join(' ')}</em>
+          <span>
+            {prefix} {first}
+          </span>
+          <em>{last}</em>
         </h1>
         <p className="mhero-tagline">{site.hero.headline.replace(/,\s+/, ',\n')}</p>
 
-        <div className="mhero-ctas">
-          <Link to={readHref} className="mhero-btn mhero-btn-solid">
-            Start reading
-          </Link>
-          <Link to={listenHref} className="mhero-btn mhero-btn-line">
-            <HeadphonesIcon /> Listen
-          </Link>
-        </div>
-        <p className="mhero-trust">{n} books · every chapter free · no sign-up</p>
+        {book1 && (
+          <div className="mhero-ctas">
+            <button type="button" className="mhero-btn mhero-btn-solid" onClick={() => openBook(book1.slug, firstChapterPage(book1))}>
+              {t.hero.startReading}
+            </button>
+            <button type="button" className="mhero-btn mhero-btn-line" onClick={() => openBook(book1.slug)}>
+              <HeadphonesIcon /> {t.hero.listen}
+            </button>
+          </div>
+        )}
+        <p className="mhero-trust">{t.hero.trust(n)}</p>
       </div>
 
       <div className="mhero-shelf">
         <div className="mhero-shelf-head">
-          <h2>The library</h2>
-          <span>
-            {n} books · swipe →
-          </span>
+          <h2>{t.hero.library}</h2>
+          <span>{t.hero.booksSwipe(n)}</span>
         </div>
-        <ul className="mhero-row" aria-label="Books">
+        <ul className="mhero-row" aria-label={t.nav.books}>
           {books.map((b, i) => (
             <li key={b.slug}>
               <a
-                href={`/books/${b.slug}`}
-                onClick={(e) => openBook(e, b.slug)}
+                href={`#book-${b.slug}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  openCover(b.slug);
+                }}
                 className={`mcover tone-${i % 6} ${selected === b.slug ? 'is-selected' : ''}`}
-                aria-label={`${b.title} — chapters`}
+                aria-label={t.shelf.openBook(b.titlePa)}
               >
-                {b.cover ? (
-                  <img src={b.cover} alt="" width={72} height={104} loading="lazy" decoding="async" />
-                ) : (
-                  <span className="mcover-title" lang={b.language}>
-                    {b.title}
-                  </span>
-                )}
+                <img src={b.cover} alt="" width={72} height={102} loading="lazy" decoding="async" />
               </a>
             </li>
           ))}

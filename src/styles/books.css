@@ -1,0 +1,394 @@
+/* ═════════════ Punjabi (Gurmukhi) typography — applies to any element marked lang="pa" ═════════════
+   Serif Gurmukhi for titles, sans for body/lists; generous line-height so vowel signs above/below are never
+   clipped; never letter-spacing or capitals (they break the top line that joins Gurmukhi letters). */
+:root {
+  --pa-serif: 'Noto Serif Gurmukhi', 'Cormorant Garamond', serif;
+  --pa-sans: 'Noto Sans Gurmukhi', 'Jost', var(--f-ui);
+}
+:lang(pa) {
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+p:lang(pa),
+li:lang(pa),
+dd:lang(pa),
+.toc-pa {
+  font-family: var(--pa-sans);
+  line-height: 1.8;
+}
+h1:lang(pa),
+h2:lang(pa),
+h3:lang(pa),
+.book-title-pa,
+.viewer-title {
+  font-family: var(--pa-serif);
+  line-height: 1.4;
+}
+
+/* ═════════════ Book title: Punjabi large, English small underneath ═════════════ */
+.book-title {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  font-weight: 400;
+}
+.book-title-pa {
+  font-weight: 600;
+  font-size: 1em;
+  color: inherit;
+  padding-top: 0.08em; /* room for vowel signs above the top line */
+}
+.book-title-en {
+  font-family: 'Jost', var(--f-ui);
+  font-size: 0.42em;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  opacity: 0.75;
+}
+.book-card .book-title {
+  margin-top: 6px;
+  font-size: clamp(24px, 2.1vw, 30px);
+  color: var(--navy);
+}
+.book-card .book-title-en {
+  font-size: 14px;
+}
+.latest-title.book-title {
+  margin-top: 22px;
+  font-size: clamp(38px, 4.2vw, 60px);
+  color: var(--chocolate);
+}
+.latest-title .book-title-en {
+  font-size: 18px;
+  margin-top: 6px;
+}
+.latest-cover-link {
+  display: block;
+  width: min(64%, 360px);
+  z-index: 1;
+  position: relative;
+}
+.latest-cover-link .latest-cover {
+  width: 100%;
+}
+.book-card .cover img,
+.latest-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ═════════════ Read / Listen buttons ═════════════ */
+.rl-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+.rl-btn {
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: 999px;
+  font-family: 'Noto Sans Gurmukhi', 'Jost', var(--f-ui);
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.25s, color 0.25s;
+}
+.rl-btn-read {
+  background: var(--navy);
+  color: #f3eadb;
+}
+.rl-btn-read:hover {
+  background: #263a64;
+}
+.rl-btn-listen {
+  border: 1.5px solid var(--navy);
+  color: var(--navy);
+}
+.rl-btn-listen:hover {
+  background: rgba(28, 43, 77, 0.07);
+}
+.rl-btns-lg .rl-btn {
+  min-height: 52px;
+  padding: 0 28px;
+  font-size: 16px;
+}
+.rl-btn:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* ═════════════ Chapter list (ਤਤਕਰਾ), collapsed by default ═════════════ */
+.toc-details {
+  margin-top: 18px;
+  border-top: 1px solid var(--line);
+}
+.toc-details summary {
+  list-style: none;
+  cursor: pointer;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Noto Sans Gurmukhi', 'Jost', var(--f-ui);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--navy);
+}
+.toc-details summary::-webkit-details-marker {
+  display: none;
+}
+.toc-details summary::after {
+  content: '';
+  margin-left: auto;
+  width: 9px;
+  height: 9px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-3px);
+  transition: transform 0.25s;
+}
+.toc-details[open] summary::after {
+  transform: rotate(-135deg) translateY(-2px);
+}
+.toc-details summary:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.toc-count {
+  font-family: 'Jost', var(--f-ui);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: rgba(185, 154, 90, 0.18);
+  color: #7a5c22;
+}
+.toc-list {
+  list-style: none;
+  margin: 0 0 6px;
+  padding: 0;
+  max-height: 360px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.toc-list a {
+  display: grid;
+  grid-template-columns: 28px 1fr auto;
+  gap: 10px;
+  align-items: baseline;
+  padding: 8px 4px;
+  min-height: 44px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  transition: background 0.2s, color 0.2s;
+}
+.toc-list a:hover,
+.toc-list a:focus-visible {
+  background: rgba(185, 154, 90, 0.1);
+  color: var(--navy);
+}
+.toc-n {
+  font-family: var(--f-display);
+  font-style: italic;
+  color: var(--gold);
+  font-size: 15px;
+}
+.toc-pa {
+  font-size: 16px;
+}
+.toc-pg {
+  font-family: 'Jost', var(--f-ui);
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+/* book card cover is a button-like link */
+.book-card-cover {
+  cursor: pointer;
+}
+
+/* ═════════════ Full-screen Heyzine viewer ═════════════ */
+.viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(28, 43, 77, 0.96);
+  display: flex;
+  flex-direction: column;
+  animation: viewerIn 0.25s ease both;
+}
+@keyframes viewerIn {
+  from {
+    opacity: 0;
+  }
+}
+.viewer-bar {
+  height: 64px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 max(16px, env(safe-area-inset-right)) 0 max(20px, env(safe-area-inset-left));
+  color: #f3eadb;
+  border-bottom: 1px solid rgba(226, 194, 126, 0.25);
+}
+.viewer-title {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #f3eadb;
+}
+.viewer-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+.viewer-newtab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(226, 194, 126, 0.6);
+  color: #f3eadb;
+  font-family: 'Noto Sans Gurmukhi', 'Jost', var(--f-ui);
+  font-size: 14px;
+  font-weight: 500;
+}
+.viewer-newtab:hover {
+  background: rgba(226, 194, 126, 0.12);
+}
+.viewer-close {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #e2c27e;
+  color: #1c2b4d;
+  transition: background 0.2s;
+}
+.viewer-close:hover {
+  background: #f3dca8;
+}
+.viewer-close:focus-visible,
+.viewer-newtab:focus-visible {
+  outline: 2px solid #f3eadb;
+  outline-offset: 3px;
+}
+.viewer-body {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+}
+.viewer-frame {
+  display: block;
+  width: 100%;
+  height: calc(100vh - 64px);
+  height: calc(100dvh - 64px);
+  border: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.viewer-frame.is-loaded {
+  opacity: 1;
+}
+.viewer-loading {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  color: #f3eadb;
+  font-family: 'Noto Sans Gurmukhi', 'Jost', var(--f-ui);
+  font-size: 15px;
+}
+.viewer-spinner {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 3px solid rgba(226, 194, 126, 0.25);
+  border-top-color: #e2c27e;
+  animation: spin 0.9s linear infinite;
+}
+@media (max-width: 600px) {
+  .viewer-title {
+    font-size: 17px;
+  }
+  .viewer-newtab-label {
+    display: none; /* keep the ↗ icon; the close button must always fit */
+  }
+  .viewer-newtab {
+    width: 44px;
+    padding: 0;
+    justify-content: center;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .viewer-spinner {
+    animation-duration: 2.5s;
+  }
+}
+
+/* ═════════════ Official round logo (the one used inside the Heyzine books) ═════════════
+   The artwork is already a round badge (cream disc + bronze ring), so it is shown as-is:
+   no extra medallion, ring or recolouring around it. */
+.emblem-badge,
+.site-header.is-solid .emblem-badge,
+.reader-back .emblem-badge {
+  background: none;
+  box-shadow: none;
+  border-radius: 50%;
+}
+.emblem-badge .logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+}
+/* hero arch: the badge sits centred on the cream arch panel */
+.dhero-emblem {
+  width: 78%;
+}
+.mhero-emblem {
+  width: 88%;
+}
+.dhero-emblem,
+.mhero-emblem {
+  height: auto;
+  filter: drop-shadow(0 10px 22px rgba(48, 36, 31, 0.18));
+}
+/* About seal: the round logo fills the seal, keeping its cream outline */
+.author-seal {
+  background: #f3eadb;
+  padding: 0;
+  overflow: hidden;
+}
+.author-seal img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* footer */
+.footer-logo {
+  width: 150px !important;
+  height: auto;
+  margin-left: 0;
+}
+@media (max-width: 480px) {
+  .footer-logo {
+    width: 120px !important;
+  }
+}
