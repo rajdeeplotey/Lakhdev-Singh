@@ -15,7 +15,8 @@ npm test        # checks public/content/books.json (Unicode Gurmukhi, chapter pa
 | Path | What |
 |---|---|
 | `public/content/books.json` | **The books** — one entry per book (title, cover, Heyzine link, chapters) |
-| `public/content/site.json` | Hero text, biography, quote, contact details, portrait, logo paths (English + `i18n.pa` Punjabi) |
+| `public/content/author-bio.md` | **The author biography** (English + ਪੰਜਾਬੀ) shown in "About the Author", exactly as written. Keep the shape: `## ENGLISH` / `## ਪੰਜਾਬੀ`, then `###` sections (first = short introduction, also used as the page's meta description; last = "At a glance" timeline as `- year — text`). Stats and button labels are in `src/i18n/*.ts → author` |
+| `public/content/site.json` | Hero text, contact details, portrait, logo paths (English + `i18n.pa` Punjabi) |
 | `public/images/covers/` | Book covers, `book-N-cover.webp`, 600px wide |
 | `public/brand/` | Official logo files |
 | `src/components/BookViewer.tsx` | Full-screen Heyzine viewer (iframe only exists while open) |

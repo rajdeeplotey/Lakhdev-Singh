@@ -111,7 +111,6 @@ html[lang='pa'] body *:not(.lang-toggle button):not(svg):not(svg *) {
 html[lang='pa'] .eyebrow,
 html[lang='pa'] .dhero-label,
 html[lang='pa'] .mhero-label,
-html[lang='pa'] .author-label,
 html[lang='pa'] .book-meta,
 html[lang='pa'] .footer-col h3,
 html[lang='pa'] .header-wordmark small,
@@ -142,7 +141,6 @@ html[lang='pa'] .mhero-name {
   font-size: 40px;
   line-height: 1.15;
 }
-html[lang='pa'] .author-name,
 html[lang='pa'] .latest-title,
 html[lang='pa'] .detail-copy h1,
 html[lang='pa'] .section-head h2,
@@ -159,7 +157,6 @@ html[lang='pa'] .dhero-tagline {
   white-space: normal;
 }
 html[lang='pa'] .dhero-intro,
-html[lang='pa'] .author-bio,
 html[lang='pa'] .rl-body,
 html[lang='pa'] .rl-mode p,
 html[lang='pa'] .rl-points,
@@ -167,14 +164,12 @@ html[lang='pa'] .lede,
 html[lang='pa'] .book-card-desc,
 html[lang='pa'] .mhero-trust,
 html[lang='pa'] .dhero-shelf-sub,
-html[lang='pa'] .author-stats dt,
 html[lang='pa'] .player-note,
 html[lang='pa'] .sync-note {
   line-height: 1.8;
 }
 html[lang='pa'] .mhero-trust,
-html[lang='pa'] .dhero-shelf-sub,
-html[lang='pa'] .author-stats dt {
+html[lang='pa'] .dhero-shelf-sub {
   font-size: 15px;
 }
 /* the marquee word is shorter and taller in Gurmukhi */

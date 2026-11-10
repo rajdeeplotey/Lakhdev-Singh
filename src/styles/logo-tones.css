@@ -1,0 +1,76 @@
+/* ═════════════ Logo tones ═════════════
+   Small accents taken from the round logo itself (measured from brand-source/logo-round-noname.png):
+   the bronze ring and the warm brown of the "LS" lettering. The main theme (navy, cream, gold) is NOT
+   changed; these shades only touch thin lines, small labels and numbers so the site and logo match. */
+:root {
+  --logo-bronze: #c5955b; /* ring, mid tone */
+  --logo-bronze-deep: #664428; /* ring, shadow side */
+  --logo-bronze-text: #7f532c; /* bronze dark enough for small text on cream (5.1–5.8:1) */
+  --logo-brown: #5f3f22; /* LS lettering */
+  --logo-ring: linear-gradient(90deg, #664428, #c5955b 45%, #e6c79b 70%, #c5955b);
+}
+
+/* section eyebrows: the short rule becomes a little bronze ring segment */
+.eyebrow::before,
+.eyebrow.center::after {
+  background: var(--logo-ring);
+  opacity: 0.9;
+  height: 1.5px;
+}
+
+/* About uses the exact colours from its own spec (author.css); only the seal gets a bronze ring */
+.author-seal {
+  box-shadow: 0 0 0 1.5px var(--logo-bronze), 0 12px 24px -10px rgba(102, 68, 40, 0.45);
+}
+
+/* book numbers, chapter numbers and the chapter-count chip */
+.book-no,
+.toc-n {
+  color: var(--logo-bronze-text);
+}
+.toc-count {
+  background: rgba(197, 149, 91, 0.16);
+  color: var(--logo-brown);
+}
+.toc-details {
+  border-top-color: rgba(197, 149, 91, 0.4);
+}
+.toc-list a:hover,
+.toc-list a:focus-visible {
+  background: rgba(197, 149, 91, 0.1);
+}
+
+/* the shelf line under each book cover */
+.book-card-cover::after {
+  background: linear-gradient(90deg, transparent, rgba(197, 149, 91, 0.55) 20%, rgba(197, 149, 91, 0.55) 80%, transparent);
+}
+
+/* light header (after scrolling) and footer: a fine bronze hairline */
+.site-header.is-solid {
+  box-shadow: 0 1px 0 rgba(197, 149, 91, 0.35), 0 12px 30px -22px rgba(23, 20, 18, 0.5);
+}
+.site-footer {
+  border-top: 1px solid rgba(197, 149, 91, 0.45);
+}
+
+/* Listen button outline and the book viewer's top bar */
+.rl-btn-listen:hover {
+  border-color: var(--logo-bronze-deep);
+  background: rgba(197, 149, 91, 0.1);
+}
+.viewer-bar {
+  border-bottom-color: rgba(197, 149, 91, 0.35);
+}
+
+/* "22 chapters · 135 pages" under each book title (light cards only) */
+.book-card .book-meta {
+  color: var(--logo-bronze-text);
+}
+
+/* footer: column headings and the small ornament under the logo */
+.footer-col h3 {
+  color: var(--logo-bronze-text);
+}
+.footer-flourish {
+  color: var(--logo-bronze);
+}

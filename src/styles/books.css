@@ -392,3 +392,223 @@ h3:lang(pa),
     width: 120px !important;
   }
 }
+
+/* ═════════════ Book cards: icons in the Read/Listen buttons are only used on narrow phones ═════════════ */
+.rl-ico {
+  display: none;
+  flex-shrink: 0;
+}
+/* the chapter list now follows the text column (it is a direct child of the card); keep it right under
+   the buttons on desktop exactly as before */
+.book-card-body {
+  flex: none;
+}
+
+/* ═════════════ Phones (≤600px): book collection ═════════════ */
+@media (max-width: 600px) {
+  .collection {
+    padding-top: 56px;
+  }
+  .collection .section-head {
+    margin-bottom: 28px;
+  }
+  /* 28px between books, with one thin divider in the middle */
+  .shelf {
+    row-gap: 0;
+  }
+  .shelf > * + * {
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid #d9cbb0;
+  }
+  .book-card {
+    display: grid;
+    grid-template-columns: 112px minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 0;
+    align-items: start;
+    padding: 0;
+    border-bottom: 0;
+    height: auto;
+  }
+  .book-card-cover {
+    width: 112px;
+    padding: 0;
+  }
+  .book-card .cover {
+    box-shadow: 0 10px 20px rgba(28, 43, 77, 0.18);
+  }
+  .book-card-body {
+    padding-top: 0;
+    min-width: 0;
+  }
+  .book-card .book-no {
+    line-height: 1.2;
+  }
+  .book-card .book-title {
+    margin-top: 6px;
+    gap: 4px;
+  }
+  .book-card .book-title-pa {
+    line-height: 1.35;
+    padding-top: 0;
+  }
+  .book-card .book-meta {
+    margin-top: 8px;
+  }
+  /* Read + Listen: always on one line */
+  .book-card .rl-btns {
+    container-type: inline-size;
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: 100%;
+    margin-top: 14px;
+  }
+  .book-card .rl-btn {
+    flex: 1;
+    min-width: 0;
+    height: 44px;
+    min-height: 44px;
+    padding: 0 10px;
+    border-radius: 999px;
+    font-size: 14px;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  /* not enough room for "ਪੜ੍ਹੋ / Read": show icon + Punjabi word (full text is in aria-label) */
+  @container (max-width: 214px) {
+    .rl-btn .rl-rest {
+      display: none;
+    }
+    .rl-btn .rl-ico {
+      display: block;
+    }
+  }
+  /* chapter list spans the whole card (under cover and text) */
+  .book-card > .toc-details {
+    grid-column: 1 / -1;
+    margin-top: 14px;
+  }
+  .book-card > .toc-details summary {
+    min-height: 48px;
+    height: 48px;
+  }
+}
+
+/* ═════════════ Book viewer: A− / A+ (enlarges the whole book frame; pages scale evenly) ═════════════ */
+.viewer-frame {
+  width: calc(100% * var(--vz, 1));
+  height: calc((100vh - 64px) * var(--vz, 1));
+  height: calc((100dvh - 64px) * var(--vz, 1));
+}
+.viewer-body.is-zoomed {
+  overflow: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: auto;
+  scrollbar-color: #e2c27e rgba(243, 234, 219, 0.12);
+}
+.viewer-body.is-zoomed::-webkit-scrollbar {
+  width: 14px;
+  height: 14px;
+}
+.viewer-body.is-zoomed::-webkit-scrollbar-thumb {
+  background: #e2c27e;
+  border-radius: 999px;
+  border: 3px solid #1c2b4d;
+}
+.viewer-body.is-zoomed::-webkit-scrollbar-track,
+.viewer-body.is-zoomed::-webkit-scrollbar-corner {
+  background: rgba(243, 234, 219, 0.1);
+}
+.viewer-zoom {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px;
+  border-radius: 999px;
+  border: 1.5px solid rgba(226, 194, 126, 0.6);
+  color: #f3eadb;
+}
+.viewer-zoom button {
+  min-width: 42px;
+  min-height: 40px;
+  padding: 0 8px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  font-family: 'Jost', var(--f-ui);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  color: inherit;
+  transition: background 0.2s, opacity 0.2s;
+}
+.viewer-zoom button:hover:not(:disabled) {
+  background: rgba(226, 194, 126, 0.16);
+}
+.viewer-zoom button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.viewer-zoom button:focus-visible {
+  outline: 2px solid #f3eadb;
+  outline-offset: 2px;
+}
+.vz-a {
+  display: inline-block;
+  line-height: 1;
+}
+.vz-a-sm {
+  font-size: 13px;
+}
+.vz-a-lg {
+  font-size: 19px;
+}
+.vz-level {
+  min-width: 42px;
+  text-align: center;
+  font-family: 'Jost', var(--f-ui);
+  font-size: 13px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  opacity: 0.85;
+}
+@media (max-width: 420px) {
+  .viewer-bar {
+    gap: 8px;
+    padding-left: max(14px, env(safe-area-inset-left));
+  }
+  .viewer-actions {
+    gap: 6px;
+  }
+  .vz-level {
+    display: none;
+  }
+  .viewer-zoom button {
+    min-width: 40px;
+    padding: 0 4px;
+  }
+}
+
+/* the book's top bar is solid, so the website menu never shows through it */
+.viewer-bar {
+  background: #1c2b4d;
+  position: relative;
+  z-index: 1;
+}
+
+/* Touch phones/tablets: a finger drag on the book turns pages, so an enlarged frame could not be moved around.
+   There, Heyzine's own zoom (🔍 button / pinch) is used instead and our A− / A+ is hidden. */
+@media (hover: none) and (pointer: coarse) {
+  .viewer-zoom {
+    display: none;
+  }
+  .viewer-body {
+    --vz: 1 !important;
+    overflow: hidden !important;
+  }
+}

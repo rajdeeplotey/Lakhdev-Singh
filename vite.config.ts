@@ -2,6 +2,7 @@
 import { defineConfig, type Plugin } from 'vite';
 import react from '@vitejs/plugin-react';
 import fs from 'node:fs';
+import { parseAuthorBio } from './src/content/authorBio';
 
 // Static build for Hostinger shared hosting (Apache/LiteSpeed, no Node runtime needed).
 // `base: '/'` assumes the site is served from the domain root (public_html).
@@ -31,11 +32,13 @@ function booksSeo(): Plugin {
       const { books } = JSON.parse(fs.readFileSync('public/content/books.json', 'utf8')) as { books: Book[] };
       const titles = books.map((b) => b.titlePa);
       const title = `Dr. Lakhdev Singh (ਡਾ. ਲਖਦੇਵ ਸਿੰਘ) — ${titles.join(' · ')}`;
-      const desc = `Read the books of Dr. Lakhdev Singh free online: ${books.map((b) => `${b.titlePa} (${b.titleEn})`).join(', ')}. ਡਾ. ਲਖਦੇਵ ਸਿੰਘ ਦੀਆਂ ਕਿਤਾਬਾਂ ਮੁਫ਼ਤ ਪੜ੍ਹੋ।`;
+      // meta description = the English short introduction from author-bio.md, exactly as written
+      const bio = parseAuthorBio(fs.readFileSync('public/content/author-bio.md', 'utf8'));
+      const desc = bio.en.intro.paragraphs.join(' ');
       const ld = {
         '@context': 'https://schema.org',
         '@graph': [
-          { '@type': 'Person', '@id': '#author', name: 'Dr. Lakhdev Singh', alternateName: 'ਡਾ. ਲਖਦੇਵ ਸਿੰਘ', jobTitle: 'Writer' },
+          { '@type': 'Person', '@id': '#author', name: 'Dr. Lakhdev Singh', alternateName: 'ਡਾ. ਲਖਦੇਵ ਸਿੰਘ', jobTitle: 'Writer', description: desc },
           ...books.map((b) => ({
             '@type': 'Book',
             name: b.titlePa,
@@ -52,6 +55,11 @@ function booksSeo(): Plugin {
       };
       const body = `<main class="prerender">
   <h1>Dr. Lakhdev Singh · <span lang="pa">ਡਾ. ਲਖਦੇਵ ਸਿੰਘ</span></h1>
+  <section id="about">
+    ${(['pa', 'en'] as const)
+      .map((l) => [bio[l].intro, ...bio[l].sections].map((s) => `<div lang="${l}"><h2>${esc(s.heading)}</h2>${s.paragraphs.map((p) => `<p>${esc(p)}</p>`).join('')}${s.items.length ? `<ul>${s.items.map((i) => `<li>${esc(i)}</li>`).join('')}</ul>` : ''}</div>`).join(''))
+      .join('\n    ')}
+  </section>
   ${books
     .map(
       (b) => `<section id="b-${b.slug}">

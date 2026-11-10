@@ -9,6 +9,7 @@ import './styles/desktop-hero.css';
 import './styles/author.css';
 import './styles/i18n.css';
 import './styles/books.css';
+import './styles/logo-tones.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

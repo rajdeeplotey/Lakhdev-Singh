@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import type { MouseEvent } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Logo } from './Logo';
 import { HashLink } from './HashLink';
@@ -50,12 +51,21 @@ export function Header() {
 
   const solid = scrolled || !overHero;
   const close = () => setOpen(false);
+  // Logo: on the homepage it scrolls back to the very top (and clears any #section from the address bar)
+  const goTop = (e: MouseEvent) => {
+    close();
+    if (pathname !== '/') return; // other pages: normal link to the homepage
+    e.preventDefault();
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+    if (window.location.hash) history.replaceState(history.state, '', '/');
+  };
   const name = site ? `${site.authorParts.first} ${site.authorParts.last}` : 'Lakhdev Singh';
 
   return (
     <header className={`site-header ${solid ? 'is-solid' : ''} ${open ? 'menu-open' : ''}`}>
       <div className="container header-inner">
-        <Link to="/" className="header-brand" aria-label={`${site?.author ?? 'Dr. Lakhdev Singh'} — ${t.nav.homeLink}`} onClick={close}>
+        <Link to="/" className="header-brand" aria-label={`${site?.author ?? 'Dr. Lakhdev Singh'} — ${t.nav.homeLink}`} onClick={goTop}>
           <Logo variant="emblem" badge height={48} eager />
           <span className="header-wordmark">
             <span>{name}</span>
@@ -63,7 +73,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="header-nav" aria-label="Primary">
+        <nav className="header-nav" aria-label={t.nav.mainMenu}>
           {NAV.map((n) => (
             <HashLink key={n.href} to={n.href}>
               {n.label}
@@ -93,7 +103,7 @@ export function Header() {
       </div>
 
       <div id="mobile-menu" className="mobile-menu" hidden={!open}>
-        <nav aria-label="Mobile">
+        <nav aria-label={t.nav.mobileMenu}>
           {MOBILE_NAV.map((n, i) => (
             <HashLink key={n.href} to={n.href} onClick={close} style={{ ['--i' as string]: i }}>
               <span className="mm-num">0{i + 1}</span>

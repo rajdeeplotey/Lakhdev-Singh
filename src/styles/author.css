@@ -1,33 +1,67 @@
-/* ═════════════ About the Author ═════════════ */
+/* ═════════════ About the Author ═════════════
+   Text comes from public/content/author-bio.md. The section has its own ਪੰਜਾਬੀ / English switch, so
+   typography is chosen with :lang() on the section content, not on <html>. */
 .author {
   --a-cream: #f3eadb;
   --a-navy: #1c2b4d;
-  --a-text2: #3a4664;
-  --a-gold-dark: #8a6a2a; /* large text (heading italic) */
-  --a-label: #7a5c22; /* small label: #8A6A2A is 4.2:1 on cream, this is 5.2:1 (WCAG AA) */
-  --a-frame: #b8964f;
-  --a-rule: #d9cbb0;
+  --a-text2: #3a4664; /* paragraphs */
+  --a-label: #7a5a1e; /* label and "Singh / ਸਿੰਘ" (5.6:1 on the cream) */
+  --a-frame: #b8964f; /* gold: arch outline, quote rule, timeline */
+  --a-rule: #d9cbb0; /* dividers */
   --a-jost: 'Jost', var(--f-ui);
   --a-corm: 'Cormorant Garamond', var(--f-display);
+  --a-pa-serif: 'Noto Serif Gurmukhi', serif;
+  --a-pa-sans: 'Noto Sans Gurmukhi', sans-serif;
   background: var(--a-cream);
   color: var(--a-navy);
-  overflow: hidden;
+  overflow: hidden; /* older browsers */
+  overflow: clip; /* clips the offset arch outline without breaking position: sticky */
 }
 .author-inner {
   max-width: calc(1280px + 128px);
   margin: 0 auto;
-  padding: 96px 64px;
+  padding: 72px 64px 96px;
   display: grid;
   grid-template-columns: 440px minmax(0, 1fr);
-  gap: 96px;
-  align-items: center;
+  column-gap: 96px;
+  align-items: start;
 }
 .author :focus-visible {
   outline: 2px solid var(--a-frame);
   outline-offset: 3px;
 }
 
-/* portrait arch */
+/* ───── language switch (top right) ───── */
+.author-top {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+.author .author-lang {
+  border-color: var(--a-frame);
+  color: var(--a-navy);
+}
+.author .author-lang button {
+  opacity: 1;
+}
+.author .author-lang button:hover {
+  background: rgba(184, 150, 79, 0.14);
+}
+.author .author-lang button.is-on {
+  background: var(--a-navy);
+  color: var(--a-cream);
+}
+.author .author-lang button:focus-visible {
+  outline-color: var(--a-navy);
+}
+
+/* ───── left column: portrait + timeline (sticky on desktop) ───── */
+.author-aside {
+  position: sticky;
+  top: var(--aside-top, 124px);
+  align-self: start;
+}
 .author-visual {
   position: relative;
   width: 400px;
@@ -77,8 +111,75 @@
   height: auto;
 }
 
-/* copy */
+/* timeline: gold line, gold dots */
+.author-timeline {
+  margin-top: 40px;
+  max-width: 400px;
+}
+.author-timeline h3 {
+  margin: 0;
+  font-family: var(--a-jost);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--a-label);
+}
+.author-timeline ol {
+  list-style: none;
+  margin: 22px 0 0;
+  padding: 0;
+  position: relative;
+}
+.author-timeline ol::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 10px;
+  bottom: 10px;
+  width: 2px;
+  background: var(--a-frame);
+}
+.author-timeline li {
+  position: relative;
+  padding: 0 0 18px 34px;
+  display: grid;
+  gap: 2px;
+}
+.author-timeline li:last-child {
+  padding-bottom: 0;
+}
+.author-timeline li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--a-frame);
+  box-shadow: 0 0 0 4px var(--a-cream);
+}
+.tl-year {
+  font-family: var(--a-corm);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.2;
+  color: var(--a-navy);
+}
+.tl-text {
+  font-family: var(--a-jost);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--a-text2);
+}
+
+/* ───── right column ───── */
+.author-copy {
+  max-width: 680px;
+}
 .author-label {
+  margin: 0;
   font-family: var(--a-jost);
   font-weight: 600;
   font-size: 13px;
@@ -96,39 +197,25 @@
 }
 .author-name em {
   font-style: italic;
-  color: var(--a-gold-dark);
+  color: var(--a-label);
 }
 .author-quote {
   margin: 28px 0 0;
   padding-left: 22px;
   border-left: 2px solid var(--a-frame);
+}
+.author-quote p {
+  margin: 0;
   font-family: var(--a-corm);
   font-style: italic;
-  font-size: 28px;
-  line-height: 1.3;
+  font-size: 26px;
+  line-height: 1.4;
   color: var(--a-navy);
-}
-.author-bio {
-  margin-top: 24px;
-  max-width: 560px;
-  display: grid;
-  gap: 14px;
-  font-family: var(--a-jost);
-  font-size: 17px;
-  line-height: 1.75;
-  color: var(--a-text2);
-}
-.author .is-todo {
-  font-family: var(--a-jost);
-  font-style: normal;
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--a-label);
 }
 
 /* stats */
 .author-stats {
-  margin: 32px 0 0;
+  margin: 36px 0 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--a-rule);
@@ -138,7 +225,7 @@
   display: flex;
   flex-direction: column-reverse; /* number above label, label read first */
   justify-content: flex-end;
-  gap: 4px;
+  gap: 6px;
   padding: 20px 24px;
 }
 .author-stats > div:first-child {
@@ -158,15 +245,67 @@
 .author-stats dt {
   font-family: var(--a-jost);
   font-size: 13px;
+  line-height: 1.4;
   color: var(--a-text2);
 }
 
-/* buttons */
+/* biography sections */
+.author-blocks {
+  margin-top: 40px;
+  display: grid;
+  gap: 36px;
+}
+.author-block h3 {
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--a-rule);
+  font-family: var(--a-corm);
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 1.2;
+  color: var(--a-navy);
+}
+.author-block p {
+  margin: 14px 0 0;
+  font-family: var(--a-jost);
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--a-text2);
+}
+.author-list {
+  list-style: none;
+  margin: 14px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+.author-list li {
+  position: relative;
+  padding-left: 26px;
+  font-family: var(--a-jost);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--a-text2);
+}
+.author-list li::before {
+  content: '✦';
+  position: absolute;
+  left: 2px;
+  top: 0;
+  font-size: 11px;
+  line-height: 1.7rem;
+  color: var(--a-frame);
+}
+.author-loading {
+  margin-top: 28px;
+  font-family: var(--a-jost);
+  color: var(--a-text2);
+}
+
+/* button */
 .author-ctas {
-  margin-top: 32px;
+  margin-top: 44px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
 }
 .author-btn {
   height: 56px;
@@ -178,47 +317,95 @@
   font-family: var(--a-jost);
   font-weight: 600;
   font-size: 16px;
-  transition: background 0.25s, color 0.25s, opacity 0.25s;
+  transition: background 0.25s;
 }
-.author-btn-play {
+.author-btn-books {
   background: var(--a-navy);
   color: var(--a-cream);
-  padding: 0 26px 0 7px;
-  font-variant-numeric: tabular-nums;
+  padding: 0 32px;
 }
-.author-btn-play:hover:not(:disabled) {
+.author-btn-books:hover {
   background: #263a64;
 }
-.author-btn-play:disabled {
-  cursor: default;
-  opacity: 0.6;
+.author-btn-books:focus-visible {
+  outline-color: var(--a-navy);
 }
-.author-btn-dot {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  background: #e2c27e;
-  color: var(--a-navy);
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
+
+/* ───── ਪੰਜਾਬੀ typography: serif headings 1.45, sans body 1.9, no letter-spacing or capitals ───── */
+.author :lang(pa) {
+  letter-spacing: normal !important;
+  text-transform: none !important;
 }
-.author-btn-play:not([aria-pressed='true']) .author-btn-dot svg {
-  margin-left: 2px;
+.author-copy:lang(pa) .author-label,
+.author-timeline:lang(pa) h3 {
+  font-family: var(--a-pa-sans);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.45;
 }
-.author-btn-line {
-  border: 1.5px solid var(--a-navy);
-  color: var(--a-navy);
-  padding: 0 28px;
+.author-copy:lang(pa) .author-name {
+  font-family: var(--a-pa-serif);
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 1.45;
 }
-.author-btn-line:hover {
-  background: rgba(28, 43, 77, 0.07);
+.author-copy:lang(pa) .author-name em {
+  font-style: normal; /* Gurmukhi has no italic */
+}
+.author-copy:lang(pa) .author-quote p {
+  font-family: var(--a-pa-sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.9;
+}
+.author-copy:lang(pa) .author-stats dt {
+  font-family: var(--a-pa-sans);
+  font-size: 15px;
+  line-height: 1.6;
+}
+.author-copy:lang(pa) .author-block h3 {
+  font-family: var(--a-pa-serif);
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1.45;
+}
+.author-copy:lang(pa) .author-block p,
+.author-copy:lang(pa) .author-list li {
+  font-family: var(--a-pa-sans);
+  font-weight: 400;
+  font-size: 17.5px;
+  line-height: 1.9;
+}
+.author-copy:lang(pa) .author-list li::before {
+  line-height: 1.9rem;
+}
+.author-timeline:lang(pa) .tl-year {
+  font-family: var(--a-pa-serif);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.45;
+}
+.author-timeline:lang(pa) .tl-text {
+  font-family: var(--a-pa-sans);
+  font-size: 16px;
+  line-height: 1.9;
+}
+.author-copy:lang(pa) .author-btn,
+.author-copy:lang(pa) .author-loading {
+  font-family: var(--a-pa-sans);
+  font-size: 17px;
+}
+/* the site-wide Punjabi mode removes letter-spacing everywhere; keep it for this section's English labels */
+html .author .author-copy:lang(en) .author-label,
+html .author .author-timeline:lang(en) h3 {
+  letter-spacing: 0.28em !important;
 }
 
 /* 1024–1199: tighten so two columns still fit */
 @media (max-width: 1199px) and (min-width: 1024px) {
   .author-inner {
-    gap: 64px;
+    column-gap: 56px;
     grid-template-columns: 400px minmax(0, 1fr);
   }
   .author-visual {
@@ -228,32 +415,42 @@
   .author-name {
     font-size: 60px;
   }
+  .author-copy:lang(pa) .author-name {
+    font-size: 48px;
+  }
 }
 
-/* ═════════════ Mobile / tablet (<1024px) ═════════════ */
+/* ═════════════ Mobile / tablet (<1024px): photo, then text, then timeline ═════════════ */
 @media (max-width: 1023px) {
   .author-inner {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     gap: 0;
-    padding: 56px 24px;
+    padding: 40px 24px 64px;
     max-width: 640px;
   }
-  /* label sits above the photo on mobile: the visual takes its place via order */
-  .author-copy {
-    display: contents;
+  .author-top {
+    margin-bottom: 28px;
   }
-  .author-label {
-    order: -2;
-    margin-bottom: 24px;
+  .author-aside {
+    display: contents; /* its two children are placed separately: photo first, timeline last */
   }
   .author-visual {
-    order: -1;
+    order: 1;
+    align-self: center;
     width: 270px;
     height: 360px;
-    margin-bottom: 16px;
+    margin-bottom: 44px;
+  }
+  .author-copy {
+    order: 2;
+  }
+  .author-timeline {
+    order: 3;
+    margin-top: 48px;
+    max-width: none;
+    padding-top: 32px;
+    border-top: 1px solid var(--a-rule);
   }
   .author-arch-outline {
     transform: translate(18px, 16px);
@@ -270,40 +467,60 @@
     border-width: 3px;
   }
   .author-name {
-    margin-top: 28px;
+    margin-top: 14px;
     font-size: 44px;
+    line-height: 1.05;
+  }
+  .author-copy:lang(pa) .author-name {
+    font-size: 40px;
   }
   .author-quote {
-    border-left: 0;
-    padding-left: 0;
-    font-size: 22px;
-    margin-top: 18px;
+    padding-left: 18px;
   }
-  .author-bio {
-    font-size: 16px;
-    margin-top: 18px;
+  .author-quote p {
+    font-size: 22px;
+  }
+  .author-copy:lang(pa) .author-quote p {
+    font-size: 18px;
   }
   .author-stats {
-    width: 100%;
-    margin-top: 26px;
+    margin-top: 28px;
   }
   .author-stats > div,
   .author-stats > div:first-child {
     padding: 16px 8px;
-    align-items: center;
+  }
+  .author-stats > div:first-child {
+    padding-left: 0;
   }
   .author-stats dd {
     font-size: 30px;
   }
-  .author-stats dt {
-    font-size: 12px;
-    line-height: 1.3;
+  .author-stats dt,
+  .author-copy:lang(pa) .author-stats dt {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .author-blocks {
+    margin-top: 32px;
+    gap: 30px;
+  }
+  .author-block h3 {
+    font-size: 26px;
+  }
+  .author-copy:lang(pa) .author-block h3 {
+    font-size: 22px;
+  }
+  .author-block p,
+  .author-list li {
+    font-size: 16px;
+  }
+  .author-copy:lang(pa) .author-block p,
+  .author-copy:lang(pa) .author-list li {
+    font-size: 17px;
   }
   .author-ctas {
-    width: 100%;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 26px;
+    margin-top: 36px;
   }
   .author-btn {
     width: 100%;

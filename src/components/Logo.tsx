@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useSite } from '../content/SiteContext';
+import { useT } from '../i18n';
 
 /**
  * Official logo (public/brand). The artwork uses navy lettering, so it is always presented on a
@@ -20,10 +21,12 @@ export function Logo({
   eager?: boolean;
 }) {
   const site = useSite();
+  const t = useT();
   const [failed, setFailed] = useState(false);
   const src =
     variant === 'emblem' ? (height && height <= 96 && site?.brand.logoSmall) || site?.brand.logoEmblem : variant === 'stacked' ? site?.brand.logoStacked ?? site?.brand.logoFull : site?.brand.logoFull;
-  const alt = variant === 'emblem' ? 'LS — Dr. Lakhdev Singh' : 'Dr. Lakhdev Singh — Writer';
+  const author = site?.author ?? 'Dr. Lakhdev Singh';
+  const alt = variant === 'emblem' ? `LS — ${author}` : `${author} — ${t.writer}`;
 
   const img =
     src && !failed ? (

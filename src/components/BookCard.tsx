@@ -27,15 +27,45 @@ export function BookMeta({ book }: { book: BookEntry }) {
   );
 }
 
+const BookOpenIcon = () => (
+  <svg className="rl-ico" width="17" height="15" viewBox="0 0 17 15" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" aria-hidden>
+    <path d="M8.5 3.2 C6.8 1.8 4.4 1.3 1.2 1.6 V12.6 C4.4 12.3 6.8 12.8 8.5 14.2 C10.2 12.8 12.6 12.3 15.8 12.6 V1.6 C12.6 1.3 10.2 1.8 8.5 3.2 Z" />
+    <path d="M8.5 3.2 V14.2" />
+  </svg>
+);
+const HeadphonesIcon = () => (
+  <svg className="rl-ico" width="17" height="16" viewBox="0 0 17 16" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden>
+    <path d="M2 10 V8.5 a6.5 6.5 0 0 1 13 0 V10" strokeLinecap="round" />
+    <rect x="1.2" y="9.2" width="3.6" height="5.6" rx="1.4" fill="currentColor" stroke="none" />
+    <rect x="12.2" y="9.2" width="3.6" height="5.6" rx="1.4" fill="currentColor" stroke="none" />
+  </svg>
+);
+
+/** "ਪੜ੍ਹੋ / Read" → Punjabi word + the rest; on narrow phones only icon + Punjabi word show (full text stays in aria-label). */
+function BtnLabel({ text }: { text: string }) {
+  const i = text.indexOf(' / ');
+  if (i < 0) return <span>{text}</span>;
+  return (
+    <>
+      <span lang="pa">{text.slice(0, i)}</span>
+      <span className="rl-rest" lang="en">
+        {text.slice(i)}
+      </span>
+    </>
+  );
+}
+
 export function ReadListenButtons({ book, size = 'sm' }: { book: BookEntry; size?: 'sm' | 'lg' }) {
   const t = useT();
   return (
     <div className={`rl-btns rl-btns-${size}`}>
-      <button type="button" className="rl-btn rl-btn-read" onClick={() => openBook(book.slug)}>
-        {t.shelf.read}
+      <button type="button" className="rl-btn rl-btn-read" onClick={() => openBook(book.slug)} aria-label={t.shelf.read}>
+        <BookOpenIcon />
+        <BtnLabel text={t.shelf.read} />
       </button>
-      <button type="button" className="rl-btn rl-btn-listen" onClick={() => openBook(book.slug)}>
-        {t.shelf.listen}
+      <button type="button" className="rl-btn rl-btn-listen" onClick={() => openBook(book.slug)} aria-label={t.shelf.listen}>
+        <HeadphonesIcon />
+        <BtnLabel text={t.shelf.listen} />
       </button>
     </div>
   );
@@ -106,8 +136,9 @@ export function BookCard({ book, index }: { book: BookEntry; index: number }) {
         )}
         <BookMeta book={book} />
         <ReadListenButtons book={book} />
-        <ChapterList book={book} />
       </div>
+      {/* outside the text column so on phones it spans the whole card width */}
+      <ChapterList book={book} />
     </article>
   );
 }

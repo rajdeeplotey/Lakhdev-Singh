@@ -19,6 +19,8 @@ export const pa: Dict = {
     closeMenu: 'ਮੀਨੂ ਬੰਦ ਕਰੋ',
     homeLink: 'ਮੁੱਖ ਪੰਨਾ',
     language: 'ਭਾਸ਼ਾ',
+    mainMenu: 'ਮੁੱਖ ਮੀਨੂ',
+    mobileMenu: 'ਮੀਨੂ',
   },
   hero: {
     startReading: 'ਪੜ੍ਹਨਾ ਸ਼ੁਰੂ ਕਰੋ',
@@ -71,6 +73,18 @@ export const pa: Dict = {
     playing: (t) => `ਚੱਲ ਰਿਹਾ ਹੈ · ${t}`,
     welcomeSoon: 'ਸੁਆਗਤ ਸੁਨੇਹਾ ਜਲਦੀ ਆ ਰਿਹਾ ਹੈ',
     readHisBooks: 'ਉਨ੍ਹਾਂ ਦੀਆਂ ਕਿਤਾਬਾਂ ਪੜ੍ਹੋ',
+  },
+  author: {
+    label: 'ਲੇਖਕ ਬਾਰੇ',
+    nameFirst: 'ਡਾ. ਲਖਦੇਵ',
+    nameLast: 'ਸਿੰਘ',
+    stats: [
+      { value: '6', label: 'ਪ੍ਰਕਾਸ਼ਿਤ ਪੁਸਤਕਾਂ' },
+      { value: '1965', label: 'ਇਲੈਕਟ੍ਰੀਕਲ ਇੰਜੀਨੀਅਰ' },
+      { value: '17', label: 'ਸਾਲ ਪ੍ਰਿੰਸੀਪਲ, 1982–1999' },
+    ],
+    readBooks: 'ਪੁਸਤਕਾਂ ਪੜ੍ਹੋ',
+    loading: 'ਖੁੱਲ੍ਹ ਰਿਹਾ ਹੈ…',
   },
   readListen: {
     eyebrow: 'ਪੜ੍ਹਨਾ ਅਤੇ ਸੁਣਨਾ',
@@ -203,6 +217,7 @@ export const pa: Dict = {
   loading: 'ਖੁੱਲ੍ਹ ਰਿਹਾ ਹੈ',
   skip: 'ਮੁੱਖ ਲਿਖਤ ਤੇ ਜਾਓ',
   viewer: { newTab: 'ਨਵੀਂ ਟੈਬ ਵਿੱਚ ਖੋਲ੍ਹੋ', close: 'ਕਿਤਾਬ ਬੰਦ ਕਰੋ', loading: 'ਕਿਤਾਬ ਖੁੱਲ੍ਹ ਰਹੀ ਹੈ…' },
+  textSize: { group: 'ਅੱਖਰਾਂ ਦਾ ਆਕਾਰ', smaller: 'ਅੱਖਰ ਛੋਟੇ ਕਰੋ', larger: 'ਅੱਖਰ ਵੱਡੇ ਕਰੋ' },
   shelf: {
     count: (n) => `${n} ਕਿਤਾਬਾਂ · ${n} ${n === 1 ? 'book' : 'books'}`,
     read: 'ਪੜ੍ਹੋ / Read',

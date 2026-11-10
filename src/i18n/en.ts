@@ -16,6 +16,8 @@ export const en = {
     closeMenu: 'Close menu',
     homeLink: 'home',
     language: 'Language',
+    mainMenu: 'Main menu',
+    mobileMenu: 'Menu',
   },
   hero: {
     startReading: 'Start reading',
@@ -68,6 +70,19 @@ export const en = {
     playing: (t: string) => `Playing · ${t}`,
     welcomeSoon: 'Welcome message coming soon',
     readHisBooks: 'Read his books',
+  },
+  /** About the Author section (its text comes from public/content/author-bio.md; these are only the labels) */
+  author: {
+    label: 'About the author',
+    nameFirst: 'Dr. Lakhdev',
+    nameLast: 'Singh',
+    stats: [
+      { value: '6', label: 'Books published' },
+      { value: '1965', label: 'Electrical engineer' },
+      { value: '17', label: 'years as Principal, 1982–1999' },
+    ],
+    readBooks: 'Read his books',
+    loading: 'Loading…',
   },
   readListen: {
     eyebrow: 'Reading & Listening',
@@ -200,6 +215,7 @@ export const en = {
   loading: 'Loading',
   skip: 'Skip to content',
   viewer: { newTab: 'Open in new tab', close: 'Close book', loading: 'Opening the book…' },
+  textSize: { group: 'Text size', smaller: 'Smaller text', larger: 'Larger text' },
   shelf: {
     count: (n: number) => `${n} ਕਿਤਾਬਾਂ · ${n} ${n === 1 ? 'book' : 'books'}`,
     read: 'ਪੜ੍ਹੋ / Read',
