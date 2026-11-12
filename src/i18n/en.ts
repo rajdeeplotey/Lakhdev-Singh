@@ -226,6 +226,7 @@ export const en = {
     speed: 'Speed',
     page: (n: number) => `Page ${n}`,
     chapter: 'Chapter',
+    pagePick: 'Page',
     position: 'Position in this page',
     loading: 'Loading the narration…',
     error: 'The narration could not be loaded. Please try again.',

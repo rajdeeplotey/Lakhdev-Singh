@@ -1,6 +1,14 @@
 import type { BookEntry } from '../content/books';
-import { cycleRate, goToChapter, nextPage, prevPage, seekTo, skip, togglePlay, useNarration } from '../lib/narration';
+import { cycleRate, goToChapter, goToIndex, nextPage, prevPage, seekTo, skip, togglePlay, useNarration, type NarrationPage } from '../lib/narration';
 import { useT } from '../i18n';
+import { BarDropdown } from './BarDropdown';
+import { en } from '../i18n/en';
+import { pa } from '../i18n/pa';
+
+/** "ਪੰਨਾ 7 / Page 7" (both languages, from the dictionaries); a recording of two pages reads "… 5–6" */
+const pageNo = (p: NarrationPage) => (p.lastPage ? `${p.page}–${p.lastPage}` : String(p.page));
+const pagePa = (p: NarrationPage) => pa.narration.page(p.page) + (p.lastPage ? `–${p.lastPage}` : '');
+const pageEn = (p: NarrationPage) => en.narration.page(p.page) + (p.lastPage ? `–${p.lastPage}` : '');
 
 const mmss = (s: number) => {
   s = Math.max(0, Math.floor(s || 0));
@@ -41,6 +49,8 @@ export function NarrationBar({ book }: { book: BookEntry }) {
   const chapter = pg ? book.chapters.find((c) => c.n === pg.chapter) : undefined;
   const dur = n.duration || pg?.duration || 0;
   const chapters = n.index ? book.chapters.filter((c) => n.index!.pages.some((p) => p.chapter === c.n)) : [];
+  // the recordings of the current chapter, with their position in index.pages (the page picker's list)
+  const chapterPages = n.index && pg ? n.index.pages.map((p, i) => ({ p, i })).filter(({ p }) => p.chapter === pg.chapter) : [];
 
   return (
     <div className="nar" role="region" aria-label={t.narration.bar}>
@@ -55,20 +65,48 @@ export function NarrationBar({ book }: { book: BookEntry }) {
       ) : (
         <>
           <div className="nar-info">
-            <label className="nar-chapter">
-              <span className="sr-only">{t.narration.chapter}</span>
-              <select value={pg.chapter} onChange={(e) => goToChapter(Number(e.target.value))} lang="pa">
-                {chapters.map((c) => (
-                  <option key={c.n} value={c.n}>
-                    {c.n}. {c.pa}
-                  </option>
-                ))}
-              </select>
-            </label>
-            <span className="nar-page">
-              {t.narration.page(pg.page)}
-              {chapter ? <span className="sr-only"> · {chapter.pa}</span> : null}
-            </span>
+            <BarDropdown
+              className="nar-chapter"
+              label={t.narration.chapter}
+              lang="pa"
+              value={pg.chapter}
+              onChange={goToChapter}
+              face={chapter ? `${chapter.n}. ${chapter.pa}` : ''}
+              options={chapters.map((c) => ({ value: c.n, label: `${c.n}. ${c.pa}` }))}
+            />
+            {chapterPages.length > 1 ? (
+              <BarDropdown
+                className="nar-pagepick"
+                label={t.narration.pagePick}
+                align="right"
+                value={n.i}
+                onChange={goToIndex}
+                face={
+                  <>
+                    <span lang="pa" className="np-pa">
+                      {pagePa(pg)} /
+                    </span>
+                    {pageEn(pg)}
+                  </>
+                }
+                options={chapterPages.map(({ p, i }) => ({
+                  value: i,
+                  label: (
+                    <>
+                      <span lang="pa">{pagePa(p)}</span> / {pageEn(p)}
+                    </>
+                  ),
+                }))}
+              />
+            ) : (
+              <span className="nar-page" data-page={pageNo(pg)}>
+                <span lang="pa" className="np-pa">
+                  {pagePa(pg)} /{' '}
+                </span>
+                {pageEn(pg)}
+                {chapter ? <span className="sr-only"> · {chapter.pa}</span> : null}
+              </span>
+            )}
           </div>
 
           <div className="nar-controls">

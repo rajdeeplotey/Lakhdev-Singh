@@ -13,6 +13,7 @@ import { useSyncExternalStore } from 'react';
  */
 export interface NarrationPage {
   page: number; // printed page number
+  lastPage?: number; // set when one recording reads two printed pages (e.g. 5–6)
   chapter: number;
   heyzinePage: number;
   file: string;
@@ -61,16 +62,22 @@ function savedRate(): number {
 
 let audio: HTMLAudioElement | null = null;
 let preload: HTMLAudioElement | null = null;
+// a restored position is shown 2 s early (to hear the last words again); it is not saved back until the reader plays
+// or moves, otherwise every open/close without playing would creep 2 s further back
+let holdSave = false;
 function el(): HTMLAudioElement {
   if (audio) return audio;
   audio = new Audio();
   audio.preload = 'auto';
   audio.addEventListener('timeupdate', () => {
     set({ time: audio!.currentTime });
-    savePosition();
+    if (!holdSave) savePosition();
   });
   audio.addEventListener('durationchange', () => set({ duration: audio!.duration || 0 }));
-  audio.addEventListener('play', () => set({ playing: true, error: null }));
+  audio.addEventListener('play', () => {
+    holdSave = false;
+    set({ playing: true, error: null });
+  });
   audio.addEventListener('pause', () => set({ playing: false }));
   audio.addEventListener('ended', () => {
     if (state.index && state.i < state.index.pages.length - 1) goTo(state.i + 1, 0, true);
@@ -139,6 +146,7 @@ export function savedPosition(slug: string): { page: number; t: number } | null 
 
 function goTo(i: number, t = 0, play = state.playing) {
   if (!state.index || !state.slug) return;
+  holdSave = false;
   i = Math.max(0, Math.min(state.index.pages.length - 1, i));
   const pg = state.index.pages[i];
   const a = el();
@@ -169,14 +177,15 @@ function goTo(i: number, t = 0, play = state.playing) {
 }
 
 /**
- * Start listening (called from a click, so phones allow the sound).
+ * Open the audio bar, PAUSED: the voice never starts by itself — only the play button starts it.
  * Start point: the given Heyzine page if any → else the saved position → else the first narrated page.
  */
 export function startListening(slug: string, fromHeyzinePage?: number) {
   const ix = cache.get(slug);
-  const begin = (index: NarrationIndex, playNow: boolean) => {
+  const begin = (index: NarrationIndex) => {
     let i = 0;
     let t = 0;
+    let restored = false;
     if (fromHeyzinePage && fromHeyzinePage > 1) {
       const k = index.pages.findIndex((p) => p.heyzinePage >= fromHeyzinePage);
       i = k < 0 ? 0 : k;
@@ -186,16 +195,18 @@ export function startListening(slug: string, fromHeyzinePage?: number) {
       if (k >= 0) {
         i = k;
         t = Math.max(0, pos!.t - 2);
+        restored = true;
       }
     }
     set({ slug, index, open: true, error: null });
-    goTo(i, t, playNow);
+    goTo(i, t, false);
+    holdSave = restored;
   };
-  if (ix) begin(ix, true);
+  if (ix) begin(ix);
   else {
     set({ slug, open: true, error: null });
     loadIndex(slug).then(
-      (index) => begin(index, true),
+      (index) => begin(index),
       () => set({ error: 'load' }),
     );
   }
@@ -210,6 +221,7 @@ export const nextPage = () => goTo(state.i + 1, 0);
 export const prevPage = () => (state.time > 3 ? seekTo(0) : goTo(state.i - 1, 0));
 export function seekTo(t: number) {
   const a = el();
+  holdSave = false;
   a.currentTime = Math.max(0, Math.min(t, (a.duration || state.duration) - 0.2));
   set({ time: a.currentTime });
 }
@@ -223,10 +235,15 @@ export function skip(sec: number) {
     goTo(state.i + 1, Math.min(5, t - (a.duration || state.duration)));
   } else seekTo(t);
 }
+/** Page picker: move to the start of the recording at position i of index.pages (keeps playing only if it was playing). */
+export function goToIndex(i: number) {
+  goTo(i, 0);
+}
+/** Chapter picker: move to the chapter's first page (keeps playing only if it was playing). */
 export function goToChapter(n: number) {
   if (!state.index) return;
   const k = state.index.pages.findIndex((p) => p.chapter === n);
-  if (k >= 0) goTo(k, 0, true);
+  if (k >= 0) goTo(k, 0);
 }
 export function cycleRate() {
   const k = RATES.indexOf(state.rate as (typeof RATES)[number]);

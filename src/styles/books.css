@@ -677,7 +677,33 @@ h3:lang(pa),
   width: 250px;
   flex-shrink: 1;
 }
-.nar-chapter select {
+.nar-page {
+  font-size: 13px;
+  opacity: 0.8;
+  padding-left: 2px;
+}
+/* page picker: looks like the chapter dropdown; an invisible native <select> lies on top of its face */
+.viewer .nar-info {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  width: 400px;
+}
+.viewer .nar-chapter {
+  flex: 1;
+  min-width: 0;
+}
+.nar-pagepick {
+  flex-shrink: 0;
+}
+/* chapter + page dropdowns (BarDropdown): the button looks like the old chapter select; the list opens UPWARD */
+.bar-dd {
+  position: relative;
+  min-width: 0;
+}
+.bar-dd-btn {
+  display: flex;
+  align-items: center;
   width: 100%;
   min-height: 34px;
   padding: 0 28px 0 10px;
@@ -685,20 +711,97 @@ h3:lang(pa),
   border: 1px solid rgba(226, 194, 126, 0.45);
   background: rgba(243, 234, 219, 0.08) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%23e2c27e' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 10px center;
   color: #f3eadb;
-  font-family: 'Noto Sans Gurmukhi', sans-serif;
+  font-family: 'Noto Sans Gurmukhi', 'Jost', sans-serif;
   font-size: 15px;
   line-height: 1.4;
-  appearance: none;
+  text-align: left;
+  cursor: pointer;
+}
+.bar-dd-btn:hover,
+.bar-dd-btn[aria-expanded='true'] {
+  background-color: rgba(226, 194, 126, 0.16);
+}
+.bar-dd-face {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
   text-overflow: ellipsis;
 }
-.nar-chapter option {
-  color: #1c2b4d;
-  background: #f3eadb;
+.nar-chapter .bar-dd-face {
+  display: block;
 }
-.nar-page {
-  font-size: 13px;
-  opacity: 0.8;
-  padding-left: 2px;
+.bar-dd-list {
+  position: absolute;
+  bottom: calc(100% + 6px);
+  z-index: 60;
+  min-width: 100%;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  max-height: 50vh;
+  max-height: 50dvh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  border-radius: 8px;
+  background: #f3eadb;
+  color: #1c2b4d;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.35);
+  font-family: 'Noto Sans Gurmukhi', 'Jost', sans-serif;
+  font-size: 15px;
+  line-height: 1.4;
+}
+.bar-dd-left {
+  left: 0;
+}
+.bar-dd-right {
+  right: 0;
+}
+.bar-dd-list:focus {
+  outline: 2px solid #e2c27e;
+  outline-offset: 2px;
+}
+.bar-dd-list li {
+  padding: 8px 14px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.bar-dd-list li.is-active {
+  background: rgba(28, 43, 77, 0.08);
+}
+.bar-dd-list li.is-current {
+  background: #cfe0f7;
+  font-weight: 600;
+}
+/* a chapter with one recording: the same face as a plain label, no arrow */
+.viewer .nar-page {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(226, 194, 126, 0.45);
+  font-family: 'Noto Sans Gurmukhi', 'Jost', sans-serif;
+  font-size: 15px;
+  opacity: 1;
+  white-space: nowrap;
+}
+.nar .np-pa {
+  margin-right: 0.3em; /* the space after "ਪੰਨਾ 7 /" (flex items drop trailing spaces) */
+}
+@media (max-width: 860px) {
+  .viewer .nar-info {
+    width: auto;
+  }
+}
+@media (max-width: 600px) {
+  .nar .np-pa {
+    display: none;
+  }
 }
 .nar-controls {
   display: flex;
@@ -722,7 +825,7 @@ h3:lang(pa),
   background: rgba(226, 194, 126, 0.16);
 }
 .nar-btn:focus-visible,
-.nar-chapter select:focus-visible,
+.bar-dd-btn:focus-visible,
 .nar-progress input:focus-visible {
   outline: 2px solid #e2c27e;
   outline-offset: 2px;

@@ -182,7 +182,9 @@ export function BookViewer() {
                 className={listening ? "is-on" : ""}
                 aria-pressed={listening}
                 aria-label={t.shelf.listen}
-                onClick={() => (listening ? togglePlay() : startListening(book.slug, state?.page))}
+                onClick={() => {
+                  if (!listening) startListening(book.slug, state?.page); // opens the bar paused; only ▶ starts the voice
+                }}
               >
                 <ModeLabel text={t.shelf.listen} />
               </button>
@@ -275,7 +277,8 @@ export function BookViewer() {
           ref={frameRef}
           onLoad={() => {
             setLoaded(true);
-            focusBook(); // arrow keys turn the pages straight away
+            // arrow keys turn the pages straight away — unless the reader is using the audio bar (e.g. a list is open)
+            if (!document.activeElement?.closest?.(".nar")) focusBook();
           }}
         />
       </div>

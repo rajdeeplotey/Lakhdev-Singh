@@ -160,10 +160,11 @@
       "coverWidth": 600,
       "coverHeight": 849,
       "heyzine": "https://heyzine.com/flip-book/2e278305bd.html",
+      "narration": "/audio/gurmat-guhaj-vichar-2/index.json",
       "descriptionPa": "",
       "pages": 127,
-      "chaptersConfirmed": false,
-      "chaptersSource": "chapter headings found in the book (printed ਤਤਕਰਾ belongs to Part 3)",
+      "chaptersConfirmed": true,
+      "chaptersSource": "chapter headings found in the book (printed ਤਤਕਰਾ belongs to Part 3); numbers and start pages match the narrator's 28 audio folders",
       "chapters": [
         {
           "n": 1,

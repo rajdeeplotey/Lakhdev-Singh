@@ -228,6 +228,7 @@ export const pa: Dict = {
     speed: 'ਰਫ਼ਤਾਰ',
     page: (n: number) => `ਪੰਨਾ ${n}`,
     chapter: 'ਅਧਿਆਇ',
+    pagePick: 'ਪੰਨਾ',
     position: 'ਇਸ ਪੰਨੇ ਵਿੱਚ ਥਾਂ',
     loading: 'ਆਵਾਜ਼ ਖੁੱਲ੍ਹ ਰਹੀ ਹੈ…',
     error: 'ਆਵਾਜ਼ ਖੁੱਲ੍ਹ ਨਹੀਂ ਸਕੀ। ਕਿਰਪਾ ਕਰਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।',
