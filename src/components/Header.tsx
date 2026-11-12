@@ -6,7 +6,7 @@ import { HashLink } from './HashLink';
 import { LangToggle } from './LangToggle';
 import { useBooks, useSite } from '../content/SiteContext';
 import { startBook } from '../content/startBook';
-import { openBook } from '../lib/viewer';
+import { listenToBook } from '../lib/narration';
 import { useT } from '../i18n';
 
 export function Header() {
@@ -81,7 +81,7 @@ export function Header() {
           ))}
           <LangToggle className="header-lang" />
           {book1 && (
-            <button type="button" className="header-listen" onClick={() => openBook(book1.slug)}>
+            <button type="button" className="header-listen" onClick={() => listenToBook(book1.slug)}>
               <HeadphonesIcon /> {t.nav.listenNow}
             </button>
           )}
@@ -117,7 +117,7 @@ export function Header() {
             className="btn btn-gold"
             onClick={() => {
               close();
-              openBook(book1.slug);
+              listenToBook(book1.slug);
             }}
           >
             <HeadphonesIcon /> {t.nav.listenNow}

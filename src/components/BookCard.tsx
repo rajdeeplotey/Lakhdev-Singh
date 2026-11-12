@@ -1,6 +1,7 @@
 import type { BookEntry } from '../content/books';
 import { visibleChapters } from '../content/books';
 import { openBook } from '../lib/viewer';
+import { listenToBook } from '../lib/narration';
 import { pad2 } from '../lib/format';
 import { useT } from '../i18n';
 
@@ -63,7 +64,7 @@ export function ReadListenButtons({ book, size = 'sm' }: { book: BookEntry; size
         <BookOpenIcon />
         <BtnLabel text={t.shelf.read} />
       </button>
-      <button type="button" className="rl-btn rl-btn-listen" onClick={() => openBook(book.slug)} aria-label={t.shelf.listen}>
+      <button type="button" className="rl-btn rl-btn-listen" onClick={() => listenToBook(book.slug)} aria-label={t.shelf.listen}>
         <HeadphonesIcon />
         <BtnLabel text={t.shelf.listen} />
       </button>

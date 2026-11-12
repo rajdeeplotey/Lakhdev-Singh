@@ -29,6 +29,8 @@ export interface BookEntry {
   chaptersConfirmed: boolean;
   chaptersSource?: string;
   chapters: Chapter[];
+  /** narration index (public/audio/<slug>/index.json): one recording per printed page, synced to the flipbook */
+  narration?: string;
 }
 
 export interface BooksData {

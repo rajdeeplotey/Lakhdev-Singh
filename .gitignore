@@ -4,3 +4,6 @@ work
 *.zip
 *.tsbuildinfo
 *.pdf
+
+# original narration recordings (large, kept local; web copies go to public/audio)
+/audio/

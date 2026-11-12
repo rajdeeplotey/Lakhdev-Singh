@@ -3,6 +3,8 @@ import { useBooks } from "../content/SiteContext";
 import { heyzineUrl } from "../content/books";
 import { closeBook, useViewer } from "../lib/viewer";
 import { useT } from "../i18n";
+import { NarrationBar } from "./NarrationBar";
+import { hasNarration, setNarrationMeta, startListening, stopListening, togglePlay, useNarration } from "../lib/narration";
 
 /**
  * Full-screen Heyzine viewer. The iframe exists only while the viewer is open (fast pages, and the
@@ -23,6 +25,18 @@ function savedZoom(): number {
     /* storage blocked */
   }
   return 1;
+}
+
+/** "ਪੜ੍ਹੋ / Read" → on very small phones only the Punjabi word is shown */
+function ModeLabel({ text }: { text: string }) {
+  const i = text.indexOf(" / ");
+  if (i < 0) return <>{text}</>;
+  return (
+    <>
+      <span lang="pa">{text.slice(0, i)}</span>
+      <span className="vm-en">{text.slice(i)}</span>
+    </>
+  );
 }
 
 export function BookViewer() {
@@ -50,6 +64,32 @@ export function BookViewer() {
       /* cross-origin: f.focus() is enough */
     }
   };
+  const nar = useNarration();
+  const canListen = !!book && hasNarration(book.slug);
+  const listening = !!book && nar.open && nar.slug === book.slug;
+  const narPage = listening ? nar.index?.pages[nar.i] : undefined;
+  // the voice drives the book: when a new page starts, turn the flipbook to it (hash change, no reload)
+  const turnedTo = useRef<number | null>(null);
+  useEffect(() => {
+    const f = frameRef.current;
+    if (!f || !loaded || !narPage || !src) return;
+    if (turnedTo.current === narPage.heyzinePage) return;
+    turnedTo.current = narPage.heyzinePage;
+    f.src = src.split('#')[0] + '#page/' + narPage.heyzinePage;
+  }, [narPage, loaded, src]);
+  useEffect(() => {
+    turnedTo.current = null;
+  }, [src]);
+  // lock screen / headphone controls show the book, chapter and cover
+  useEffect(() => {
+    if (!book) return;
+    setNarrationMeta({
+      title: book.titlePa,
+      artist: 'ਡਾ. ਲਖਦੇਵ ਸਿੰਘ',
+      cover: book.cover,
+      chapterTitle: (n) => book.chapters.find((c) => c.n === n)?.pa ?? '',
+    });
+  }, [book]);
   const [zoom, setZoom] = useState(savedZoom);
   const zi = ZOOMS.indexOf(zoom as (typeof ZOOMS)[number]);
   const changeZoom = (d: number) => {
@@ -85,6 +125,12 @@ export function BookViewer() {
         closeBook();
         return;
       }
+      // Space = play / pause while the narration bar is open (focus on our page, not inside the book)
+      if (e.key === " " && hasNarration(book.slug) && document.querySelector(".nar") && !(e.target as HTMLElement).closest?.("button, select, input")) {
+        e.preventDefault();
+        togglePlay();
+        return;
+      }
       // a page-turn key pressed while the focus is on our top bar: hand the keyboard to the book
       if (
         [
@@ -106,6 +152,7 @@ export function BookViewer() {
     window.addEventListener("keydown", onKey);
     return () => {
       document.body.style.overflow = prevOverflow;
+      stopListening(); // closing the book stops the voice (the position stays saved)
       window.removeEventListener("keydown", onKey);
       prevFocus?.focus?.();
     };
@@ -115,7 +162,7 @@ export function BookViewer() {
 
   return (
     <div
-      className="viewer"
+      className={`viewer ${listening ? "has-narration" : ""}`}
       role="dialog"
       aria-modal="true"
       aria-labelledby="viewer-title"
@@ -125,6 +172,22 @@ export function BookViewer() {
           {book.titlePa}
         </h2>
         <div className="viewer-actions">
+          {canListen && (
+            <div className="viewer-mode" role="group" aria-label={t.narration.mode}>
+              <button type="button" className={listening ? "" : "is-on"} aria-pressed={!listening} aria-label={t.shelf.read} onClick={() => stopListening()}>
+                <ModeLabel text={t.shelf.read} />
+              </button>
+              <button
+                type="button"
+                className={listening ? "is-on" : ""}
+                aria-pressed={listening}
+                aria-label={t.shelf.listen}
+                onClick={() => (listening ? togglePlay() : startListening(book.slug, state?.page))}
+              >
+                <ModeLabel text={t.shelf.listen} />
+              </button>
+            </div>
+          )}
           <div
             className="viewer-zoom"
             role="group"
@@ -216,6 +279,7 @@ export function BookViewer() {
           }}
         />
       </div>
+      {listening && <NarrationBar book={book} />}
     </div>
   );
 }

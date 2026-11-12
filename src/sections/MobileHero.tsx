@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useBooks, useSite } from '../content/SiteContext';
 import { Logo } from '../components/Logo';
 import { openBook } from '../lib/viewer';
+import { listenToBook } from '../lib/narration';
 import { firstChapterPage, startBook } from '../content/startBook';
 import { useLang, useT } from '../i18n';
 
@@ -71,7 +72,7 @@ export function MobileHero() {
             <button type="button" className="mhero-btn mhero-btn-solid" onClick={() => openBook(book1.slug, firstChapterPage(book1))}>
               {t.hero.startReading}
             </button>
-            <button type="button" className="mhero-btn mhero-btn-line" onClick={() => openBook(book1.slug)}>
+            <button type="button" className="mhero-btn mhero-btn-line" onClick={() => listenToBook(book1.slug)}>
               <HeadphonesIcon /> {t.hero.listen}
             </button>
           </div>

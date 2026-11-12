@@ -1,6 +1,7 @@
 import { createContext, useContext, useEffect, useMemo, useState, type ReactNode } from 'react';
 import { loadSite } from './loaders';
 import { loadBooks, type BooksData } from './books';
+import { registerNarration } from '../lib/narration';
 import type { SiteContent } from './types';
 import { localize, useLang } from '../i18n';
 
@@ -16,7 +17,10 @@ export function SiteProvider({ children }: { children: ReactNode }) {
   const { lang } = useLang();
   useEffect(() => {
     Promise.all([loadSite(), loadBooks()])
-      .then(([site, books]) => setState({ site, books, error: null }))
+      .then(([site, books]) => {
+        books.books.forEach((b) => registerNarration(b.slug, b.narration));
+        setState({ site, books, error: null });
+      })
       .catch((e) => setState({ site: null, books: null, error: String(e) }));
   }, []);
 

@@ -7,6 +7,7 @@ import { HashLink } from '../components/HashLink';
 import { useMediaQuery } from '../lib/useMediaQuery';
 import { stopPreview } from '../lib/chapterPreview';
 import { openBook } from '../lib/viewer';
+import { listenToBook } from '../lib/narration';
 import { MobileHero } from './MobileHero';
 import { useLang, useT } from '../i18n';
 
@@ -57,7 +58,7 @@ function DesktopHero() {
               <button type="button" className="pill pill-solid" onClick={() => openBook(book1.slug, firstChapterPage(book1))}>
                 {t.hero.startReading} <span aria-hidden>→</span>
               </button>
-              <button type="button" className="pill pill-line" onClick={() => openBook(book1.slug)}>
+              <button type="button" className="pill pill-line" onClick={() => listenToBook(book1.slug)}>
                 <PlayGlyph size={12} />
                 {t.hero.listenFree}
               </button>
