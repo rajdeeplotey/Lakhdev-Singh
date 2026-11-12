@@ -1,0 +1,1044 @@
+{
+ "book": "gurmat-guhaj-vichar-3",
+ "note": "One narration file per printed page. heyzinePage = page index in the Heyzine flipbook (#page/N). Generated from the original recordings in /audio (not in git).",
+ "checks": [
+  "Printed pages 5–6 are one recording (\"1.ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨਾਲ ਕਿੰਝ ਗੱਲ ਕਰੀਏ 5-6.mp3\").",
+  "Printed pages 10–11 are one recording (\"3.ਗੁਰਬਾਣੀ ਵਿੱਚ ਅਵਤਾਰ ਕੌਣ ਹੈ 10 11.mp3\")."
+ ],
+ "pages": [
+  {
+   "page": 5,
+   "lastPage": 6,
+   "chapter": 1,
+   "heyzinePage": 5,
+   "file": "p005.mp3",
+   "duration": 110.13,
+   "source": "1.ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨਾਲ ਕਿੰਝ ਗੱਲ ਕਰੀਏ/1.ਗੁਰੂ ਗੋਬਿੰਦ ਸਿੰਘ ਜੀ ਨਾਲ ਕਿੰਝ ਗੱਲ ਕਰੀਏ 5-6.mp3"
+  },
+  {
+   "page": 7,
+   "chapter": 2,
+   "heyzinePage": 7,
+   "file": "p007.mp3",
+   "duration": 126.15,
+   "source": "2.ਸਾਹਿਬਜ਼ਾਦਿਆਂ ਦੀ ਸ਼ਹੀਦੀ/2.ਸਾਹਿਬਜ਼ਾਦਿਆਂ ਦੀ ਸ਼ਹੀਦੀ 7.mp3"
+  },
+  {
+   "page": 8,
+   "chapter": 2,
+   "heyzinePage": 8,
+   "file": "p008.mp3",
+   "duration": 57.57,
+   "source": "2.ਸਾਹਿਬਜ਼ਾਦਿਆਂ ਦੀ ਸ਼ਹੀਦੀ/2.ਸਾਹਿਬਜ਼ਾਦਿਆਂ ਦੀ ਸ਼ਹੀਦੀ  8.mp3"
+  },
+  {
+   "page": 9,
+   "chapter": 3,
+   "heyzinePage": 9,
+   "file": "p009.mp3",
+   "duration": 110.47,
+   "source": "3.ਗੁਰਬਾਣੀ ਵਿੱਚ ਅਵਤਾਰ ਕੌਣ ਹੈ/3.ਗੁਰਬਾਣੀ ਵਿੱਚ ਅਵਤਾਰ ਕੌਣ ਹੈ 9.mp3"
+  },
+  {
+   "page": 10,
+   "lastPage": 11,
+   "chapter": 3,
+   "heyzinePage": 10,
+   "file": "p010.mp3",
+   "duration": 133.02,
+   "source": "3.ਗੁਰਬਾਣੀ ਵਿੱਚ ਅਵਤਾਰ ਕੌਣ ਹੈ/3.ਗੁਰਬਾਣੀ ਵਿੱਚ ਅਵਤਾਰ ਕੌਣ ਹੈ 10 11.mp3"
+  },
+  {
+   "page": 12,
+   "chapter": 4,
+   "heyzinePage": 12,
+   "file": "p012.mp3",
+   "duration": 101.59,
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 12.mp3"
+  },
+  {
+   "page": 13,
+   "chapter": 4,
+   "heyzinePage": 13,
+   "file": "p013.mp3",
+   "duration": 105.98,
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 13.mp3"
+  },
+  {
+   "page": 14,
+   "chapter": 4,
+   "heyzinePage": 14,
+   "file": "p014.mp3",
+   "duration": 123.19,
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 14.mp3"
+  },
+  {
+   "page": 15,
+   "chapter": 4,
+   "heyzinePage": 15,
+   "file": "p015.mp3",
+   "duration": 114.31,
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 15.mp3"
+  },
+  {
+   "page": 16,
+   "chapter": 4,
+   "heyzinePage": 16,
+   "file": "p016.mp3",
+   "duration": 116.87,
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 16.mp3"
+  },
+  {
+   "page": 17,
+   "chapter": 4,
+   "heyzinePage": 17,
+   "file": "p017.mp3",
+   "duration": 103.34,
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 17.mp3"
+  },
+  {
+   "page": 18,
+   "chapter": 4,
+   "heyzinePage": 18,
+   "file": "p018.mp3",
+   "duration": 117.66,
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 18.mp3"
+  },
+  {
+   "page": 19,
+   "chapter": 4,
+   "heyzinePage": 19,
+   "file": "p019.mp3",
+   "duration": 111.75,
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 19.mp3"
+  },
+  {
+   "page": 20,
+   "chapter": 4,
+   "heyzinePage": 20,
+   "file": "p020.mp3",
+   "duration": 94.69,
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 20.mp3"
+  },
+  {
+   "page": 21,
+   "chapter": 4,
+   "heyzinePage": 21,
+   "file": "p021.mp3",
+   "duration": 54.7,
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 21.mp3"
+  },
+  {
+   "page": 22,
+   "chapter": 5,
+   "heyzinePage": 22,
+   "file": "p022.mp3",
+   "duration": 104.86,
+   "source": "5.ਭਗਤ ਕਬੀਰ ਜੀ/5.ਭਗਤ ਕਬੀਰ ਜੀ 22.mp3"
+  },
+  {
+   "page": 23,
+   "chapter": 5,
+   "heyzinePage": 23,
+   "file": "p023.mp3",
+   "duration": 109.19,
+   "source": "5.ਭਗਤ ਕਬੀਰ ਜੀ/5.ਭਗਤ ਕਬੀਰ ਜੀ 23.mp3"
+  },
+  {
+   "page": 24,
+   "chapter": 5,
+   "heyzinePage": 24,
+   "file": "p024.mp3",
+   "duration": 105.35,
+   "source": "5.ਭਗਤ ਕਬੀਰ ਜੀ/5.ਭਗਤ ਕਬੀਰ ਜੀ 24.mp3"
+  },
+  {
+   "page": 25,
+   "chapter": 5,
+   "heyzinePage": 25,
+   "file": "p025.mp3",
+   "duration": 113.66,
+   "source": "5.ਭਗਤ ਕਬੀਰ ਜੀ/5.ਭਗਤ ਕਬੀਰ ਜੀ 25.mp3"
+  },
+  {
+   "page": 26,
+   "chapter": 5,
+   "heyzinePage": 26,
+   "file": "p026.mp3",
+   "duration": 73.51,
+   "source": "5.ਭਗਤ ਕਬੀਰ ਜੀ/5.ਭਗਤ ਕਬੀਰ ਜੀ 26.mp3"
+  },
+  {
+   "page": 27,
+   "chapter": 6,
+   "heyzinePage": 27,
+   "file": "p027.mp3",
+   "duration": 115.59,
+   "source": "6.ਜਥੇਦਾਰ ਦਮਦਮਾ ਸਾਹਿਬ ਜੀ (ਲਗਭਗ 1967)/6.ਜਥੇਦਾਰ ਦਮਦਮਾ ਸਾਹਿਬ ਜੀ (ਲਗਭਗ 1967) 27 (2).mp3"
+  },
+  {
+   "page": 28,
+   "chapter": 6,
+   "heyzinePage": 28,
+   "file": "p028.mp3",
+   "duration": 77.9,
+   "source": "6.ਜਥੇਦਾਰ ਦਮਦਮਾ ਸਾਹਿਬ ਜੀ (ਲਗਭਗ 1967)/6.ਜਥੇਦਾਰ ਦਮਦਮਾ ਸਾਹਿਬ ਜੀ (ਲਗਭਗ 1967) 28.mp3"
+  },
+  {
+   "page": 29,
+   "chapter": 7,
+   "heyzinePage": 29,
+   "file": "p029.mp3",
+   "duration": 98.22,
+   "source": "7.ਸੰਤ ਕਰਤਾਰ ਸਿੰਘ ਜੀ ਭਿੰਡਰਾਂਵਾਲੇ/7.ਸੰਤ ਕਰਤਾਰ ਸਿੰਘ ਜੀ ਭਿੰਡਰਾਂਵਾਲੇ 29.mp3"
+  },
+  {
+   "page": 30,
+   "chapter": 7,
+   "heyzinePage": 30,
+   "file": "p030.mp3",
+   "duration": 113.42,
+   "source": "7.ਸੰਤ ਕਰਤਾਰ ਸਿੰਘ ਜੀ ਭਿੰਡਰਾਂਵਾਲੇ/7.ਸੰਤ ਕਰਤਾਰ ਸਿੰਘ ਜੀ ਭਿੰਡਰਾਂਵਾਲੇ 30.mp3"
+  },
+  {
+   "page": 31,
+   "chapter": 7,
+   "heyzinePage": 31,
+   "file": "p031.mp3",
+   "duration": 123.59,
+   "source": "7.ਸੰਤ ਕਰਤਾਰ ਸਿੰਘ ਜੀ ਭਿੰਡਰਾਂਵਾਲੇ/7.ਸੰਤ ਕਰਤਾਰ ਸਿੰਘ ਜੀ ਭਿੰਡਰਾਂਵਾਲੇ 31.mp3"
+  },
+  {
+   "page": 32,
+   "chapter": 7,
+   "heyzinePage": 32,
+   "file": "p032.mp3",
+   "duration": 105.43,
+   "source": "7.ਸੰਤ ਕਰਤਾਰ ਸਿੰਘ ਜੀ ਭਿੰਡਰਾਂਵਾਲੇ/7.ਸੰਤ ਕਰਤਾਰ ਸਿੰਘ ਜੀ ਭਿੰਡਰਾਂਵਾਲੇ 32.mp3"
+  },
+  {
+   "page": 33,
+   "chapter": 8,
+   "heyzinePage": 33,
+   "file": "p033.mp3",
+   "duration": 108.54,
+   "source": "8.ਜਥੇਦਾਰ ਤਰਨਾ ਦਲ ਬਾਬਾ ਨਿਹਾਲ ਸਿੰਘ ਜੀ/8.ਜਥੇਦਾਰ ਤਰਨਾ ਦਲ ਬਾਬਾ ਨਿਹਾਲ ਸਿੰਘ ਜੀ 33.mp3"
+  },
+  {
+   "page": 34,
+   "chapter": 8,
+   "heyzinePage": 34,
+   "file": "p034.mp3",
+   "duration": 69.09,
+   "source": "8.ਜਥੇਦਾਰ ਤਰਨਾ ਦਲ ਬਾਬਾ ਨਿਹਾਲ ਸਿੰਘ ਜੀ/8.ਜਥੇਦਾਰ ਤਰਨਾ ਦਲ ਬਾਬਾ ਨਿਹਾਲ ਸਿੰਘ ਜੀ 34.mp3"
+  },
+  {
+   "page": 35,
+   "chapter": 9,
+   "heyzinePage": 35,
+   "file": "p035.mp3",
+   "duration": 108.62,
+   "source": "9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ/9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ 35.mp3"
+  },
+  {
+   "page": 36,
+   "chapter": 9,
+   "heyzinePage": 36,
+   "file": "p036.mp3",
+   "duration": 116.3,
+   "source": "9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ/9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ 36.mp3"
+  },
+  {
+   "page": 37,
+   "chapter": 9,
+   "heyzinePage": 37,
+   "file": "p037.mp3",
+   "duration": 119.43,
+   "source": "9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ/9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ 37.mp3"
+  },
+  {
+   "page": 38,
+   "chapter": 9,
+   "heyzinePage": 38,
+   "file": "p038.mp3",
+   "duration": 116.87,
+   "source": "9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ/9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ 38.mp3"
+  },
+  {
+   "page": 39,
+   "chapter": 9,
+   "heyzinePage": 39,
+   "file": "p039.mp3",
+   "duration": 112.95,
+   "source": "9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ/9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ 39.mp3"
+  },
+  {
+   "page": 40,
+   "chapter": 9,
+   "heyzinePage": 40,
+   "file": "p040.mp3",
+   "duration": 118.7,
+   "source": "9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ/9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ 40.mp3"
+  },
+  {
+   "page": 41,
+   "chapter": 9,
+   "heyzinePage": 41,
+   "file": "p041.mp3",
+   "duration": 111.6,
+   "source": "9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ/9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ 41.mp3"
+  },
+  {
+   "page": 42,
+   "chapter": 9,
+   "heyzinePage": 42,
+   "file": "p042.mp3",
+   "duration": 58.07,
+   "source": "9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ/9.ਕੁਝ ਕੁ ਜੀਵਨ ਝਲਕਾਰੇ, ਬਾਊ ਮਲ ਸਿੰਘ ਜੀ 42.mp3"
+  },
+  {
+   "page": 43,
+   "chapter": 10,
+   "heyzinePage": 43,
+   "file": "p043.mp3",
+   "duration": 103.42,
+   "source": "10 .ਭਾਈ ਬਲਦੇਵ ਸਿੰਘ ਜੀ, ਪਿੰਡ ਕੁਰਾਂਗਣਾ, ਜ਼ਿਲ੍ਹਾ ਹੁਸ਼ਿਆਰਪੁਰ/9.ਭਾਈ ਬਲਦੇਵ ਸਿੰਘ ਜੀ, ਪਿੰਡ ਕੁਰਾਂਗਣਾ, ਜ਼ਿਲ੍ਹਾ ਹੁਸ਼ਿਆਰਪੁਰ 43.mp3"
+  },
+  {
+   "page": 44,
+   "chapter": 10,
+   "heyzinePage": 44,
+   "file": "p044.mp3",
+   "duration": 115.1,
+   "source": "10 .ਭਾਈ ਬਲਦੇਵ ਸਿੰਘ ਜੀ, ਪਿੰਡ ਕੁਰਾਂਗਣਾ, ਜ਼ਿਲ੍ਹਾ ਹੁਸ਼ਿਆਰਪੁਰ/9.ਭਾਈ ਬਲਦੇਵ ਸਿੰਘ ਜੀ, ਪਿੰਡ ਕੁਰਾਂਗਣਾ, ਜ਼ਿਲ੍ਹਾ ਹੁਸ਼ਿਆਰਪੁਰ 44.mp3"
+  },
+  {
+   "page": 45,
+   "chapter": 11,
+   "heyzinePage": 45,
+   "file": "p045.mp3",
+   "duration": 92.87,
+   "source": "11 ਗੁਰਬਾਣੀ ਵਿਚਾਰ/11 ਗੁਰਬਾਣੀ ਵਿਚਾਰ 45.mp3"
+  },
+  {
+   "page": 46,
+   "chapter": 11,
+   "heyzinePage": 46,
+   "file": "p046.mp3",
+   "duration": 108.23,
+   "source": "11 ਗੁਰਬਾਣੀ ਵਿਚਾਰ/11 ਗੁਰਬਾਣੀ ਵਿਚਾਰ 46.mp3"
+  },
+  {
+   "page": 47,
+   "chapter": 11,
+   "heyzinePage": 47,
+   "file": "p047.mp3",
+   "duration": 110.24,
+   "source": "11 ਗੁਰਬਾਣੀ ਵਿਚਾਰ/11 ਗੁਰਬਾਣੀ ਵਿਚਾਰ 47.mp3"
+  },
+  {
+   "page": 48,
+   "chapter": 11,
+   "heyzinePage": 48,
+   "file": "p048.mp3",
+   "duration": 20.79,
+   "source": "11 ਗੁਰਬਾਣੀ ਵਿਚਾਰ/11 ਗੁਰਬਾਣੀ ਵਿਚਾਰ 48.mp3"
+  },
+  {
+   "page": 49,
+   "chapter": 12,
+   "heyzinePage": 49,
+   "file": "p049.mp3",
+   "duration": 87.35,
+   "source": "12.ਗੁਰੂ ਦਾ ਸਤਿਕਾਰ ਜਾਂ ਪੰਥ ਵਿੱਚ ਪੰਗਾ/12.ਗੁਰੂ ਦਾ ਸਤਿਕਾਰ ਜਾਂ ਪੰਥ ਵਿੱਚ ਪੰਗਾ 49.mp3"
+  },
+  {
+   "page": 50,
+   "chapter": 12,
+   "heyzinePage": 50,
+   "file": "p050.mp3",
+   "duration": 119.2,
+   "source": "12.ਗੁਰੂ ਦਾ ਸਤਿਕਾਰ ਜਾਂ ਪੰਥ ਵਿੱਚ ਪੰਗਾ/12.ਗੁਰੂ ਦਾ ਸਤਿਕਾਰ ਜਾਂ ਪੰਥ ਵਿੱਚ ਪੰਗਾ 50.mp3"
+  },
+  {
+   "page": 51,
+   "chapter": 12,
+   "heyzinePage": 51,
+   "file": "p051.mp3",
+   "duration": 115.51,
+   "source": "12.ਗੁਰੂ ਦਾ ਸਤਿਕਾਰ ਜਾਂ ਪੰਥ ਵਿੱਚ ਪੰਗਾ/12.ਗੁਰੂ ਦਾ ਸਤਿਕਾਰ ਜਾਂ ਪੰਥ ਵਿੱਚ ਪੰਗਾ 51.mp3"
+  },
+  {
+   "page": 52,
+   "chapter": 12,
+   "heyzinePage": 52,
+   "file": "p052.mp3",
+   "duration": 113.5,
+   "source": "12.ਗੁਰੂ ਦਾ ਸਤਿਕਾਰ ਜਾਂ ਪੰਥ ਵਿੱਚ ਪੰਗਾ/12.ਗੁਰੂ ਦਾ ਸਤਿਕਾਰ ਜਾਂ ਪੰਥ ਵਿੱਚ ਪੰਗਾ 52.mp3"
+  },
+  {
+   "page": 53,
+   "chapter": 12,
+   "heyzinePage": 53,
+   "file": "p053.mp3",
+   "duration": 97.44,
+   "source": "12.ਗੁਰੂ ਦਾ ਸਤਿਕਾਰ ਜਾਂ ਪੰਥ ਵਿੱਚ ਪੰਗਾ/12.ਗੁਰੂ ਦਾ ਸਤਿਕਾਰ ਜਾਂ ਪੰਥ ਵਿੱਚ ਪੰਗਾ 53.mp3"
+  },
+  {
+   "page": 54,
+   "chapter": 13,
+   "heyzinePage": 54,
+   "file": "p054.mp3",
+   "duration": 118.86,
+   "source": "13.ਬੇਨਿਵਾਜ਼ਾ ਕੁੱਤਿਆ/13.ਬੇਨਿਵਾਜ਼ਾ ਕੁੱਤਿਆ 54.mp3"
+  },
+  {
+   "page": 55,
+   "chapter": 13,
+   "heyzinePage": 55,
+   "file": "p055.mp3",
+   "duration": 61.02,
+   "source": "13.ਬੇਨਿਵਾਜ਼ਾ ਕੁੱਤਿਆ/13.ਬੇਨਿਵਾਜ਼ਾ ਕੁੱਤਿਆ 55.mp3"
+  },
+  {
+   "page": 56,
+   "chapter": 14,
+   "heyzinePage": 56,
+   "file": "p056.mp3",
+   "duration": 105.74,
+   "source": "14.ਕਾਮਧੇਨੁ ਹਰਿ ਹਰਿ ਗੁਣ ਗਾਮੁ ॥/14.ਕਾਮਧੇਨੁ ਹਰਿ ਹਰਿ ਗੁਣ ਗਾਮੁ ॥ 56.mp3"
+  },
+  {
+   "page": 57,
+   "chapter": 14,
+   "heyzinePage": 57,
+   "file": "p057.mp3",
+   "duration": 118.78,
+   "source": "14.ਕਾਮਧੇਨੁ ਹਰਿ ਹਰਿ ਗੁਣ ਗਾਮੁ ॥/14.ਕਾਮਧੇਨੁ ਹਰਿ ਹਰਿ ਗੁਣ ਗਾਮੁ ॥ 57.mp3"
+  },
+  {
+   "page": 58,
+   "chapter": 14,
+   "heyzinePage": 58,
+   "file": "p058.mp3",
+   "duration": 89.26,
+   "source": "14.ਕਾਮਧੇਨੁ ਹਰਿ ਹਰਿ ਗੁਣ ਗਾਮੁ ॥/14.ਕਾਮਧੇਨੁ ਹਰਿ ਹਰਿ ਗੁਣ ਗਾਮੁ ॥ 58.mp3"
+  },
+  {
+   "page": 59,
+   "chapter": 15,
+   "heyzinePage": 59,
+   "file": "p059.mp3",
+   "duration": 94.77,
+   "source": "15. ਨਿੰਦਿਆ ਜਨ ਕਉ ਖਰੀ ਪਿਆਰੀ/15.ਨਿੰਦਿਆ ਜਨ ਕਉ ਖਰੀ ਪਿਆਰੀ 59.mp3"
+  },
+  {
+   "page": 60,
+   "chapter": 15,
+   "heyzinePage": 60,
+   "file": "p060.mp3",
+   "duration": 109.66,
+   "source": "15. ਨਿੰਦਿਆ ਜਨ ਕਉ ਖਰੀ ਪਿਆਰੀ/15.ਨਿੰਦਿਆ ਜਨ ਕਉ ਖਰੀ ਪਿਆਰੀ 60.mp3"
+  },
+  {
+   "page": 61,
+   "chapter": 15,
+   "heyzinePage": 61,
+   "file": "p061.mp3",
+   "duration": 26.23,
+   "source": "15. ਨਿੰਦਿਆ ਜਨ ਕਉ ਖਰੀ ਪਿਆਰੀ/15.ਨਿੰਦਿਆ ਜਨ ਕਉ ਖਰੀ ਪਿਆਰੀ 61 (2).mp3"
+  },
+  {
+   "page": 62,
+   "chapter": 16,
+   "heyzinePage": 62,
+   "file": "p062.mp3",
+   "duration": 101.02,
+   "source": "16.ਨਿੰਦਕ ਕੌਣ 62/16.ਨਿੰਦਕ ਕੌਣ 62.mp3"
+  },
+  {
+   "page": 63,
+   "chapter": 17,
+   "heyzinePage": 63,
+   "file": "p063.mp3",
+   "duration": 104.78,
+   "source": "17.ਕਿਹੜੀ ਨਿੰਦਾ ਸਭ ਤੋਂ ਚੰਗੀ/17.ਕਿਹੜੀ ਨਿੰਦਾ ਸਭ ਤੋਂ ਚੰਗੀ 63.mp3"
+  },
+  {
+   "page": 64,
+   "chapter": 17,
+   "heyzinePage": 64,
+   "file": "p064.mp3",
+   "duration": 94.46,
+   "source": "17.ਕਿਹੜੀ ਨਿੰਦਾ ਸਭ ਤੋਂ ਚੰਗੀ/17.ਕਿਹੜੀ ਨਿੰਦਾ ਸਭ ਤੋਂ ਚੰਗੀ 64.mp3"
+  },
+  {
+   "page": 65,
+   "chapter": 18,
+   "heyzinePage": 65,
+   "file": "p065.mp3",
+   "duration": 106.29,
+   "source": "18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ/18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ 65.mp3"
+  },
+  {
+   "page": 66,
+   "chapter": 18,
+   "heyzinePage": 66,
+   "file": "p066.mp3",
+   "duration": 116.53,
+   "source": "18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ/18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ 66.mp3"
+  },
+  {
+   "page": 67,
+   "chapter": 18,
+   "heyzinePage": 67,
+   "file": "p067.mp3",
+   "duration": 135.5,
+   "source": "18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ/18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ 67.mp3"
+  },
+  {
+   "page": 68,
+   "chapter": 18,
+   "heyzinePage": 68,
+   "file": "p068.mp3",
+   "duration": 121.42,
+   "source": "18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ/18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ 68.mp3"
+  },
+  {
+   "page": 69,
+   "chapter": 18,
+   "heyzinePage": 69,
+   "file": "p069.mp3",
+   "duration": 113.19,
+   "source": "18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ/18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ 69.mp3"
+  },
+  {
+   "page": 70,
+   "chapter": 18,
+   "heyzinePage": 70,
+   "file": "p070.mp3",
+   "duration": 107.42,
+   "source": "18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ/18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ 70.mp3"
+  },
+  {
+   "page": 71,
+   "chapter": 18,
+   "heyzinePage": 71,
+   "file": "p071.mp3",
+   "duration": 120.79,
+   "source": "18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ/18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ 71.mp3"
+  },
+  {
+   "page": 72,
+   "chapter": 18,
+   "heyzinePage": 72,
+   "file": "p072.mp3",
+   "duration": 115.91,
+   "source": "18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ/18.ਹਨਵੰਤ੍ਰ ਆਰਾਧਿਆ 72.mp3"
+  },
+  {
+   "page": 73,
+   "chapter": 19,
+   "heyzinePage": 73,
+   "file": "p073.mp3",
+   "duration": 104.23,
+   "source": "19.ਕਾਮ/19.ਕਾਮ 73.mp3"
+  },
+  {
+   "page": 74,
+   "chapter": 19,
+   "heyzinePage": 74,
+   "file": "p074.mp3",
+   "duration": 129.25,
+   "source": "19.ਕਾਮ/19.ਕਾਮ 74.mp3"
+  },
+  {
+   "page": 75,
+   "chapter": 19,
+   "heyzinePage": 75,
+   "file": "p075.mp3",
+   "duration": 122.38,
+   "source": "19.ਕਾਮ/19.ਕਾਮ 75.mp3"
+  },
+  {
+   "page": 76,
+   "chapter": 19,
+   "heyzinePage": 76,
+   "file": "p076.mp3",
+   "duration": 131.42,
+   "source": "19.ਕਾਮ/19.ਕਾਮ 76.mp3"
+  },
+  {
+   "page": 77,
+   "chapter": 19,
+   "heyzinePage": 77,
+   "file": "p077.mp3",
+   "duration": 127.11,
+   "source": "19.ਕਾਮ/19.ਕਾਮ 77.mp3"
+  },
+  {
+   "page": 78,
+   "chapter": 19,
+   "heyzinePage": 78,
+   "file": "p078.mp3",
+   "duration": 89.57,
+   "source": "19.ਕਾਮ/19.ਕਾਮ 78.mp3"
+  },
+  {
+   "page": 79,
+   "chapter": 20,
+   "heyzinePage": 79,
+   "file": "p079.mp3",
+   "duration": 93.83,
+   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 79.mp3"
+  },
+  {
+   "page": 80,
+   "chapter": 20,
+   "heyzinePage": 80,
+   "file": "p080.mp3",
+   "duration": 128.63,
+   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 80.mp3"
+  },
+  {
+   "page": 81,
+   "chapter": 20,
+   "heyzinePage": 81,
+   "file": "p081.mp3",
+   "duration": 109.66,
+   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 81.mp3"
+  },
+  {
+   "page": 82,
+   "chapter": 20,
+   "heyzinePage": 82,
+   "file": "p082.mp3",
+   "duration": 44.46,
+   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 82.mp3"
+  },
+  {
+   "page": 83,
+   "chapter": 21,
+   "heyzinePage": 83,
+   "file": "p083.mp3",
+   "duration": 95.5,
+   "source": "21 ਪਾਰਜਾਤੁ ਇਹੁ ਹਰਿ ਕੋ ਨਾਮ/21 ਪਾਰਜਾਤੁ ਇਹੁ ਹਰਿ ਕੋ ਨਾਮ 83.mp3"
+  },
+  {
+   "page": 84,
+   "chapter": 21,
+   "heyzinePage": 84,
+   "file": "p084.mp3",
+   "duration": 112.61,
+   "source": "21 ਪਾਰਜਾਤੁ ਇਹੁ ਹਰਿ ਕੋ ਨਾਮ/21 ਪਾਰਜਾਤੁ ਇਹੁ ਹਰਿ ਕੋ ਨਾਮ 84.mp3"
+  },
+  {
+   "page": 85,
+   "chapter": 21,
+   "heyzinePage": 85,
+   "file": "p085.mp3",
+   "duration": 17.11,
+   "source": "21 ਪਾਰਜਾਤੁ ਇਹੁ ਹਰਿ ਕੋ ਨਾਮ/21 ਪਾਰਜਾਤੁ ਇਹੁ ਹਰਿ ਕੋ ਨਾਮ 85.mp3"
+  },
+  {
+   "page": 86,
+   "chapter": 22,
+   "heyzinePage": 86,
+   "file": "p086.mp3",
+   "duration": 114.7,
+   "source": "22.ਨਿਰਧਨ ਹੈ ਸੋਈ/22.ਨਿਰਧਨ ਹੈ ਸੋਈ 86.mp3"
+  },
+  {
+   "page": 87,
+   "chapter": 22,
+   "heyzinePage": 87,
+   "file": "p087.mp3",
+   "duration": 98.38,
+   "source": "22.ਨਿਰਧਨ ਹੈ ਸੋਈ/22.ਨਿਰਧਨ ਹੈ ਸੋਈ 87.mp3"
+  },
+  {
+   "page": 88,
+   "chapter": 22,
+   "heyzinePage": 88,
+   "file": "p088.mp3",
+   "duration": 111.02,
+   "source": "22.ਨਿਰਧਨ ਹੈ ਸੋਈ/22.ਨਿਰਧਨ ਹੈ ਸੋਈ 88.mp3"
+  },
+  {
+   "page": 89,
+   "chapter": 23,
+   "heyzinePage": 89,
+   "file": "p089.mp3",
+   "duration": 101.51,
+   "source": "23 ਹਰਿਮੰਦਰ ਸਾਹਿਬ  ਗੋਲਡਨ ਟੈਂਪਲ/23 ਹਰਿਮੰਦਰ ਸਾਹਿਬ  ਗੋਲਡਨ ਟੈਂਪਲ 89.mp3"
+  },
+  {
+   "page": 90,
+   "chapter": 23,
+   "heyzinePage": 90,
+   "file": "p090.mp3",
+   "duration": 112.38,
+   "source": "23 ਹਰਿਮੰਦਰ ਸਾਹਿਬ  ਗੋਲਡਨ ਟੈਂਪਲ/23 ਹਰਿਮੰਦਰ ਸਾਹਿਬ  ਗੋਲਡਨ ਟੈਂਪਲ 90.mp3"
+  },
+  {
+   "page": 91,
+   "chapter": 23,
+   "heyzinePage": 91,
+   "file": "p091.mp3",
+   "duration": 101.28,
+   "source": "23 ਹਰਿਮੰਦਰ ਸਾਹਿਬ  ਗੋਲਡਨ ਟੈਂਪਲ/23 ਹਰਿਮੰਦਰ ਸਾਹਿਬ  ਗੋਲਡਨ ਟੈਂਪਲ 91.mp3"
+  },
+  {
+   "page": 92,
+   "chapter": 23,
+   "heyzinePage": 92,
+   "file": "p092.mp3",
+   "duration": 38.22,
+   "source": "23 ਹਰਿਮੰਦਰ ਸਾਹਿਬ  ਗੋਲਡਨ ਟੈਂਪਲ/23 ਹਰਿਮੰਦਰ ਸਾਹਿਬ  ਗੋਲਡਨ ਟੈਂਪਲ 92.mp3"
+  },
+  {
+   "page": 93,
+   "chapter": 24,
+   "heyzinePage": 93,
+   "file": "p093.mp3",
+   "duration": 116.72,
+   "source": "24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101/24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 93.mp3"
+  },
+  {
+   "page": 94,
+   "chapter": 24,
+   "heyzinePage": 94,
+   "file": "p094.mp3",
+   "duration": 121.5,
+   "source": "24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101/24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 94.mp3"
+  },
+  {
+   "page": 95,
+   "chapter": 24,
+   "heyzinePage": 95,
+   "file": "p095.mp3",
+   "duration": 116.79,
+   "source": "24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101/24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 95.mp3"
+  },
+  {
+   "page": 96,
+   "chapter": 24,
+   "heyzinePage": 96,
+   "file": "p096.mp3",
+   "duration": 121.18,
+   "source": "24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101/24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 96.mp3"
+  },
+  {
+   "page": 97,
+   "chapter": 24,
+   "heyzinePage": 97,
+   "file": "p097.mp3",
+   "duration": 116.95,
+   "source": "24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101/24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 97.mp3"
+  },
+  {
+   "page": 98,
+   "chapter": 24,
+   "heyzinePage": 98,
+   "file": "p098.mp3",
+   "duration": 128.16,
+   "source": "24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101/24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 98.mp3"
+  },
+  {
+   "page": 99,
+   "chapter": 24,
+   "heyzinePage": 99,
+   "file": "p099.mp3",
+   "duration": 116.64,
+   "source": "24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101/24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 99.mp3"
+  },
+  {
+   "page": 100,
+   "chapter": 24,
+   "heyzinePage": 100,
+   "file": "p100.mp3",
+   "duration": 114.39,
+   "source": "24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101/24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 100.mp3"
+  },
+  {
+   "page": 101,
+   "chapter": 24,
+   "heyzinePage": 101,
+   "file": "p101.mp3",
+   "duration": 118.31,
+   "source": "24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101/24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101.mp3"
+  },
+  {
+   "page": 102,
+   "chapter": 24,
+   "heyzinePage": 102,
+   "file": "p102.mp3",
+   "duration": 113.5,
+   "source": "24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101/24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 102.mp3"
+  },
+  {
+   "page": 103,
+   "chapter": 24,
+   "heyzinePage": 103,
+   "file": "p103.mp3",
+   "duration": 114.7,
+   "source": "24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 101/24. ਸਾਡਾ ਸੱਭਿਆਚਾਰ 103.mp3"
+  },
+  {
+   "page": 104,
+   "chapter": 25,
+   "heyzinePage": 104,
+   "file": "p104.mp3",
+   "duration": 106.14,
+   "source": "25 ਖਾਲਿਸਤਾਨ/25 ਖਾਲਿਸਤਾਨ 104.mp3"
+  },
+  {
+   "page": 105,
+   "chapter": 25,
+   "heyzinePage": 105,
+   "file": "p105.mp3",
+   "duration": 115.1,
+   "source": "25 ਖਾਲਿਸਤਾਨ/25 ਖਾਲਿਸਤਾਨ 105.mp3"
+  },
+  {
+   "page": 106,
+   "chapter": 25,
+   "heyzinePage": 106,
+   "file": "p106.mp3",
+   "duration": 110.63,
+   "source": "25 ਖਾਲਿਸਤਾਨ/25 ਖਾਲਿਸਤਾਨ 106.mp3"
+  },
+  {
+   "page": 107,
+   "chapter": 25,
+   "heyzinePage": 107,
+   "file": "p107.mp3",
+   "duration": 108.85,
+   "source": "25 ਖਾਲਿਸਤਾਨ/25 ਖਾਲਿਸਤਾਨ 107.mp3"
+  },
+  {
+   "page": 108,
+   "chapter": 25,
+   "heyzinePage": 108,
+   "file": "p108.mp3",
+   "duration": 103.84,
+   "source": "25 ਖਾਲਿਸਤਾਨ/25 ਖਾਲਿਸਤਾਨ 108.mp3"
+  },
+  {
+   "page": 109,
+   "chapter": 25,
+   "heyzinePage": 109,
+   "file": "p109.mp3",
+   "duration": 122.38,
+   "source": "25 ਖਾਲਿਸਤਾਨ/25 ਖਾਲਿਸਤਾਨ 109.mp3"
+  },
+  {
+   "page": 110,
+   "chapter": 25,
+   "heyzinePage": 110,
+   "file": "p110.mp3",
+   "duration": 125.6,
+   "source": "25 ਖਾਲਿਸਤਾਨ/25 ਖਾਲਿਸਤਾਨ 110.mp3"
+  },
+  {
+   "page": 111,
+   "chapter": 25,
+   "heyzinePage": 111,
+   "file": "p111.mp3",
+   "duration": 114.7,
+   "source": "25 ਖਾਲਿਸਤਾਨ/25 ਖਾਲਿਸਤਾਨ 111.mp3"
+  },
+  {
+   "page": 112,
+   "chapter": 25,
+   "heyzinePage": 112,
+   "file": "p112.mp3",
+   "duration": 102.14,
+   "source": "25 ਖਾਲਿਸਤਾਨ/25 ਖਾਲਿਸਤਾਨ 112.mp3"
+  },
+  {
+   "page": 113,
+   "chapter": 26,
+   "heyzinePage": 113,
+   "file": "p113.mp3",
+   "duration": 102.95,
+   "source": "26. ਕਸਵੱਟੀ/26.ਕਸਵੱਟੀ 113.mp3"
+  },
+  {
+   "page": 114,
+   "chapter": 26,
+   "heyzinePage": 114,
+   "file": "p114.mp3",
+   "duration": 118.39,
+   "source": "26. ਕਸਵੱਟੀ/26. ਕਸਵੱਟੀ 114.mp3"
+  },
+  {
+   "page": 115,
+   "chapter": 26,
+   "heyzinePage": 115,
+   "file": "p115.mp3",
+   "duration": 109.11,
+   "source": "26. ਕਸਵੱਟੀ/26. ਕਸਵੱਟੀ 115.mp3"
+  },
+  {
+   "page": 116,
+   "chapter": 26,
+   "heyzinePage": 116,
+   "file": "p116.mp3",
+   "duration": 98.3,
+   "source": "26. ਕਸਵੱਟੀ/26. ਕਸਵੱਟੀ 116.mp3"
+  },
+  {
+   "page": 117,
+   "chapter": 26,
+   "heyzinePage": 117,
+   "file": "p117.mp3",
+   "duration": 113.74,
+   "source": "26. ਕਸਵੱਟੀ/26. ਕਸਵੱਟੀ 117.mp3"
+  },
+  {
+   "page": 118,
+   "chapter": 26,
+   "heyzinePage": 118,
+   "file": "p118.mp3",
+   "duration": 50.86,
+   "source": "26. ਕਸਵੱਟੀ/26. ਕਸਵੱਟੀ 118.mp3"
+  },
+  {
+   "page": 119,
+   "chapter": 27,
+   "heyzinePage": 119,
+   "file": "p119.mp3",
+   "duration": 108.54,
+   "source": "27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ/27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ 119.mp3"
+  },
+  {
+   "page": 120,
+   "chapter": 27,
+   "heyzinePage": 120,
+   "file": "p120.mp3",
+   "duration": 117.03,
+   "source": "27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ/27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ 120.mp3"
+  },
+  {
+   "page": 121,
+   "chapter": 27,
+   "heyzinePage": 121,
+   "file": "p121.mp3",
+   "duration": 111.67,
+   "source": "27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ/27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ 121.mp3"
+  },
+  {
+   "page": 122,
+   "chapter": 27,
+   "heyzinePage": 122,
+   "file": "p122.mp3",
+   "duration": 105.35,
+   "source": "27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ/27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ 122.mp3"
+  },
+  {
+   "page": 123,
+   "chapter": 27,
+   "heyzinePage": 123,
+   "file": "p123.mp3",
+   "duration": 116.95,
+   "source": "27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ/27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ 123.mp3"
+  },
+  {
+   "page": 124,
+   "chapter": 27,
+   "heyzinePage": 124,
+   "file": "p124.mp3",
+   "duration": 102.14,
+   "source": "27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ/27. ਸਿੱਖਾਂ ਦੇ 12 ਵੱਜਣੇ 124.mp3"
+  },
+  {
+   "page": 125,
+   "chapter": 28,
+   "heyzinePage": 125,
+   "file": "p125.mp3",
+   "duration": 103.03,
+   "source": "28. ਖਾਲਸੇ ਦਾ ਨਿਆਰਾਪਣ/28. ਖਾਲਸੇ ਦਾ ਨਿਆਰਾਪਣ 125.mp3"
+  },
+  {
+   "page": 126,
+   "chapter": 28,
+   "heyzinePage": 126,
+   "file": "p126.mp3",
+   "duration": 121.57,
+   "source": "28. ਖਾਲਸੇ ਦਾ ਨਿਆਰਾਪਣ/28. ਖਾਲਸੇ ਦਾ ਨਿਆਰਾਪਣ 126.mp3"
+  },
+  {
+   "page": 127,
+   "chapter": 28,
+   "heyzinePage": 127,
+   "file": "p127.mp3",
+   "duration": 123.82,
+   "source": "28. ਖਾਲਸੇ ਦਾ ਨਿਆਰਾਪਣ/28. ਖਾਲਸੇ ਦਾ ਨਿਆਰਾਪਣ 127.mp3"
+  },
+  {
+   "page": 128,
+   "chapter": 28,
+   "heyzinePage": 128,
+   "file": "p128.mp3",
+   "duration": 93.18,
+   "source": "28. ਖਾਲਸੇ ਦਾ ਨਿਆਰਾਪਣ/28. ਖਾਲਸੇ ਦਾ ਨਿਆਰਾਪਣ 128.mp3"
+  },
+  {
+   "page": 129,
+   "chapter": 29,
+   "heyzinePage": 129,
+   "file": "p129.mp3",
+   "duration": 109.11,
+   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ129.mp3"
+  },
+  {
+   "page": 130,
+   "chapter": 29,
+   "heyzinePage": 130,
+   "file": "p130.mp3",
+   "duration": 111.18,
+   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ 130.mp3"
+  },
+  {
+   "page": 131,
+   "chapter": 29,
+   "heyzinePage": 131,
+   "file": "p131.mp3",
+   "duration": 114.31,
+   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ 131.mp3"
+  },
+  {
+   "page": 132,
+   "chapter": 29,
+   "heyzinePage": 132,
+   "file": "p132.mp3",
+   "duration": 57.5,
+   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ 132.mp3"
+  },
+  {
+   "page": 133,
+   "chapter": 30,
+   "heyzinePage": 133,
+   "file": "p133.mp3",
+   "duration": 87.59,
+   "source": "30.ਮਾਂ ਬੋਲੀ ਪ੍ਰਫੁੱਲਤ ਕਰਨ ਬਾਰੇ/30.ਮਾਂ ਬੋਲੀ ਪ੍ਰਫੁੱਲਤ ਕਰਨ ਬਾਰੇ 133.mp3"
+  },
+  {
+   "page": 134,
+   "chapter": 30,
+   "heyzinePage": 134,
+   "file": "p134.mp3",
+   "duration": 93.91,
+   "source": "30.ਮਾਂ ਬੋਲੀ ਪ੍ਰਫੁੱਲਤ ਕਰਨ ਬਾਰੇ/30.ਮਾਂ ਬੋਲੀ ਪ੍ਰਫੁੱਲਤ ਕਰਨ ਬਾਰੇ 134.mp3"
+  },
+  {
+   "page": 135,
+   "chapter": 30,
+   "heyzinePage": 135,
+   "file": "p135.mp3",
+   "duration": 44.15,
+   "source": "30.ਮਾਂ ਬੋਲੀ ਪ੍ਰਫੁੱਲਤ ਕਰਨ ਬਾਰੇ/30.ਮਾਂ ਬੋਲੀ ਪ੍ਰਫੁੱਲਤ ਕਰਨ ਬਾਰੇ 135.mp3"
+  }
+ ]
+}
