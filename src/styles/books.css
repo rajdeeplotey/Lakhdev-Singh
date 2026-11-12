@@ -954,3 +954,47 @@ h3:lang(pa),
     padding: 0 12px;
   }
 }
+
+/* ═════════════ Word highlight over the Heyzine book (BookViewer) ═════════════ */
+/* a see-through layer above the book frame: it never catches taps and shows nothing unless the voice is playing */
+.word-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  overflow: visible;
+  pointer-events: none;
+  z-index: 2;
+}
+.word-mark {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-radius: 3px;
+  background: rgba(226, 180, 75, 0.45); /* #E2B44B at 45 % */
+  mix-blend-mode: multiply; /* the printed letters stay fully readable */
+  opacity: 0;
+  transition: opacity 80ms linear, transform 80ms ease-out, width 80ms ease-out, height 80ms ease-out;
+  will-change: transform, opacity;
+}
+/* while the voice plays: an invisible layer over the book (same size as the frame); a tap on it pauses */
+.viewer-catcher {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  width: calc(100% * var(--vz, 1));
+  height: calc((100vh - 64px - var(--abar)) * var(--vz, 1));
+  height: calc((100dvh - 64px - var(--abar)) * var(--vz, 1));
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+@media (prefers-reduced-motion: reduce) {
+  .word-mark {
+    transition: opacity 80ms linear;
+  }
+}

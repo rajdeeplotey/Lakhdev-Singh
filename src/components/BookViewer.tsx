@@ -1,10 +1,43 @@
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useBooks } from "../content/SiteContext";
 import { heyzineUrl } from "../content/books";
 import { closeBook, useViewer } from "../lib/viewer";
 import { useT } from "../i18n";
 import { NarrationBar } from "./NarrationBar";
-import { hasNarration, setNarrationMeta, startListening, stopListening, togglePlay, useNarration } from "../lib/narration";
+import { audioTime, hasNarration, narrationAsset, setNarrationMeta, startListening, stopListening, togglePlay, useNarration } from "../lib/narration";
+import { heyzinePageRect, heyzineVisiblePages } from "../lib/heyzineLayout";
+
+/**
+ * Word highlight. Heyzine's frame belongs to another website, so nothing can be drawn inside it. A see-through layer
+ * lies over the frame instead, and one gold marker is placed at: where Heyzine draws the page (heyzineLayout.ts,
+ * measured) × where the word is on that page (word box, 0–1). Its timing is the forced alignment of the recording,
+ * read against the voice's position every screen frame. Only while the voice plays; nothing shows when paused.
+ */
+interface SpokenWord {
+  w: string;
+  s: number; // start, seconds into the recording
+  e: number; // end
+  p: number; // printed page the word is on
+  box: [number, number, number, number]; // x, y, w, h as fractions of that page
+}
+const wordFiles = new Map<string, Promise<SpokenWord[]>>();
+const loadWords = (url: string) => {
+  let p = wordFiles.get(url);
+  if (!p) {
+    p = fetch(url).then((r) => {
+      if (!r.ok) throw new Error(`words HTTP ${r.status}`);
+      return r.json() as Promise<SpokenWord[]>;
+    });
+    wordFiles.set(url, p);
+    p.catch(() => wordFiles.delete(url));
+  }
+  return p;
+};
+/** Heyzine's page-turn animation (measured 1.04–1.13 s): the marker waits for it */
+const TURN_MS = 1200;
+/** after the book (re)loads, Heyzine still draws its pages: the marker waits for that too */
+const SETTLE_MS = 1500;
+const PAGE_KEYS = ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "PageUp", "PageDown", "Home", "End"];
 
 /**
  * Full-screen Heyzine viewer. The iframe exists only while the viewer is open (fast pages, and the
@@ -54,9 +87,11 @@ export function BookViewer() {
    * keys into another site's frame). So focus goes into the book as soon as it has loaded, and back into it
    * after a mouse click on our top bar.
    */
+  const ignoreBlurUntil = useRef(0);
   const focusBook = () => {
     const f = frameRef.current;
     if (!f) return;
+    ignoreBlurUntil.current = performance.now() + 500; // our own focus move is not the reader touching the book
     f.focus();
     try {
       f.contentWindow?.focus();
@@ -68,18 +103,137 @@ export function BookViewer() {
   const canListen = !!book && hasNarration(book.slug);
   const listening = !!book && nar.open && nar.slug === book.slug;
   const narPage = listening ? nar.index?.pages[nar.i] : undefined;
-  // the voice drives the book: when a new page starts, turn the flipbook to it (hash change, no reload)
-  const turnedTo = useRef<number | null>(null);
-  useEffect(() => {
-    const f = frameRef.current;
-    if (!f || !loaded || !narPage || !src) return;
-    if (turnedTo.current === narPage.heyzinePage) return;
-    turnedTo.current = narPage.heyzinePage;
-    f.src = src.split('#')[0] + '#page/' + narPage.heyzinePage;
-  }, [narPage, loaded, src]);
+  const playing = listening && nar.playing;
+  const playingRef = useRef(false);
+  playingRef.current = playing;
+  const loadedRef = useRef(false);
+  loadedRef.current = loaded;
+  // printed page → Heyzine page, for the words' pages
+  const hzOf = useMemo(() => new Map((nar.index?.pages ?? []).map((p) => [p.page, p.heyzinePage])), [nar.index]);
+
+  // ── which Heyzine page is on screen (we set it; Heyzine cannot tell us) ──
+  const turnedTo = useRef<number | null>(null); // last page the voice asked for
+  const shownRef = useRef(1); // the page Heyzine was last told to show
+  const hideUntil = useRef(0); // the marker waits until a page turn / reload has finished
+  const touched = useRef(false); // the reader used the book (pages, zoom) while paused
+  const [reload, setReload] = useState<{ n: number; page: number } | null>(null);
+  const frameSrc = src && reload ? `${src.split("#")[0]}#page/${reload.page}` : src;
   useEffect(() => {
     turnedTo.current = null;
-  }, [src]);
+    shownRef.current = state?.page && state.page > 1 ? state.page : 1;
+    touched.current = false;
+    setReload(null);
+  }, [src]); // eslint-disable-line react-hooks/exhaustive-deps
+  /** the voice drives the book: turn Heyzine to page hz — unless it is already on screen (a two-page spread) */
+  const turnTo = useCallback(
+    (hz: number) => {
+      const f = frameRef.current;
+      if (!f || !src || !book) return;
+      turnedTo.current = hz;
+      const onScreen = heyzineVisiblePages(f.offsetWidth, f.offsetHeight, shownRef.current, book.pages).includes(hz);
+      if (onScreen && !touched.current) return;
+      shownRef.current = hz;
+      hideUntil.current = performance.now() + TURN_MS;
+      f.src = `${src.split("#")[0]}#page/${hz}`; // hash change: Heyzine turns the page, no reload
+    },
+    [src, book],
+  );
+  // a new recording starts → its page (chapters without word timings turn the book this way only)
+  useEffect(() => {
+    if (!loaded || !narPage) return;
+    if (turnedTo.current === narPage.heyzinePage) return;
+    turnTo(narPage.heyzinePage);
+  }, [narPage, loaded, turnTo]);
+
+  // the reader taps into the book (our page loses focus to Heyzine's frame) → remember it
+  useEffect(() => {
+    const onBlur = () => {
+      if (document.activeElement === frameRef.current && performance.now() > ignoreBlurUntil.current) touched.current = true;
+    };
+    window.addEventListener("blur", onBlur);
+    return () => window.removeEventListener("blur", onBlur);
+  }, []);
+
+  // ── the words of the recording being played ──
+  const [words, setWords] = useState<SpokenWord[] | null>(null);
+  useEffect(() => {
+    setWords(null);
+    if (!book || !narPage?.words) return;
+    const url = narrationAsset(book.slug, narPage.words);
+    if (!url) return;
+    let alive = true;
+    loadWords(url).then(
+      (w) => alive && setWords(w),
+      () => {},
+    );
+    return () => {
+      alive = false;
+    };
+  }, [book, narPage?.words]);
+  const currentWord = (list: SpokenWord[] | null) => {
+    if (!list) return null;
+    const t = audioTime();
+    let lo = 0, hi = list.length - 1, k = -1;
+    while (lo <= hi) {
+      const m = (lo + hi) >> 1;
+      if (list[m].s <= t) {
+        k = m;
+        lo = m + 1;
+      } else hi = m - 1;
+    }
+    if (k < 0) return null;
+    const w = list[k], next = list[k + 1];
+    // keep the marker through the short gap between two words; hide it in longer pauses
+    return t <= w.e + 0.15 || (next && t < next.s && next.s - w.e < 0.6) ? w : null;
+  };
+
+  // ▶ after the reader used the book while paused: reload it at the spoken page, so pages and zoom match again
+  const wasPlaying = useRef(false);
+  useEffect(() => {
+    if (playing && !wasPlaying.current && touched.current && narPage && book) {
+      touched.current = false;
+      const hz = hzOf.get(currentWord(words)?.p ?? -1) ?? narPage.heyzinePage;
+      shownRef.current = hz;
+      turnedTo.current = hz;
+      setLoaded(false);
+      setReload((r) => ({ n: (r?.n ?? 0) + 1, page: hz }));
+    }
+    wasPlaying.current = playing;
+  }, [playing]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── the marker: every screen frame while the voice plays ──
+  const markRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const mark = markRef.current;
+    if (!mark) return;
+    const hide = () => {
+      mark.style.opacity = "0";
+    };
+    if (!playing || !words || !book) return hide();
+    let raf = 0;
+    const tick = () => {
+      raf = requestAnimationFrame(tick);
+      const f = frameRef.current;
+      const w = currentWord(words);
+      const hz = w ? hzOf.get(w.p) : undefined;
+      if (!f || !w || !hz) return hide();
+      // the spoken word is on a page that is not on screen → turn to it (once), then wait for the turn
+      if (turnedTo.current !== hz && !heyzineVisiblePages(f.offsetWidth, f.offsetHeight, shownRef.current, book.pages).includes(hz)) turnTo(hz);
+      if (!loadedRef.current || performance.now() < hideUntil.current) return hide();
+      const r = heyzinePageRect(f.offsetWidth, f.offsetHeight, hz);
+      const x = f.offsetLeft + r.x + w.box[0] * r.w - 2;
+      const y = f.offsetTop + r.y + w.box[1] * r.h - 2;
+      mark.style.transform = `translate(${x.toFixed(1)}px, ${y.toFixed(1)}px)`;
+      mark.style.width = `${(w.box[2] * r.w + 4).toFixed(1)}px`;
+      mark.style.height = `${(w.box[3] * r.h + 4).toFixed(1)}px`;
+      mark.style.opacity = "1";
+    };
+    raf = requestAnimationFrame(tick);
+    return () => {
+      cancelAnimationFrame(raf);
+      hide();
+    };
+  }, [playing, words, book, hzOf, turnTo]); // eslint-disable-line react-hooks/exhaustive-deps
   // lock screen / headphone controls show the book, chapter and cover
   useEffect(() => {
     if (!book) return;
@@ -131,6 +285,11 @@ export function BookViewer() {
         togglePlay();
         return;
       }
+      // while the voice plays the book stays on the spoken page: page keys do nothing
+      if (playingRef.current && PAGE_KEYS.includes(e.key)) {
+        e.preventDefault();
+        return;
+      }
       // a page-turn key pressed while the focus is on our top bar: hand the keyboard to the book
       if (
         [
@@ -147,6 +306,7 @@ export function BookViewer() {
       ) {
         e.preventDefault();
         focusBook();
+        if (document.querySelector(".nar")) touched.current = true; // the reader is moving the book while paused
       }
     };
     window.addEventListener("keydown", onKey);
@@ -268,19 +428,27 @@ export function BookViewer() {
           </div>
         )}
         <iframe
-          key={src}
+          key={`${src}|${reload?.n ?? 0}`}
           className={`viewer-frame ${loaded ? "is-loaded" : ""}`}
-          src={src}
+          src={frameSrc ?? src}
           title={`${book.titlePa} — ${book.titleEn}`}
           allow="autoplay; fullscreen; clipboard-write"
           allowFullScreen
           ref={frameRef}
           onLoad={() => {
             setLoaded(true);
-            // arrow keys turn the pages straight away — unless the reader is using the audio bar (e.g. a list is open)
-            if (!document.activeElement?.closest?.(".nar")) focusBook();
+            hideUntil.current = performance.now() + SETTLE_MS;
+            // arrow keys turn the pages straight away — unless the voice is playing (the book stays still then)
+            // or the reader is using the audio bar (e.g. a list is open)
+            if (!playingRef.current && !document.activeElement?.closest?.(".nar")) focusBook();
           }}
         />
+        {/* the word highlight: a see-through layer over the book; nothing visible unless the voice is playing */}
+        <div className="word-overlay" aria-hidden>
+          <div ref={markRef} className="word-mark" />
+        </div>
+        {/* while the voice plays, the book stays on the spoken page: a tap on it pauses (then the book is free) */}
+        {playing && <div className="viewer-catcher" onClick={() => togglePlay()} aria-hidden />}
       </div>
       {listening && <NarrationBar book={book} />}
     </div>

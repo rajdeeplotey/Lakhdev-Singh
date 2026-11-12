@@ -14,6 +14,7 @@ import { useSyncExternalStore } from 'react';
 export interface NarrationPage {
   page: number; // printed page number
   lastPage?: number; // set when one recording reads two printed pages (e.g. 5–6)
+  words?: string; // word timings + positions for the highlight (words/pNNN.json), where they exist
   chapter: number;
   heyzinePage: number;
   file: string;
@@ -289,6 +290,12 @@ function updateMediaSession() {
     /* older browsers */
   }
 }
+
+// ── read-only, for the word highlight ──
+/** the voice's exact position right now (read every screen frame by the highlight) */
+export const audioTime = () => audio?.currentTime ?? 0;
+/** a file next to the book's narration index (e.g. "words/p007.json") */
+export const narrationAsset = (slug: string, rel: string) => (urls.has(slug) ? fileUrl(slug, rel) : null);
 
 export function useNarration(): NarrationState {
   return useSyncExternalStore(

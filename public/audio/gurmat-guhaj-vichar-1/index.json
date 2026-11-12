@@ -11,7 +11,8 @@
    "heyzinePage": 5,
    "file": "p007.mp3",
    "duration": 121.03,
-   "source": "1.PUNN/1.PUNN PG-7.mp3"
+   "source": "1.PUNN/1.PUNN PG-7.mp3",
+   "words": "words/p007.json"
   },
   {
    "page": 8,
@@ -19,7 +20,8 @@
    "heyzinePage": 6,
    "file": "p008.mp3",
    "duration": 120.22,
-   "source": "1.PUNN/1.PUNN PG-8.mp3"
+   "source": "1.PUNN/1.PUNN PG-8.mp3",
+   "words": "words/p008.json"
   },
   {
    "page": 9,
@@ -27,7 +29,8 @@
    "heyzinePage": 7,
    "file": "p009.mp3",
    "duration": 127.97,
-   "source": "1.PUNN/1.PUNN PG-9.mp3"
+   "source": "1.PUNN/1.PUNN PG-9.mp3",
+   "words": "words/p009.json"
   },
   {
    "page": 10,
