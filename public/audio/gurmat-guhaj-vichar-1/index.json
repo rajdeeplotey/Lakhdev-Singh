@@ -1081,7 +1081,8 @@
    "heyzinePage": 125,
    "file": "p126.mp3",
    "duration": 114.94,
-   "source": "20. APNE LOBH KYU MN MEET/20. APNE LOBH KYU MN MEET 126.mp3"
+   "source": "20. APNE LOBH KYU MN MEET/20. APNE LOBH KYU MN MEET 126.mp3",
+   "words": "words/p126.json"
   },
   {
    "page": 127,
@@ -1089,7 +1090,8 @@
    "heyzinePage": 126,
    "file": "p127.mp3",
    "duration": 117.73,
-   "source": "20. APNE LOBH KYU MN MEET/20. APNE LOBH KYU MN MEET  127.mp3"
+   "source": "20. APNE LOBH KYU MN MEET/20. APNE LOBH KYU MN MEET  127.mp3",
+   "words": "words/p127.json"
   },
   {
    "page": 128,
@@ -1097,7 +1099,8 @@
    "heyzinePage": 127,
    "file": "p128.mp3",
    "duration": 105.01,
-   "source": "20. APNE LOBH KYU MN MEET/20. APNE LOBH KYU MN MEET 128.mp3"
+   "source": "20. APNE LOBH KYU MN MEET/20. APNE LOBH KYU MN MEET 128.mp3",
+   "words": "words/p128.json"
   },
   {
    "page": 129,
