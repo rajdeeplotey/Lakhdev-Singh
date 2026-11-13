@@ -946,7 +946,8 @@
    "heyzinePage": 109,
    "file": "p111.mp3",
    "duration": 134.64,
-   "source": "18. AANAD/18. AANAD 111.mp3"
+   "source": "18. AANAD/18. AANAD 111.mp3",
+   "words": "words/p111.json"
   },
   {
    "page": 112,
@@ -954,7 +955,8 @@
    "heyzinePage": 110,
    "file": "p112.mp3",
    "duration": 122.31,
-   "source": "18. AANAD/18. AANAD 112.mp3"
+   "source": "18. AANAD/18. AANAD 112.mp3",
+   "words": "words/p112.json"
   },
   {
    "page": 113,
@@ -962,7 +964,8 @@
    "heyzinePage": 111,
    "file": "p113.mp3",
    "duration": 139.91,
-   "source": "18. AANAD/18. AANAD 113.mp3"
+   "source": "18. AANAD/18. AANAD 113.mp3",
+   "words": "words/p113.json"
   },
   {
    "page": 114,
@@ -970,7 +973,8 @@
    "heyzinePage": 112,
    "file": "p114.mp3",
    "duration": 124.13,
-   "source": "18. AANAD/18. AANAD 114.mp3"
+   "source": "18. AANAD/18. AANAD 114.mp3",
+   "words": "words/p114.json"
   },
   {
    "page": 115,
@@ -978,7 +982,8 @@
    "heyzinePage": 113,
    "file": "p115.mp3",
    "duration": 134.79,
-   "source": "18. AANAD/18. AANAD 115.mp3"
+   "source": "18. AANAD/18. AANAD 115.mp3",
+   "words": "words/p115.json"
   },
   {
    "page": 116,
@@ -986,7 +991,8 @@
    "heyzinePage": 114,
    "file": "p116.mp3",
    "duration": 129.59,
-   "source": "18. AANAD/18. AANAD 116.mp3"
+   "source": "18. AANAD/18. AANAD 116.mp3",
+   "words": "words/p116.json"
   },
   {
    "page": 117,
@@ -994,7 +1000,8 @@
    "heyzinePage": 115,
    "file": "p117.mp3",
    "duration": 131.58,
-   "source": "18. AANAD/18. AANAD 117.mp3"
+   "source": "18. AANAD/18. AANAD 117.mp3",
+   "words": "words/p117.json"
   },
   {
    "page": 118,
@@ -1002,7 +1009,8 @@
    "heyzinePage": 116,
    "file": "p118.mp3",
    "duration": 47.1,
-   "source": "18. AANAD/18. AANAD 118.mp3"
+   "source": "18. AANAD/18. AANAD 118.mp3",
+   "words": "words/p118.json"
   },
   {
    "page": 119,
