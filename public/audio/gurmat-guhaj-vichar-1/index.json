@@ -353,7 +353,8 @@
    "heyzinePage": 43,
    "file": "p045.mp3",
    "duration": 114.08,
-   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -45.mp3"
+   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -45.mp3",
+   "words": "words/p045.json"
   },
   {
    "page": 46,
@@ -361,7 +362,8 @@
    "heyzinePage": 44,
    "file": "p046.mp3",
    "duration": 121.99,
-   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -46.mp3"
+   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -46.mp3",
+   "words": "words/p046.json"
   },
   {
    "page": 47,
@@ -369,7 +371,8 @@
    "heyzinePage": 45,
    "file": "p047.mp3",
    "duration": 125.6,
-   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -47.mp3"
+   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -47.mp3",
+   "words": "words/p047.json"
   },
   {
    "page": 48,
@@ -377,7 +380,8 @@
    "heyzinePage": 46,
    "file": "p048.mp3",
    "duration": 128.86,
-   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -48.mp3"
+   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -48.mp3",
+   "words": "words/p048.json"
   },
   {
    "page": 49,
@@ -385,7 +389,8 @@
    "heyzinePage": 47,
    "file": "p049.mp3",
    "duration": 130.22,
-   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -49.mp3"
+   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -49.mp3",
+   "words": "words/p049.json"
   },
   {
    "page": 50,
@@ -393,7 +398,8 @@
    "heyzinePage": 48,
    "file": "p050.mp3",
    "duration": 117.19,
-   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -50.mp3"
+   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -50.mp3",
+   "words": "words/p050.json"
   },
   {
    "page": 51,
@@ -401,7 +407,8 @@
    "heyzinePage": 49,
    "file": "p051.mp3",
    "duration": 115.91,
-   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -51.mp3"
+   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -51.mp3",
+   "words": "words/p051.json"
   },
   {
    "page": 52,
@@ -409,7 +416,8 @@
    "heyzinePage": 50,
    "file": "p052.mp3",
    "duration": 121.5,
-   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -52.mp3"
+   "source": "5. SUKHAM HYUME/5. SUKHAM HYUME -52.mp3",
+   "words": "words/p052.json"
   },
   {
    "page": 53,
@@ -417,7 +425,8 @@
    "heyzinePage": 51,
    "file": "p053.mp3",
    "duration": 121.91,
-   "source": "5. SUKHAM HYUME/5. PEER CHELA-53.mp3"
+   "source": "5. SUKHAM HYUME/5. PEER CHELA-53.mp3",
+   "words": "words/p053.json"
   },
   {
    "page": 54,
@@ -425,7 +434,8 @@
    "heyzinePage": 52,
    "file": "p054.mp3",
    "duration": 111.1,
-   "source": "5. SUKHAM HYUME/5. PEER CHELA -54.mp3"
+   "source": "5. SUKHAM HYUME/5. PEER CHELA -54.mp3",
+   "words": "words/p054.json"
   },
   {
    "page": 55,
@@ -433,7 +443,8 @@
    "heyzinePage": 53,
    "file": "p055.mp3",
    "duration": 83.75,
-   "source": "5. SUKHAM HYUME/5. PEER CHELA -55.mp3"
+   "source": "5. SUKHAM HYUME/5. PEER CHELA -55.mp3",
+   "words": "words/p055.json"
   },
   {
    "page": 56,
