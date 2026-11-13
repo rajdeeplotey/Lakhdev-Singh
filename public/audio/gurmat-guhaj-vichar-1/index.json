@@ -83,7 +83,8 @@
    "heyzinePage": 13,
    "file": "p015.mp3",
    "duration": 123.12,
-   "source": "3.HINDU SIKHA DA PYR/3. HINDU SIKHA DA PYAR-15.mp3"
+   "source": "3.HINDU SIKHA DA PYR/3. HINDU SIKHA DA PYAR-15.mp3",
+   "words": "words/p015.json"
   },
   {
    "page": 16,
@@ -91,7 +92,8 @@
    "heyzinePage": 14,
    "file": "p016.mp3",
    "duration": 115.36,
-   "source": "3.HINDU SIKHA DA PYR/3. HINDU SIKHA DA PYAR-16.mp3"
+   "source": "3.HINDU SIKHA DA PYR/3. HINDU SIKHA DA PYAR-16.mp3",
+   "words": "words/p016.json"
   },
   {
    "page": 17,
@@ -99,7 +101,8 @@
    "heyzinePage": 15,
    "file": "p017.mp3",
    "duration": 112.8,
-   "source": "3.HINDU SIKHA DA PYR/3. HINDU SIKHA DA PYAR-17.mp3"
+   "source": "3.HINDU SIKHA DA PYR/3. HINDU SIKHA DA PYAR-17.mp3",
+   "words": "words/p017.json"
   },
   {
    "page": 18,
@@ -107,7 +110,8 @@
    "heyzinePage": 16,
    "file": "p018.mp3",
    "duration": 115.75,
-   "source": "3.HINDU SIKHA DA PYR/3. HINDU SIKHA DA PYAR-18.mp3"
+   "source": "3.HINDU SIKHA DA PYR/3. HINDU SIKHA DA PYAR-18.mp3",
+   "words": "words/p018.json"
   },
   {
    "page": 19,
@@ -115,7 +119,8 @@
    "heyzinePage": 17,
    "file": "p019.mp3",
    "duration": 118.54,
-   "source": "3.HINDU SIKHA DA PYR/3. HINDU SIKHA DA PYAR-19.mp3"
+   "source": "3.HINDU SIKHA DA PYR/3. HINDU SIKHA DA PYAR-19.mp3",
+   "words": "words/p019.json"
   },
   {
    "page": 20,
