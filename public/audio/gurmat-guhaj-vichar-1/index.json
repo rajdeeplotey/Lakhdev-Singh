@@ -793,7 +793,8 @@
    "heyzinePage": 92,
    "file": "p094.mp3",
    "duration": 129.02,
-   "source": "14.DUKH/14. DUKH 94.mp3"
+   "source": "14.DUKH/14. DUKH 94.mp3",
+   "words": "words/p094.json"
   },
   {
    "page": 95,
@@ -801,7 +802,8 @@
    "heyzinePage": 93,
    "file": "p095.mp3",
    "duration": 130.87,
-   "source": "14.DUKH/14. DUKH 95.mp3"
+   "source": "14.DUKH/14. DUKH 95.mp3",
+   "words": "words/p095.json"
   },
   {
    "page": 96,
@@ -809,7 +811,8 @@
    "heyzinePage": 94,
    "file": "p096.mp3",
    "duration": 124.55,
-   "source": "14.DUKH/14. DUKH 96.mp3"
+   "source": "14.DUKH/14. DUKH 96.mp3",
+   "words": "words/p096.json"
   },
   {
    "page": 97,
@@ -817,7 +820,8 @@
    "heyzinePage": 95,
    "file": "p097.mp3",
    "duration": 128.55,
-   "source": "14.DUKH/14. DUKH 97.mp3"
+   "source": "14.DUKH/14. DUKH 97.mp3",
+   "words": "words/p097.json"
   },
   {
    "page": 98,
@@ -825,7 +829,8 @@
    "heyzinePage": 96,
    "file": "p098.mp3",
    "duration": 174.39,
-   "source": "14.DUKH/14. DUKH 98.mp3"
+   "source": "14.DUKH/14. DUKH 98.mp3",
+   "words": "words/p098.json"
   },
   {
    "page": 99,
@@ -833,7 +838,8 @@
    "heyzinePage": 97,
    "file": "p099.mp3",
    "duration": 122.54,
-   "source": "14.DUKH/14. DUKH 99.mp3"
+   "source": "14.DUKH/14. DUKH 99.mp3",
+   "words": "words/p099.json"
   },
   {
    "page": 100,
