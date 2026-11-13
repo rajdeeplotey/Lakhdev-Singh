@@ -296,7 +296,8 @@
    "heyzinePage": 37,
    "file": "p038.mp3",
    "duration": 106.06,
-   "source": "8.ਸੁੱਚ/8.ਸੁੱਚ-38.mp3"
+   "source": "8.ਸੁੱਚ/8.ਸੁੱਚ-38.mp3",
+   "words": "words/p038.json"
   },
   {
    "page": 39,
@@ -304,7 +305,8 @@
    "heyzinePage": 38,
    "file": "p039.mp3",
    "duration": 133.09,
-   "source": "8.ਸੁੱਚ/8.ਸੁੱਚ-39.mp3"
+   "source": "8.ਸੁੱਚ/8.ਸੁੱਚ-39.mp3",
+   "words": "words/p039.json"
   },
   {
    "page": 40,
@@ -312,7 +314,8 @@
    "heyzinePage": 39,
    "file": "p040.mp3",
    "duration": 73.51,
-   "source": "8.ਸੁੱਚ/8.ਸੁੱਚ-40.mp3"
+   "source": "8.ਸੁੱਚ/8.ਸੁੱਚ-40.mp3",
+   "words": "words/p040.json"
   },
   {
    "page": 41,
