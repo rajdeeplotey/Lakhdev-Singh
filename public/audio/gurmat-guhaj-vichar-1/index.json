@@ -128,7 +128,8 @@
    "heyzinePage": 18,
    "file": "p020.mp3",
    "duration": 106.63,
-   "source": "4.NINDA/4.NINDA-20.mp3"
+   "source": "4.NINDA/4.NINDA-20.mp3",
+   "words": "words/p020.json"
   },
   {
    "page": 21,
@@ -136,7 +137,8 @@
    "heyzinePage": 19,
    "file": "p021.mp3",
    "duration": 94.96,
-   "source": "4.NINDA/4.NINDA-21.mp3"
+   "source": "4.NINDA/4.NINDA-21.mp3",
+   "words": "words/p021.json"
   },
   {
    "page": 22,
@@ -144,7 +146,8 @@
    "heyzinePage": 20,
    "file": "p022.mp3",
    "duration": 93.91,
-   "source": "4.NINDA/4.NINDA-22.mp3"
+   "source": "4.NINDA/4.NINDA-22.mp3",
+   "words": "words/p022.json"
   },
   {
    "page": 23,
@@ -152,7 +155,8 @@
    "heyzinePage": 21,
    "file": "p023.mp3",
    "duration": 92.13,
-   "source": "4.NINDA/4.NINDA-23.mp3"
+   "source": "4.NINDA/4.NINDA-23.mp3",
+   "words": "words/p023.json"
   },
   {
    "page": 24,
@@ -160,7 +164,8 @@
    "heyzinePage": 22,
    "file": "p024.mp3",
    "duration": 93.99,
-   "source": "4.NINDA/4.NINDA-24.mp3"
+   "source": "4.NINDA/4.NINDA-24.mp3",
+   "words": "words/p024.json"
   },
   {
    "page": 25,
@@ -168,7 +173,8 @@
    "heyzinePage": 23,
    "file": "p025.mp3",
    "duration": 110.32,
-   "source": "4.NINDA/4.NINDA-25.mp3"
+   "source": "4.NINDA/4.NINDA-25.mp3",
+   "words": "words/p025.json"
   },
   {
    "page": 26,
@@ -176,7 +182,8 @@
    "heyzinePage": 24,
    "file": "p026.mp3",
    "duration": 111.41,
-   "source": "4.NINDA/4.NINDA-26.mp3"
+   "source": "4.NINDA/4.NINDA-26.mp3",
+   "words": "words/p026.json"
   },
   {
    "page": 27,
@@ -184,7 +191,8 @@
    "heyzinePage": 25,
    "file": "p027.mp3",
    "duration": 114.55,
-   "source": "4.NINDA/4.NINDA-27.mp3"
+   "source": "4.NINDA/4.NINDA-27.mp3",
+   "words": "words/p027.json"
   },
   {
    "page": 28,
@@ -192,7 +200,8 @@
    "heyzinePage": 26,
    "file": "p028.mp3",
    "duration": 124.32,
-   "source": "4.NINDA/4.NINDA-28.mp3"
+   "source": "4.NINDA/4.NINDA-28.mp3",
+   "words": "words/p028.json"
   },
   {
    "page": 29,
@@ -200,7 +209,8 @@
    "heyzinePage": 27,
    "file": "p029.mp3",
    "duration": 128.94,
-   "source": "4.NINDA/4.NINDA-29.mp3"
+   "source": "4.NINDA/4.NINDA-29.mp3",
+   "words": "words/p029.json"
   },
   {
    "page": 30,
@@ -208,7 +218,8 @@
    "heyzinePage": 28,
    "file": "p030.mp3",
    "duration": 121.34,
-   "source": "4.NINDA/4.NINDA-30.mp3"
+   "source": "4.NINDA/4.NINDA-30.mp3",
+   "words": "words/p030.json"
   },
   {
    "page": 31,
@@ -216,7 +227,8 @@
    "heyzinePage": 29,
    "file": "p031.mp3",
    "duration": 127.35,
-   "source": "4.NINDA/4.NINDA-31.mp3"
+   "source": "4.NINDA/4.NINDA-31.mp3",
+   "words": "words/p031.json"
   },
   {
    "page": 32,
@@ -224,7 +236,8 @@
    "heyzinePage": 30,
    "file": "p032.mp3",
    "duration": 123.74,
-   "source": "4.NINDA/4.NINDA-32.mp3"
+   "source": "4.NINDA/4.NINDA-32.mp3",
+   "words": "words/p032.json"
   },
   {
    "page": 33,
@@ -232,7 +245,8 @@
    "heyzinePage": 31,
    "file": "p033.mp3",
    "duration": 122.7,
-   "source": "4.NINDA/4.NINDA-33.mp3"
+   "source": "4.NINDA/4.NINDA-33.mp3",
+   "words": "words/p033.json"
   },
   {
    "page": 34,
@@ -240,7 +254,8 @@
    "heyzinePage": 32,
    "file": "p034.mp3",
    "duration": 128.71,
-   "source": "4.NINDA/4.NINDA-34.mp3"
+   "source": "4.NINDA/4.NINDA-34.mp3",
+   "words": "words/p034.json"
   },
   {
    "page": 35,
@@ -248,7 +263,8 @@
    "heyzinePage": 33,
    "file": "p035.mp3",
    "duration": 132.86,
-   "source": "4.NINDA/4.NINDA-35.mp3"
+   "source": "4.NINDA/4.NINDA-35.mp3",
+   "words": "words/p035.json"
   },
   {
    "page": 36,
@@ -256,7 +272,8 @@
    "heyzinePage": 34,
    "file": "p036.mp3",
    "duration": 120.95,
-   "source": "4.NINDA/4.NINDA-36.mp3"
+   "source": "4.NINDA/4.NINDA-36.mp3",
+   "words": "words/p036.json"
   },
   {
    "page": 37,
@@ -264,7 +281,8 @@
    "heyzinePage": 35,
    "file": "p037.mp3",
    "duration": 115.59,
-   "source": "4.NINDA/4.NINDA-37.mp3"
+   "source": "4.NINDA/4.NINDA-37.mp3",
+   "words": "words/p037.json"
   },
   {
    "page": 38,
@@ -272,7 +290,8 @@
    "heyzinePage": 36,
    "file": "p038.mp3",
    "duration": 116.79,
-   "source": "4.NINDA/4.NINDA-38.mp3"
+   "source": "4.NINDA/4.NINDA-38.mp3",
+   "words": "words/p038.json"
   },
   {
    "page": 39,
@@ -280,7 +299,8 @@
    "heyzinePage": 37,
    "file": "p039.mp3",
    "duration": 123.66,
-   "source": "4.NINDA/4.NINDA-39.mp3"
+   "source": "4.NINDA/4.NINDA-39.mp3",
+   "words": "words/p039.json"
   },
   {
    "page": 40,
@@ -288,7 +308,8 @@
    "heyzinePage": 38,
    "file": "p040.mp3",
    "duration": 112.61,
-   "source": "4.NINDA/4.NINDA-40.mp3"
+   "source": "4.NINDA/4.NINDA-40.mp3",
+   "words": "words/p040.json"
   },
   {
    "page": 41,
@@ -296,7 +317,8 @@
    "heyzinePage": 39,
    "file": "p041.mp3",
    "duration": 116.95,
-   "source": "4.NINDA/4.NINDA-41.mp3"
+   "source": "4.NINDA/4.NINDA-41.mp3",
+   "words": "words/p041.json"
   },
   {
    "page": 42,
@@ -304,7 +326,8 @@
    "heyzinePage": 40,
    "file": "p042.mp3",
    "duration": 122.93,
-   "source": "4.NINDA/4.NINDA-42.mp3"
+   "source": "4.NINDA/4.NINDA-42.mp3",
+   "words": "words/p042.json"
   },
   {
    "page": 43,
@@ -312,7 +335,8 @@
    "heyzinePage": 41,
    "file": "p043.mp3",
    "duration": 113.89,
-   "source": "4.NINDA/4.NINDA-43.mp3"
+   "source": "4.NINDA/4.NINDA-43.mp3",
+   "words": "words/p043.json"
   },
   {
    "page": 44,
@@ -320,7 +344,8 @@
    "heyzinePage": 42,
    "file": "p044.mp3",
    "duration": 73.82,
-   "source": "4.NINDA/4.NINDA-44.mp3"
+   "source": "4.NINDA/4.NINDA-44.mp3",
+   "words": "words/p044.json"
   },
   {
    "page": 45,
