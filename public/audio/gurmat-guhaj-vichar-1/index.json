@@ -919,7 +919,8 @@
    "heyzinePage": 106,
    "file": "p108.mp3",
    "duration": 122.15,
-   "source": "17. VEMUKH HOYE RAM TE/17. VEMUKH HOYE RAM TE 108.mp3"
+   "source": "17. VEMUKH HOYE RAM TE/17. VEMUKH HOYE RAM TE 108.mp3",
+   "words": "words/p108.json"
   },
   {
    "page": 109,
@@ -927,7 +928,8 @@
    "heyzinePage": 107,
    "file": "p109.mp3",
    "duration": 116.79,
-   "source": "17. VEMUKH HOYE RAM TE/17. VEMUKH HOYE RAM TE 109.mp3"
+   "source": "17. VEMUKH HOYE RAM TE/17. VEMUKH HOYE RAM TE 109.mp3",
+   "words": "words/p109.json"
   },
   {
    "page": 110,
@@ -935,7 +937,8 @@
    "heyzinePage": 108,
    "file": "p110.mp3",
    "duration": 109.04,
-   "source": "17. VEMUKH HOYE RAM TE/17. VEMUKH HOYE RAM TE 110.mp3"
+   "source": "17. VEMUKH HOYE RAM TE/17. VEMUKH HOYE RAM TE 110.mp3",
+   "words": "words/p110.json"
   },
   {
    "page": 111,
