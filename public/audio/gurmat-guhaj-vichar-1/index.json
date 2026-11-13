@@ -524,7 +524,8 @@
    "heyzinePage": 62,
    "file": "p064.mp3",
    "duration": 114.16,
-   "source": "8. MASKINIYA/8. MASKINIYA-64.mp3"
+   "source": "8. MASKINIYA/8. MASKINIYA-64.mp3",
+   "words": "words/p064.json"
   },
   {
    "page": 65,
@@ -532,7 +533,8 @@
    "heyzinePage": 63,
    "file": "p065.mp3",
    "duration": 115.17,
-   "source": "8. MASKINIYA/8. MASKINIYA-65.mp3"
+   "source": "8. MASKINIYA/8. MASKINIYA-65.mp3",
+   "words": "words/p065.json"
   },
   {
    "page": 66,
@@ -540,7 +542,8 @@
    "heyzinePage": 64,
    "file": "p066.mp3",
    "duration": 120.71,
-   "source": "8. MASKINIYA/8. MASKINIYA-66.mp3"
+   "source": "8. MASKINIYA/8. MASKINIYA-66.mp3",
+   "words": "words/p066.json"
   },
   {
    "page": 67,
@@ -548,7 +551,8 @@
    "heyzinePage": 65,
    "file": "p067.mp3",
    "duration": 16.88,
-   "source": "8. MASKINIYA/8. MASKINIYA-67.mp3"
+   "source": "8. MASKINIYA/8. MASKINIYA-67.mp3",
+   "words": "words/p067.json"
   },
   {
    "page": 68,
