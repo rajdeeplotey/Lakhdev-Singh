@@ -1018,7 +1018,8 @@
    "heyzinePage": 117,
    "file": "p119.mp3",
    "duration": 124.4,
-   "source": "19. AKALI/19. AKALI 119.mp3"
+   "source": "19. AKALI/19. AKALI 119.mp3",
+   "words": "words/p119.json"
   },
   {
    "page": 120,
@@ -1026,7 +1027,8 @@
    "heyzinePage": 118,
    "file": "p120.mp3",
    "duration": 112.95,
-   "source": "19. AKALI/19. AKALI 120.mp3"
+   "source": "19. AKALI/19. AKALI 120.mp3",
+   "words": "words/p120.json"
   },
   {
    "page": 121,
@@ -1034,7 +1036,8 @@
    "heyzinePage": 119,
    "file": "p121.mp3",
    "duration": 125.83,
-   "source": "19. AKALI/19. AKALI 121.mp3"
+   "source": "19. AKALI/19. AKALI 121.mp3",
+   "words": "words/p121.json"
   },
   {
    "page": 122,
@@ -1042,7 +1045,8 @@
    "heyzinePage": 120,
    "file": "p122.mp3",
    "duration": 129.02,
-   "source": "19. AKALI/19. AKALI 122.mp3"
+   "source": "19. AKALI/19. AKALI 122.mp3",
+   "words": "words/p122.json"
   },
   {
    "page": 123,
@@ -1050,7 +1054,8 @@
    "heyzinePage": 121,
    "file": "p123.mp3",
    "duration": 112.61,
-   "source": "19. AKALI/19. AKALI 123.mp3"
+   "source": "19. AKALI/19. AKALI 123.mp3",
+   "words": "words/p123.json"
   },
   {
    "page": 124,
@@ -1058,7 +1063,8 @@
    "heyzinePage": 122,
    "file": "p124.mp3",
    "duration": 122.07,
-   "source": "19. AKALI/19. AKALI 124.mp3"
+   "source": "19. AKALI/19. AKALI 124.mp3",
+   "words": "words/p124.json"
   },
   {
    "page": 125,
@@ -1066,7 +1072,8 @@
    "heyzinePage": 123,
    "file": "p125.mp3",
    "duration": 92.71,
-   "source": "19. AKALI/19. AKALI 125.mp3"
+   "source": "19. AKALI/19. AKALI 125.mp3",
+   "words": "words/p125.json"
   },
   {
    "page": 126,
