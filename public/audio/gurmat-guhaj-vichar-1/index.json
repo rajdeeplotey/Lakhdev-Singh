@@ -452,7 +452,8 @@
    "heyzinePage": 54,
    "file": "p056.mp3",
    "duration": 121.65,
-   "source": "6. SO SATGURUR/6. SO SATGURUR-56.mp3"
+   "source": "6. SO SATGURUR/6. SO SATGURUR-56.mp3",
+   "words": "words/p056.json"
   },
   {
    "page": 57,
@@ -460,7 +461,8 @@
    "heyzinePage": 55,
    "file": "p057.mp3",
    "duration": 121.84,
-   "source": "6. SO SATGURUR/6. SO SATGURUR-57.mp3"
+   "source": "6. SO SATGURUR/6. SO SATGURUR-57.mp3",
+   "words": "words/p057.json"
   },
   {
    "page": 58,
@@ -468,7 +470,8 @@
    "heyzinePage": 56,
    "file": "p058.mp3",
    "duration": 112.69,
-   "source": "6. SO SATGURUR/6. SO SATGURUR-58.mp3"
+   "source": "6. SO SATGURUR/6. SO SATGURUR-58.mp3",
+   "words": "words/p058.json"
   },
   {
    "page": 59,
@@ -476,7 +479,8 @@
    "heyzinePage": 57,
    "file": "p059.mp3",
    "duration": 125.91,
-   "source": "6. SO SATGURUR/6. SO SATGURUR-59.mp3"
+   "source": "6. SO SATGURUR/6. SO SATGURUR-59.mp3",
+   "words": "words/p059.json"
   },
   {
    "page": 60,
@@ -484,7 +488,8 @@
    "heyzinePage": 58,
    "file": "p060.mp3",
    "duration": 113.5,
-   "source": "6. SO SATGURUR/6. SO SATGURUR-60.mp3"
+   "source": "6. SO SATGURUR/6. SO SATGURUR-60.mp3",
+   "words": "words/p060.json"
   },
   {
    "page": 61,
@@ -492,7 +497,8 @@
    "heyzinePage": 59,
    "file": "p061.mp3",
    "duration": 55.01,
-   "source": "6. SO SATGURUR/6. SO SATGURUR-61.mp3"
+   "source": "6. SO SATGURUR/6. SO SATGURUR-61.mp3",
+   "words": "words/p061.json"
   },
   {
    "page": 62,
