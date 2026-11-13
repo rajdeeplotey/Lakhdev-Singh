@@ -695,7 +695,8 @@
    "heyzinePage": 81,
    "file": "p083.mp3",
    "duration": 111.83,
-   "source": "12.PARMATMA DE  NIKT VSNA/12.PARMATMA DE NIKAT-83.mp3"
+   "source": "12.PARMATMA DE  NIKT VSNA/12.PARMATMA DE NIKAT-83.mp3",
+   "words": "words/p083.json"
   },
   {
    "page": 84,
@@ -711,7 +712,8 @@
    "heyzinePage": 83,
    "file": "p085.mp3",
    "duration": 13.11,
-   "source": "12.PARMATMA DE  NIKT VSNA/12.PARMATMA DE NIKAT-85.mp3"
+   "source": "12.PARMATMA DE  NIKT VSNA/12.PARMATMA DE NIKAT-85.mp3",
+   "words": "words/p085.json"
   },
   {
    "page": 86,
