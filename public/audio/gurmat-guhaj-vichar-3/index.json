@@ -1111,7 +1111,8 @@
    "heyzinePage": 129,
    "file": "p129.mp3",
    "duration": 109.11,
-   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ129.mp3"
+   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ129.mp3",
+   "words": "words/p129.json"
   },
   {
    "page": 130,
@@ -1119,7 +1120,8 @@
    "heyzinePage": 130,
    "file": "p130.mp3",
    "duration": 111.18,
-   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ 130.mp3"
+   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ 130.mp3",
+   "words": "words/p130.json"
   },
   {
    "page": 131,
@@ -1127,7 +1129,8 @@
    "heyzinePage": 131,
    "file": "p131.mp3",
    "duration": 114.31,
-   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ 131.mp3"
+   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ 131.mp3",
+   "words": "words/p131.json"
   },
   {
    "page": 132,
@@ -1135,7 +1138,8 @@
    "heyzinePage": 132,
    "file": "p132.mp3",
    "duration": 57.5,
-   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ 132.mp3"
+   "source": "29.ਪੰਜ ਸੁੱਖ/29.ਪੰਜ ਸੁੱਖ 132.mp3",
+   "words": "words/p132.json"
   },
   {
    "page": 133,
