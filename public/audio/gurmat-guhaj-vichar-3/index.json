@@ -607,7 +607,8 @@
    "heyzinePage": 73,
    "file": "p073.mp3",
    "duration": 104.23,
-   "source": "19.ਕਾਮ/19.ਕਾਮ 73.mp3"
+   "source": "19.ਕਾਮ/19.ਕਾਮ 73.mp3",
+   "words": "words/p073.json"
   },
   {
    "page": 74,
@@ -615,7 +616,8 @@
    "heyzinePage": 74,
    "file": "p074.mp3",
    "duration": 129.25,
-   "source": "19.ਕਾਮ/19.ਕਾਮ 74.mp3"
+   "source": "19.ਕਾਮ/19.ਕਾਮ 74.mp3",
+   "words": "words/p074.json"
   },
   {
    "page": 75,
@@ -623,7 +625,8 @@
    "heyzinePage": 75,
    "file": "p075.mp3",
    "duration": 122.38,
-   "source": "19.ਕਾਮ/19.ਕਾਮ 75.mp3"
+   "source": "19.ਕਾਮ/19.ਕਾਮ 75.mp3",
+   "words": "words/p075.json"
   },
   {
    "page": 76,
@@ -631,7 +634,8 @@
    "heyzinePage": 76,
    "file": "p076.mp3",
    "duration": 131.42,
-   "source": "19.ਕਾਮ/19.ਕਾਮ 76.mp3"
+   "source": "19.ਕਾਮ/19.ਕਾਮ 76.mp3",
+   "words": "words/p076.json"
   },
   {
    "page": 77,
@@ -639,7 +643,8 @@
    "heyzinePage": 77,
    "file": "p077.mp3",
    "duration": 127.11,
-   "source": "19.ਕਾਮ/19.ਕਾਮ 77.mp3"
+   "source": "19.ਕਾਮ/19.ਕਾਮ 77.mp3",
+   "words": "words/p077.json"
   },
   {
    "page": 78,
@@ -647,7 +652,8 @@
    "heyzinePage": 78,
    "file": "p078.mp3",
    "duration": 89.57,
-   "source": "19.ਕਾਮ/19.ਕਾਮ 78.mp3"
+   "source": "19.ਕਾਮ/19.ਕਾਮ 78.mp3",
+   "words": "words/p078.json"
   },
   {
    "page": 79,
