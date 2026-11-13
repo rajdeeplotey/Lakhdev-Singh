@@ -512,7 +512,8 @@
    "heyzinePage": 62,
    "file": "p063.mp3",
    "duration": 118.94,
-   "source": "14.ਭੁੱਖ/14.ਭੁੱਖ 63.mp3"
+   "source": "14.ਭੁੱਖ/14.ਭੁੱਖ 63.mp3",
+   "words": "words/p063.json"
   },
   {
    "page": 64,
@@ -520,7 +521,8 @@
    "heyzinePage": 63,
    "file": "p064.mp3",
    "duration": 68.31,
-   "source": "14.ਭੁੱਖ/14.ਭੁੱਖ 64.mp3"
+   "source": "14.ਭੁੱਖ/14.ਭੁੱਖ 64.mp3",
+   "words": "words/p064.json"
   },
   {
    "page": 65,
