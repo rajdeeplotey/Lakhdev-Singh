@@ -560,7 +560,8 @@
    "heyzinePage": 66,
    "file": "p068.mp3",
    "duration": 130.72,
-   "source": "9.MUKTI/9.MUKTI-68.mp3"
+   "source": "9.MUKTI/9.MUKTI-68.mp3",
+   "words": "words/p068.json"
   },
   {
    "page": 69,
@@ -568,7 +569,8 @@
    "heyzinePage": 67,
    "file": "p069.mp3",
    "duration": 134.22,
-   "source": "9.MUKTI/9.MUKTI-69.mp3"
+   "source": "9.MUKTI/9.MUKTI-69.mp3",
+   "words": "words/p069.json"
   },
   {
    "page": 70,
@@ -576,7 +578,8 @@
    "heyzinePage": 68,
    "file": "p070.mp3",
    "duration": 122.23,
-   "source": "9.MUKTI/9.MUKTI-70.mp3"
+   "source": "9.MUKTI/9.MUKTI-70.mp3",
+   "words": "words/p070.json"
   },
   {
    "page": 71,
@@ -584,7 +587,8 @@
    "heyzinePage": 69,
    "file": "p071.mp3",
    "duration": 61.26,
-   "source": "9.MUKTI/9.MUKTI-71.mp3"
+   "source": "9.MUKTI/9.MUKTI-71.mp3",
+   "words": "words/p071.json"
   },
   {
    "page": 72,
