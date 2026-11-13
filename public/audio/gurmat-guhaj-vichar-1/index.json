@@ -847,7 +847,8 @@
    "heyzinePage": 98,
    "file": "p100.mp3",
    "duration": 98.38,
-   "source": "15. DAGGI IK SJA/15.DHAGGI IK SJA 100.mp3"
+   "source": "15. DAGGI IK SJA/15.DHAGGI IK SJA 100.mp3",
+   "words": "words/p100.json"
   },
   {
    "page": 101,
@@ -855,7 +856,8 @@
    "heyzinePage": 99,
    "file": "p101.mp3",
    "duration": 123.12,
-   "source": "15. DAGGI IK SJA/15.DHAGGI IK SJA 101.mp3"
+   "source": "15. DAGGI IK SJA/15.DHAGGI IK SJA 101.mp3",
+   "words": "words/p101.json"
   },
   {
    "page": 102,
@@ -863,7 +865,8 @@
    "heyzinePage": 100,
    "file": "p102.mp3",
    "duration": 121.42,
-   "source": "15. DAGGI IK SJA/15.DHAGGI IK SJA 102.mp3"
+   "source": "15. DAGGI IK SJA/15.DHAGGI IK SJA 102.mp3",
+   "words": "words/p102.json"
   },
   {
    "page": 103,
@@ -871,7 +874,8 @@
    "heyzinePage": 101,
    "file": "p103.mp3",
    "duration": 128.47,
-   "source": "15. DAGGI IK SJA/15.DHAGGI IK SJA 103.mp3"
+   "source": "15. DAGGI IK SJA/15.DHAGGI IK SJA 103.mp3",
+   "words": "words/p103.json"
   },
   {
    "page": 104,
@@ -879,7 +883,8 @@
    "heyzinePage": 102,
    "file": "p104.mp3",
    "duration": 39.73,
-   "source": "15. DAGGI IK SJA/15.DHAGGI IK SJA 104.mp3"
+   "source": "15. DAGGI IK SJA/15.DHAGGI IK SJA 104.mp3",
+   "words": "words/p104.json"
   },
   {
    "page": 105,
