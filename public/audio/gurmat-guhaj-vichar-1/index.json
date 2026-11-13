@@ -38,7 +38,8 @@
    "heyzinePage": 8,
    "file": "p010.mp3",
    "duration": 114.47,
-   "source": "2.RAJA JANAK/2. RAJA JANAK-10.mp3"
+   "source": "2.RAJA JANAK/2. RAJA JANAK-10.mp3",
+   "words": "words/p010.json"
   },
   {
    "page": 11,
@@ -46,7 +47,8 @@
    "heyzinePage": 9,
    "file": "p011.mp3",
    "duration": 119.01,
-   "source": "2.RAJA JANAK/2. RAJA JANAK-11.mp3"
+   "source": "2.RAJA JANAK/2. RAJA JANAK-11.mp3",
+   "words": "words/p011.json"
   },
   {
    "page": 12,
@@ -54,7 +56,8 @@
    "heyzinePage": 10,
    "file": "p012.mp3",
    "duration": 121.57,
-   "source": "2.RAJA JANAK/2. RAJA JANAK-12.mp3"
+   "source": "2.RAJA JANAK/2. RAJA JANAK-12.mp3",
+   "words": "words/p012.json"
   },
   {
    "page": 13,
@@ -62,7 +65,8 @@
    "heyzinePage": 11,
    "file": "p013.mp3",
    "duration": 120.56,
-   "source": "2.RAJA JANAK/2. RAJA JANAK-13.mp3"
+   "source": "2.RAJA JANAK/2. RAJA JANAK-13.mp3",
+   "words": "words/p013.json"
   },
   {
    "page": 14,
@@ -70,7 +74,8 @@
    "heyzinePage": 12,
    "file": "p014.mp3",
    "duration": 107.18,
-   "source": "2.RAJA JANAK/2. RAJA JANAK-14.mp3"
+   "source": "2.RAJA JANAK/2. RAJA JANAK-14.mp3",
+   "words": "words/p014.json"
   },
   {
    "page": 15,
