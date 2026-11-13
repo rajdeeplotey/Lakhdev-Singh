@@ -170,7 +170,8 @@
    "heyzinePage": 23,
    "file": "p024.mp3",
    "duration": 118.86,
-   "source": "5. ਮੂਰਖ/5.ਮੂਰਖ 24.mp3"
+   "source": "5. ਮੂਰਖ/5.ਮੂਰਖ 24.mp3",
+   "words": "words/p024.json"
   },
   {
    "page": 25,
@@ -178,7 +179,8 @@
    "heyzinePage": 24,
    "file": "p025.mp3",
    "duration": 116.06,
-   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 25.mp3"
+   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 25.mp3",
+   "words": "words/p025.json"
   },
   {
    "page": 26,
@@ -186,7 +188,8 @@
    "heyzinePage": 25,
    "file": "p026.mp3",
    "duration": 112.46,
-   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 26.mp3"
+   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 26.mp3",
+   "words": "words/p026.json"
   },
   {
    "page": 27,
@@ -194,7 +197,8 @@
    "heyzinePage": 26,
    "file": "p027.mp3",
    "duration": 84.3,
-   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 27.mp3"
+   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 27.mp3",
+   "words": "words/p027.json"
   },
   {
    "page": 28,
@@ -202,7 +206,8 @@
    "heyzinePage": 27,
    "file": "p028.mp3",
    "duration": 113.42,
-   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 28.mp3"
+   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 28.mp3",
+   "words": "words/p028.json"
   },
   {
    "page": 29,
@@ -210,7 +215,8 @@
    "heyzinePage": 28,
    "file": "p029.mp3",
    "duration": 113.89,
-   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 29.mp3"
+   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 29.mp3",
+   "words": "words/p029.json"
   },
   {
    "page": 30,
@@ -218,7 +224,8 @@
    "heyzinePage": 29,
    "file": "p030.mp3",
    "duration": 108.7,
-   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 30.mp3"
+   "source": "5. ਮੂਰਖ/5. ਮੂਰਖ 30.mp3",
+   "words": "words/p030.json"
   },
   {
    "page": 31,
