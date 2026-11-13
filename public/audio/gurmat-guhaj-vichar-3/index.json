@@ -59,7 +59,8 @@
    "heyzinePage": 12,
    "file": "p012.mp3",
    "duration": 101.59,
-   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 12.mp3"
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 12.mp3",
+   "words": "words/p012.json"
   },
   {
    "page": 13,
@@ -67,7 +68,8 @@
    "heyzinePage": 13,
    "file": "p013.mp3",
    "duration": 105.98,
-   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 13.mp3"
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 13.mp3",
+   "words": "words/p013.json"
   },
   {
    "page": 14,
@@ -75,7 +77,8 @@
    "heyzinePage": 14,
    "file": "p014.mp3",
    "duration": 123.19,
-   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 14.mp3"
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 14.mp3",
+   "words": "words/p014.json"
   },
   {
    "page": 15,
@@ -83,7 +86,8 @@
    "heyzinePage": 15,
    "file": "p015.mp3",
    "duration": 114.31,
-   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 15.mp3"
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 15.mp3",
+   "words": "words/p015.json"
   },
   {
    "page": 16,
@@ -91,7 +95,8 @@
    "heyzinePage": 16,
    "file": "p016.mp3",
    "duration": 116.87,
-   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 16.mp3"
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 16.mp3",
+   "words": "words/p016.json"
   },
   {
    "page": 17,
@@ -99,7 +104,8 @@
    "heyzinePage": 17,
    "file": "p017.mp3",
    "duration": 103.34,
-   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 17.mp3"
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 17.mp3",
+   "words": "words/p017.json"
   },
   {
    "page": 18,
@@ -107,7 +113,8 @@
    "heyzinePage": 18,
    "file": "p018.mp3",
    "duration": 117.66,
-   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 18.mp3"
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 18.mp3",
+   "words": "words/p018.json"
   },
   {
    "page": 19,
@@ -115,7 +122,8 @@
    "heyzinePage": 19,
    "file": "p019.mp3",
    "duration": 111.75,
-   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 19.mp3"
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 19.mp3",
+   "words": "words/p019.json"
   },
   {
    "page": 20,
@@ -123,7 +131,8 @@
    "heyzinePage": 20,
    "file": "p020.mp3",
    "duration": 94.69,
-   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 20.mp3"
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 20.mp3",
+   "words": "words/p020.json"
   },
   {
    "page": 21,
@@ -131,7 +140,8 @@
    "heyzinePage": 21,
    "file": "p021.mp3",
    "duration": 54.7,
-   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 21.mp3"
+   "source": "4.ਇੰਦਰ/4.ਇੰਦਰ 21.mp3",
+   "words": "words/p021.json"
   },
   {
    "page": 22,
