@@ -596,7 +596,8 @@
    "heyzinePage": 70,
    "file": "p072.mp3",
    "duration": 126.96,
-   "source": "10.RAJAN RAJ/10.RAJAN RAJ-72.mp3"
+   "source": "10.RAJAN RAJ/10.RAJAN RAJ-72.mp3",
+   "words": "words/p072.json"
   },
   {
    "page": 73,
@@ -604,7 +605,8 @@
    "heyzinePage": 71,
    "file": "p073.mp3",
    "duration": 117.5,
-   "source": "10.RAJAN RAJ/10.RAJAN RAJ-73.mp3"
+   "source": "10.RAJAN RAJ/10.RAJAN RAJ-73.mp3",
+   "words": "words/p073.json"
   },
   {
    "page": 74,
@@ -612,7 +614,8 @@
    "heyzinePage": 72,
    "file": "p074.mp3",
    "duration": 120.22,
-   "source": "10.RAJAN RAJ/10.RAJAN RAJ-74.mp3"
+   "source": "10.RAJAN RAJ/10.RAJAN RAJ-74.mp3",
+   "words": "words/p074.json"
   },
   {
    "page": 75,
@@ -620,7 +623,8 @@
    "heyzinePage": 73,
    "file": "p075.mp3",
    "duration": 42.71,
-   "source": "10.RAJAN RAJ/10.RAJAN RAJ-75.mp3"
+   "source": "10.RAJAN RAJ/10.RAJAN RAJ-75.mp3",
+   "words": "words/p075.json"
   },
   {
    "page": 76,
