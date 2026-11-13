@@ -971,7 +971,8 @@
    "heyzinePage": 115,
    "file": "p116b.mp3",
    "duration": 121.42,
-   "source": "26.ਸਾਖੀ/26.ਸਾਖੀ 116.mp3"
+   "source": "26.ਸਾਖੀ/26.ਸਾਖੀ 116.mp3",
+   "words": "words/p116b.json"
   },
   {
    "page": 117,
@@ -979,7 +980,8 @@
    "heyzinePage": 116,
    "file": "p117.mp3",
    "duration": 83.67,
-   "source": "26.ਸਾਖੀ/26.ਸਾਖੀ 117.mp3"
+   "source": "26.ਸਾਖੀ/26.ਸਾਖੀ 117.mp3",
+   "words": "words/p117.json"
   },
   {
    "page": 118,
