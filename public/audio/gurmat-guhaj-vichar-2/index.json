@@ -5,9 +5,9 @@
   "Printed page 100: the file \"20.ਖ਼ਾਲਸਾ ਸੋਇ ਜੋ ਕਰੇ ਨਿਤ ਜੰਗ/20.ਖ਼ਾਲਸਾ ਸੋਇ ਜੋ ਕਰੇ ਨਿਤ ਜੰਗ 100.mp3\" is an exact copy of \"20.ਖ਼ਾਲਸਾ ਸੋਇ ਜੋ ਕਰੇ ਨਿਤ ਜੰਗ 99.mp3\" (it reads page 99). Page 100 has no recording of its own yet, so it is left out.",
   "\"24.ਸੰਸਾਰੁ ਭ੍ਰਮਿ ਸੁਤਾ/24.ਸੰਸਾਰੁ ਭ੍ਰਮਿ ਸੁਤਾ.mp3\" (no page number in its name) is an exact copy of \"24.ਸੰਸਾਰੁ ਭ੍ਰਮਿ ਸੁਤਾ 110.mp3\"; left out.",
   "Printed page 114: the file \"25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ/25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ 114.mp3\" is an exact copy of \"25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ 113.mp3\" (it reads page 113). Page 114 has no recording of its own yet, so it is left out.",
-  "Printed page 115: the file \"25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ/25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ 115.mp3\" is an exact copy of \"25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ 113.mp3\" (it reads page 113). Page 115 has no recording of its own yet, so it is left out.",
+  "Printed page 115: the file \"25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ/25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ 115.mp3\" is an exact copy of \"25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ 113.mp3\" (it reads page 113). Page 115 is read by \"25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ/25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ 116.mp3\" instead (see below).",
   "Printed page 120: the file \"27. ਅਗਿਆਨਤਾ 'ਚ ਗਲਤ ਸੋਚ/27. ਅਗਿਆਨਤਾ 'ਚ ਗਲਤ ਸੋਚ 120.mp3\" is an exact copy of \"27. ਅਗਿਆਨਤਾ 'ਚ ਗਲਤ ਸੋਚ 119.mp3\" (it reads page 119). Page 120 has no recording of its own yet, so it is left out.",
-  "Printed page 116 has two recordings: the end of chapter 25 and the start of chapter 26; both are played, in that order.",
+  "\"25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ/25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ 116.mp3\" reads printed page 115 (the last page of chapter 25), not page 116: word alignment found all its words on page 115. It is shown on page 115. Page 116 is read by the chapter-26 recording.",
   "Printed page 58 has no recording."
  ],
  "pages": [
@@ -852,9 +852,9 @@
    "source": "25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ/25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ 113.mp3"
   },
   {
-   "page": 116,
+   "page": 115,
    "chapter": 25,
-   "heyzinePage": 115,
+   "heyzinePage": 114,
    "file": "p116.mp3",
    "duration": 97.44,
    "source": "25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ/25.ਮਾਣੁ ਸਭੈ ਕਉ ਖਾਇ 116.mp3"
