@@ -506,7 +506,8 @@
    "heyzinePage": 60,
    "file": "p062.mp3",
    "duration": 126.22,
-   "source": "7. PYAAR DE 6 LACHAN/7. PYAAR DE 6 LACHAN-62.mp3"
+   "source": "7. PYAAR DE 6 LACHAN/7. PYAAR DE 6 LACHAN-62.mp3",
+   "words": "words/p062.json"
   },
   {
    "page": 63,
@@ -514,7 +515,8 @@
    "heyzinePage": 61,
    "file": "p063.mp3",
    "duration": 98.87,
-   "source": "7. PYAAR DE 6 LACHAN/7. PYAAR DE 6 LACHAN-63.mp3"
+   "source": "7. PYAAR DE 6 LACHAN/7. PYAAR DE 6 LACHAN-63.mp3",
+   "words": "words/p063.json"
   },
   {
    "page": 64,
