@@ -1135,7 +1135,8 @@
    "heyzinePage": 131,
    "file": "p132.mp3",
    "duration": 119.98,
-   "source": "22. SIYANAP/22. SIYANAP 132.mp3"
+   "source": "22. SIYANAP/22. SIYANAP 132.mp3",
+   "words": "words/p132.json"
   },
   {
    "page": 133,
@@ -1143,7 +1144,8 @@
    "heyzinePage": 132,
    "file": "p133.mp3",
    "duration": 134.22,
-   "source": "22. SIYANAP/22. SIYANAP 133.mp3"
+   "source": "22. SIYANAP/22. SIYANAP 133.mp3",
+   "words": "words/p133.json"
   },
   {
    "page": 134,
@@ -1151,7 +1153,8 @@
    "heyzinePage": 133,
    "file": "p134.mp3",
    "duration": 125.41,
-   "source": "22. SIYANAP/22. SIYANAP 134.mp3"
+   "source": "22. SIYANAP/22. SIYANAP 134.mp3",
+   "words": "words/p134.json"
   },
   {
    "page": 135,
@@ -1159,7 +1162,8 @@
    "heyzinePage": 134,
    "file": "p135.mp3",
    "duration": 136.31,
-   "source": "22. SIYANAP/22. SIYANAP 135.mp3"
+   "source": "22. SIYANAP/22. SIYANAP 135.mp3",
+   "words": "words/p135.json"
   },
   {
    "page": 136,
@@ -1167,7 +1171,8 @@
    "heyzinePage": 135,
    "file": "p136.mp3",
    "duration": 124.06,
-   "source": "22. SIYANAP/22. SIYANAP 136.mp3"
+   "source": "22. SIYANAP/22. SIYANAP 136.mp3",
+   "words": "words/p136.json"
   }
  ]
 }
