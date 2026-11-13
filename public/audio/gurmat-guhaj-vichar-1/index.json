@@ -892,7 +892,8 @@
    "heyzinePage": 103,
    "file": "p105.mp3",
    "duration": 113.35,
-   "source": "16.DASAM GRANTH SAHIB/16.DASAM GRANTH SAHIB 105.mp3"
+   "source": "16.DASAM GRANTH SAHIB/16.DASAM GRANTH SAHIB 105.mp3",
+   "words": "words/p105.json"
   },
   {
    "page": 106,
@@ -900,7 +901,8 @@
    "heyzinePage": 104,
    "file": "p106.mp3",
    "duration": 120.79,
-   "source": "16.DASAM GRANTH SAHIB/16.DASAM GRANTH SAHIB 106.mp3"
+   "source": "16.DASAM GRANTH SAHIB/16.DASAM GRANTH SAHIB 106.mp3",
+   "words": "words/p106.json"
   },
   {
    "page": 107,
@@ -908,7 +910,8 @@
    "heyzinePage": 105,
    "file": "p107.mp3",
    "duration": 50.47,
-   "source": "16.DASAM GRANTH SAHIB/16.DASAM GRANTH SAHIB 107.mp3"
+   "source": "16.DASAM GRANTH SAHIB/16.DASAM GRANTH SAHIB 107.mp3",
+   "words": "words/p107.json"
   },
   {
    "page": 108,
