@@ -620,7 +620,8 @@
    "heyzinePage": 74,
    "file": "p075.mp3",
    "duration": 112.88,
-   "source": "17. ਹਰਿ, ਰਾਮ/17.ਹਰਿ, ਰਾਮ 75.mp3"
+   "source": "17. ਹਰਿ, ਰਾਮ/17.ਹਰਿ, ਰਾਮ 75.mp3",
+   "words": "words/p075.json"
   },
   {
    "page": 76,
@@ -628,7 +629,8 @@
    "heyzinePage": 75,
    "file": "p076.mp3",
    "duration": 112.38,
-   "source": "17. ਹਰਿ, ਰਾਮ/17.ਹਰਿ, ਰਾਮ 76.mp3"
+   "source": "17. ਹਰਿ, ਰਾਮ/17.ਹਰਿ, ਰਾਮ 76.mp3",
+   "words": "words/p076.json"
   },
   {
    "page": 77,
