@@ -62,7 +62,8 @@
    "heyzinePage": 11,
    "file": "p012.mp3",
    "duration": 113.35,
-   "source": "2.ਨਾਮ ਅਤੇ ਬਾਣੀ/2.ਨਾਮ ਅਤੇ ਬਾਣੀ 12.mp3"
+   "source": "2.ਨਾਮ ਅਤੇ ਬਾਣੀ/2.ਨਾਮ ਅਤੇ ਬਾਣੀ 12.mp3",
+   "words": "words/p012.json"
   },
   {
    "page": 13,
@@ -70,7 +71,8 @@
    "heyzinePage": 12,
    "file": "p013.mp3",
    "duration": 124.63,
-   "source": "2.ਨਾਮ ਅਤੇ ਬਾਣੀ/2.ਨਾਮ ਅਤੇ ਬਾਣੀ 13.mp3"
+   "source": "2.ਨਾਮ ਅਤੇ ਬਾਣੀ/2.ਨਾਮ ਅਤੇ ਬਾਣੀ 13.mp3",
+   "words": "words/p013.json"
   },
   {
    "page": 14,
@@ -78,7 +80,8 @@
    "heyzinePage": 13,
    "file": "p014.mp3",
    "duration": 133.75,
-   "source": "2.ਨਾਮ ਅਤੇ ਬਾਣੀ/2.ਨਾਮ ਅਤੇ ਬਾਣੀ 14.mp3"
+   "source": "2.ਨਾਮ ਅਤੇ ਬਾਣੀ/2.ਨਾਮ ਅਤੇ ਬਾਣੀ 14.mp3",
+   "words": "words/p014.json"
   },
   {
    "page": 15,
