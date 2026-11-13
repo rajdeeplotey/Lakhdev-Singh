@@ -632,7 +632,8 @@
    "heyzinePage": 74,
    "file": "p076.mp3",
    "duration": 125.75,
-   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-76.mp3"
+   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-76.mp3",
+   "words": "words/p076.json"
   },
   {
    "page": 77,
@@ -640,7 +641,8 @@
    "heyzinePage": 75,
    "file": "p077.mp3",
    "duration": 116.06,
-   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-77.mp3"
+   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-77.mp3",
+   "words": "words/p077.json"
   },
   {
    "page": 78,
@@ -648,7 +650,8 @@
    "heyzinePage": 76,
    "file": "p078.mp3",
    "duration": 115.17,
-   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-78.mp3"
+   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-78.mp3",
+   "words": "words/p078.json"
   },
   {
    "page": 79,
@@ -656,7 +659,8 @@
    "heyzinePage": 77,
    "file": "p079.mp3",
    "duration": 115.25,
-   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-79.mp3"
+   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-79.mp3",
+   "words": "words/p079.json"
   },
   {
    "page": 80,
@@ -664,7 +668,8 @@
    "heyzinePage": 78,
    "file": "p080.mp3",
    "duration": 125.1,
-   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-80.mp3"
+   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-80.mp3",
+   "words": "words/p080.json"
   },
   {
    "page": 81,
@@ -672,7 +677,8 @@
    "heyzinePage": 79,
    "file": "p081.mp3",
    "duration": 110.63,
-   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-81.mp3"
+   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-81.mp3",
+   "words": "words/p081.json"
   },
   {
    "page": 82,
@@ -680,7 +686,8 @@
    "heyzinePage": 80,
    "file": "p082.mp3",
    "duration": 116.72,
-   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-82.mp3"
+   "source": "11. BHAGTI TOH GIR K/11. BHAGTI TOH GIR K-82.mp3",
+   "words": "words/p082.json"
   },
   {
    "page": 83,
