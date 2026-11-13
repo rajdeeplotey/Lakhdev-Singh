@@ -661,7 +661,8 @@
    "heyzinePage": 79,
    "file": "p079.mp3",
    "duration": 93.83,
-   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 79.mp3"
+   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 79.mp3",
+   "words": "words/p079.json"
   },
   {
    "page": 80,
@@ -669,7 +670,8 @@
    "heyzinePage": 80,
    "file": "p080.mp3",
    "duration": 128.63,
-   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 80.mp3"
+   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 80.mp3",
+   "words": "words/p080.json"
   },
   {
    "page": 81,
@@ -677,7 +679,8 @@
    "heyzinePage": 81,
    "file": "p081.mp3",
    "duration": 109.66,
-   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 81.mp3"
+   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 81.mp3",
+   "words": "words/p081.json"
   },
   {
    "page": 82,
@@ -685,7 +688,8 @@
    "heyzinePage": 82,
    "file": "p082.mp3",
    "duration": 44.46,
-   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 82.mp3"
+   "source": "20.ਖਿਮਾ/20.ਖਿਮਾ 82.mp3",
+   "words": "words/p082.json"
   },
   {
    "page": 83,
